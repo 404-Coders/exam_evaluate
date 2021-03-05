@@ -25,8 +25,23 @@
 
     &__marks{
         flex: 1;
-        background: gray;
-        
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__markTable{
+        padding: 15px;
+        border: 1px solid #ddd;
+
+        &__heading th{
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            
+        }
+
+        &__mark{
+            
+        }
     }
 
     &__sheet{
