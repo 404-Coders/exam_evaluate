@@ -1,0 +1,47 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    &__logo{
+        display:flex;
+        align-items: center;
+
+        img{
+            width: 60px;
+            height: 60px;
+            margin: 6px 10px;
+        }
+    }
+
+    &__className{
+        font-size: $font-md;
+        color: $primary;
+    }
+
+    &__subjectName{
+        font-size: $font-sm;
+        color: $greyTextColor;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    &__navigation{
+        margin: 0 20px;
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    }
+
+    &__name{
+        font-size: $font-lg;
+    }
+
+    
+}

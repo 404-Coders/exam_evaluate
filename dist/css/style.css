@@ -1,1 +1,71 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #3D3D3D;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__logo img {
+  width: 60px;
+  height: 60px;
+  margin: 6px 10px;
+}
+
+.nav__className {
+  font-size: 1.25em;
+  color: #017296;
+}
+
+.nav__subjectName {
+  font-size: 1em;
+  color: #3D3D3D;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+}
+
+.nav__navigation {
+  margin: 0 20px;
+}
+
+.nav__navigation img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.nav__name {
+  font-size: 1.5625em;
+}
+/*# sourceMappingURL=style.css.map */
