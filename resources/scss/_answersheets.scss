@@ -12,6 +12,16 @@
 
     }
 
+    &__heading
+    {
+        width: 100%;
+        padding: 10px 30px;
+        background-color: $fadedPrimary;
+        color: $white;
+        text-align: center;
+        font-size: $font-md;
+        border-radius: 5px 5px 0 0;
+    }
 
     &__marks{
         flex: 1;

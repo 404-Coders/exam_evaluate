@@ -7,6 +7,7 @@
 
 body {
   color: #3D3D3D;
+  font-family: 'Nunito', sans-serif;
 }
 
 .nav {
@@ -84,6 +85,16 @@ body {
       -ms-flex: 1;
           flex: 1;
   background: white;
+}
+
+.answers__heading {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #88B9D3;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25em;
+  border-radius: 5px 5px 0 0;
 }
 
 .answers__marks {
