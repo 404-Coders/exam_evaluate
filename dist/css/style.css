@@ -68,4 +68,35 @@ body {
 .nav__name {
   font-size: 1.5625em;
 }
+
+.answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100vh - 74px);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding: 10px;
+}
+
+.answers__sList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: white;
+}
+
+.answers__marks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: gray;
+}
+
+.answers__sheet {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background: goldenrod;
+}
 /*# sourceMappingURL=style.css.map */
