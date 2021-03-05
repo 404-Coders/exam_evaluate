@@ -8,22 +8,27 @@
         flex: 1;
         background: white;
         
-
-        &__items
+        &__item 
         {
-            padding: 5px 0;
+            border: $borderBox_Color 1px solid;
+            border-bottom: 0;
         }
 
+        &__item.selected
+        {
+            background: $tPrimary;
+        }
+
+        &__item:last-child
+        {
+            border-bottom: $borderBox_Color 1px solid;
+
+        } 
+        
         &__item p
         {
             padding: 10px 40px;
-            border: $borderBox_Color 1px solid;
         }
-
-        &__item p:nth-child()
-        {
-            border: none;
-        } 
     }
     
     &__heading h3
