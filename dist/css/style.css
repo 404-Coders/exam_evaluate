@@ -186,6 +186,63 @@ body {
   border: 1px solid #B7B7B7;
 }
 
+.answers__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.answers__buttons img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.answers__buttons img:last-child {
+  margin-right: 0;
+}
+
+.answers__totalC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+.answers__totalC p {
+  font-size: 1.25rem;
+}
+
+.answers__totalC span {
+  padding: 0 10px;
+  border: 1px solid #B7B7B7;
+}
+
+.answers__totalC button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  border: 0;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FDBF43;
+}
+
 .answers__sheet {
   -webkit-box-flex: 3;
       -ms-flex: 3;
