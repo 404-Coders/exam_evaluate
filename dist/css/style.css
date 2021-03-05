@@ -36,12 +36,12 @@ body {
 }
 
 .nav__className {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   color: #017296;
 }
 
 .nav__subjectName {
-  font-size: 1em;
+  font-size: 1rem;
   color: #3D3D3D;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .nav__name {
-  font-size: 1.5625em;
+  font-size: 1.5625rem;
 }
 
 .answers {
@@ -87,13 +87,26 @@ body {
   background: white;
 }
 
-.answers__heading {
+.answers__sList__items {
+  padding: 5px 0;
+}
+
+.answers__sList__item p {
+  padding: 10px 40px;
+  border: #B7B7B7 1px solid;
+}
+
+.answers__sList__item p:nth-child() {
+  border: none;
+}
+
+.answers__heading h3 {
   width: 100%;
   padding: 10px 30px;
   background-color: #88B9D3;
   color: #fff;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   border-radius: 5px 5px 0 0;
 }
 
@@ -112,18 +125,67 @@ body {
 
 .answers__markTable {
   padding: 15px;
-  border: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.answers__markTable__heading {
+  margin: 50px;
+  background: rgba(136, 185, 211, 0.2);
 }
 
 .answers__markTable__heading th {
   padding: 10px 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #B7B7B7;
+  display: inline-block;
+  width: 50%;
+}
+
+.answers__markTable__heading th:last-child {
+  border-left: 0;
+}
+
+.answers__markTable__mark {
+  text-align: center;
+}
+
+.answers__markTable__mark td {
+  padding: 10px;
+  display: inline-block;
+  width: 50%;
+  border: 1px solid #B7B7B7;
+  border-top: 0;
+}
+
+.answers__markTable__mark td:last-child {
+  border-left: 0;
+}
+
+.answers__markTable__mark td input {
+  border: 0;
+  border: 0;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #3D3D3D;
+  font-family: 'Nunito';
+}
+
+.answers__markTable__mark td input::-webkit-inner-spin-button, .answers__markTable__mark td input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.answers__container {
+  padding: 10px;
+  border: 1px solid #B7B7B7;
 }
 
 .answers__sheet {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
-  background: goldenrod;
+  border: 1px solid #B7B7B7;
 }
 /*# sourceMappingURL=style.css.map */

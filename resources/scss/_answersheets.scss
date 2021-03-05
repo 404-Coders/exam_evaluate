@@ -9,10 +9,24 @@
         background: white;
         
 
+        &__items
+        {
+            padding: 5px 0;
+        }
 
+        &__item p
+        {
+            padding: 10px 40px;
+            border: $borderBox_Color 1px solid;
+        }
+
+        &__item p:nth-child()
+        {
+            border: none;
+        } 
     }
-
-    &__heading
+    
+    &__heading h3
     {
         width: 100%;
         padding: 10px 30px;
@@ -31,22 +45,66 @@
 
     &__markTable{
         padding: 15px;
-        border: 1px solid #ddd;
-
+        border-collapse: collapse;
+        width: 100%;
+        
+        &__heading {
+            margin: 50px;
+            background: $tPrimary;
+        }
         &__heading th{
             padding: 10px 20px;
-            border: 1px solid #ddd;
+            border: 1px solid $borderBox_Color;
+            display: inline-block;
+            width: 50%;
+            
+            &:last-child
+            {
+                border-left:0;
+            }
             
         }
 
         &__mark{
-            
+            text-align: center;
         }
-    }
+        &__mark td{
+            padding: 10px;
+            display: inline-block;
+            width: 50%;
+            border: 1px solid $borderBox_Color;
+            border-top: 0;
+            &:last-child
+            {
+                border-left:0;
+            }
+        }
 
+        
+        &__mark td input{
+            border: 0;border: 0;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            font-size: $font-sm;
+            color: $greyTextColor;
+            font-family: 'Nunito';
+            &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
+        }
+        
+        
+        
+    }
+    &__container{
+        padding: 10px;
+        
+        border: 1px solid $borderBox_Color;
+    }
     &__sheet{
         flex: 3;
-        background: goldenrod;
-        
+        border: 1px solid $borderBox_Color;        
     }
 }
