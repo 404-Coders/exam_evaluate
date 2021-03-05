@@ -87,10 +87,6 @@ body {
   background: white;
 }
 
-.answers__sList__items {
-  padding: 5px 0;
-}
-
 .answers__sList__item {
   border: #B7B7B7 1px solid;
   border-bottom: 0;
