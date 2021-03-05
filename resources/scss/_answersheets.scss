@@ -14,16 +14,22 @@
             padding: 5px 0;
         }
 
+        &__item 
+        {
+            border: $borderBox_Color 1px solid;
+            border-bottom: 0;
+        }
+
+        &__item:last-child
+        {
+            border-bottom: $borderBox_Color 1px solid;
+
+        } 
+        
         &__item p
         {
             padding: 10px 40px;
-            border: $borderBox_Color 1px solid;
         }
-
-        &__item p:nth-child()
-        {
-            border: none;
-        } 
     }
 
     &__heading h3

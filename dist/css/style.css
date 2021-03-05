@@ -91,13 +91,17 @@ body {
   padding: 5px 0;
 }
 
-.answers__sList__item p {
-  padding: 10px 40px;
+.answers__sList__item {
   border: #B7B7B7 1px solid;
+  border-bottom: 0;
 }
 
-.answers__sList__item p:nth-child() {
-  border: none;
+.answers__sList__item:last-child {
+  border-bottom: #B7B7B7 1px solid;
+}
+
+.answers__sList__item p {
+  padding: 10px 40px;
 }
 
 .answers__heading h3 {
