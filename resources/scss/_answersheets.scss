@@ -9,7 +9,21 @@
         background: white;
         
 
+        &__items
+        {
+            padding: 5px 0;
+        }
 
+        &__item p
+        {
+            padding: 10px 40px;
+            border: $borderBox_Color 1px solid;
+        }
+
+        &__item p:nth-child()
+        {
+            border: none;
+        } 
     }
 
     &__heading h3

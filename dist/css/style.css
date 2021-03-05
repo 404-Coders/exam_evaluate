@@ -87,6 +87,19 @@ body {
   background: white;
 }
 
+.answers__sList__items {
+  padding: 5px 0;
+}
+
+.answers__sList__item p {
+  padding: 10px 40px;
+  border: #B7B7B7 1px solid;
+}
+
+.answers__sList__item p:nth-child() {
+  border: none;
+}
+
 .answers__heading h3 {
   width: 100%;
   padding: 10px 30px;
