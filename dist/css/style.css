@@ -92,6 +92,10 @@ body {
   border-bottom: 0;
 }
 
+.answers__sList__item.selected {
+  background: rgba(136, 185, 211, 0.2);
+}
+
 .answers__sList__item:last-child {
   border-bottom: #B7B7B7 1px solid;
 }

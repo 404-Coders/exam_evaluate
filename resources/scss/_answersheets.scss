@@ -8,16 +8,15 @@
         flex: 1;
         background: white;
         
-
-        &__items
-        {
-            // padding: 5px 0;
-        }
-
         &__item 
         {
             border: $borderBox_Color 1px solid;
             border-bottom: 0;
+        }
+
+        &__item.selected
+        {
+            background: $tPrimary;
         }
 
         &__item:last-child
@@ -46,7 +45,6 @@
     &__marks{
         flex: 1;
         background: gray;
-
     }
 
     &__sheet{
