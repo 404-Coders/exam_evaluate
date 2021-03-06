@@ -6,14 +6,14 @@
     $stu_pass = $_POST['stu_pass']; 
     
     $query = mysqli_query($con, "SELECT * from `student_cred` where `stu_rollNo`='$stu_rollNo'");
-    if($query > 0)
+    if(mysqli_num_rows($query) > 0)
     {
         $query = mysqli_query($con, "SELECT * from `student_cred` where `stu_rollNo`='$stu_rollNo' and `stu_email`='$stu_email'");
 
-        if($query > 0)
+        if(mysqli_num_rows($query) > 0)
         {
             $query = mysqli_query($con, "SELECT * from `student_cred` where `stu_rollNo`='$stu_rollNo' and `stu_email`='$stu_email' and `stu_pass`='$stu_pass'");
-            if($query > 0)
+            if(mysqli_num_rows($query) > 0)
             {
                 session_start();
                 $_SESSION['rollNo'] = $stu_rollNo;

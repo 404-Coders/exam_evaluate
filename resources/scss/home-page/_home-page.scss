@@ -22,23 +22,98 @@
     align-items: center;
 
     &__icon img{
-        width: 130px;
-        height: 130px;
-        margin:15px;
+        width: 100px;
+        height: 100px;
+        margin-top: 25px;
     }
     
     &__head{
-        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-lg;
+        line-height: 63px;
+        color:$greyTextColor;
     }
+
+    &__body{
+        width: 750px;
+        // height: 105px;
+        text-align: center;
+    }
+}
+
+.why-app{
+    display:flex;
+    padding: 0 60px;
+
+    &__text{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__blue-head{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-md;
+            line-height: 45px;
+            color: #017296;
+        }
+
+        &__body{
+            
+            text-align: left;
+        }
+    }
+    &__photo1{
+        flex:1;
+    }
+    &__photo1 img{
+        width: 100%;
+        }
+       
+}
+
+// Register Section
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+        display: block;
+    }
+    
+    to{
+        opacity: 0;
+        display: none;
+    }
+
+}
+@keyframes fade-in{
+    1% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+
+    }
+
 }
 
 
 
-// Register Section
-
 .register{  
     // opacity: 0;
-    display: none;
+    // transform:translate(100vw);
+    // animation-name: fade-in;
+    // animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 50ms ease-in-out, visibility 0s linear 50ms;
+
+    // transition: all 1s ease-in-out;
     &__overlay{
         width: 100vw;
         height: 100vh;
@@ -65,6 +140,7 @@
         background: $white;
         padding: 30px;
         display: flex;
+        position: relative;
 
         border-radius: 10px;
         flex-direction: column;
@@ -107,6 +183,15 @@
         }
 
 
+    }
+
+    &__cancel{
+        width:15px;
+        height: 15px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
     }
 
 

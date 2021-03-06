@@ -1,0 +1,120 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    
+    &__details{
+        width: 1000px;
+        height: 250px;
+        padding: 50px;
+        transition: all $trans-speed ease-in-out;
+        background: $secondary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            color: $white;
+            padding: 0 20px;
+            padding-bottom: 10px;
+            font-size: $font-xlg;
+        }
+        button{
+            margin: 0 20px;
+            padding: 10px ;
+        }
+
+        #login_btn2{
+            display: none;
+        }
+    }
+
+    &__buttons{
+        transition: all $trans-speed ease-in-out;
+    }
+
+    &__form
+    {
+        border: 2px solid $secondary;
+
+        position: absolute;
+        display: flex;
+        transform: translateX(65%);
+        transition: all $trans-speed ease-in-out;
+        &__teacher{ 
+
+            img{
+                width: 58px;
+                height: 58px;
+            }  
+            p{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 45px;
+                margin-bottom: 10px;
+                color: $primary;
+            } 
+        }
+        &__teacher span{
+            width: 106px;
+            height: 106px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent ;
+            border-radius: 100%;
+
+            border: 2px solid $secondary;
+
+        }
+        
+
+        form{
+            
+            display: flex;
+            align-items: center;
+
+            flex-direction: column;
+            width:350px;
+            height: 400px;
+            background: $white;
+            padding: 20px;
+            
+            .input, .input2{
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 20px;
+                outline: 0;
+                border: 1px solid $borderBox_Color;
+                border-radius: 0   5px 5px 0;
+                color: $greyTextColor;
+                font-size: 1rem;
+                border-left: 5px $primary solid;
+            }
+
+            .input2{
+                margin-bottom: 10px;
+                border: 1px solid $borderBox_Color;
+                border-left: 5px $secondary solid;
+            }
+
+            #studentInput, #teacherInput{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                align-items: center;
+            }
+            #teacherInput{
+                display: none;
+            }
+
+        }
+    }
+
+}
