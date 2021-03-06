@@ -142,6 +142,7 @@
         background: $white;
         padding: 30px;
         display: flex;
+        position: relative;
 
         border-radius: 10px;
         flex-direction: column;
@@ -184,6 +185,15 @@
         }
 
 
+    }
+
+    &__cancel{
+        width:15px;
+        height: 15px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
     }
 
 

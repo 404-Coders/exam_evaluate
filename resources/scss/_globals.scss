@@ -27,7 +27,7 @@ body{
     background: $white; 
 }
 
-.primary-button{
+.primary-button,.blue-button{
     width: 140px;
     height: 41px;
     background: $secondary;
@@ -38,6 +38,10 @@ body{
     cursor: pointer;
     font-size: $font-md;
 
+}
+
+.blue-button{
+    background: $primary;
 }
 .white-button{
     width: 140px;
