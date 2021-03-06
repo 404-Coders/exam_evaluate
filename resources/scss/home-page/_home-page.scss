@@ -22,12 +22,56 @@
     align-items: center;
 
     &__icon img{
-        width: 130px;
-        height: 130px;
-        margin:15px;
+        width: 100px;
+        height: 100px;
+        margin-top: 25px;
     }
     
     &__head{
-        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-lg;
+        line-height: 63px;
+        color:$greyTextColor;
     }
+
+    &__body{
+        width: 750px;
+        // height: 105px;
+        text-align: center;
+    }
+}
+
+.why-app{
+    display:flex;
+    padding: 0 60px;
+
+    &__text{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__blue-head{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-md;
+            line-height: 45px;
+            color: #017296;
+        }
+
+        &__body{
+            
+            text-align: left;
+        }
+    }
+    &__photo1{
+        flex:1;
+    }
+    &__photo1 img{
+        width: 100%;
+        }
+       
 }

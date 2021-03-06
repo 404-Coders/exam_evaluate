@@ -46,3 +46,12 @@ body{
     outline: 0;
     background-color: $white;
 }
+
+.body-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-sm;
+    text-align: center;
+    color: #626262;
+}
