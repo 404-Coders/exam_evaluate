@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,12 +7,25 @@
         <link rel="stylesheet" href="./dist/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <title>Home Page</title>
     </head>
     <body>
+        <?php
+            if(isset($_GET['email']) === true){
+                if($_GET['email'] == "exist")
+                    echo '
+                    <script>
+                        swal("Error", "Email Already Exist!", "error");
+                        setTimeout(() => {
+                            window.location.href = "./";
+                        },3000);
+                    </script>';
+            }
+        ?>
         <header>
             <nav class="nav">
                 <div class="nav__logo">
@@ -50,7 +64,6 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
             </div>
 
         </section>
-            <img src="https://drive.google.com/uc?id=1pIn_EOigZXo1uD2pm97lOERKQXjv6W03" width="100" height="100" alt="">
         <!-- Register Sectiton -->
         <section class="register" id="register">
             <div class="register__overlay">
@@ -61,13 +74,13 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
                     <h1>Welcome to Exam Evaluate</h1>
                     <div class="register__forms">
                         <img src="./resources/images/signup.jpg" alt="Sign Up">
-                        <form action="" class="form">
-                            <input class="form__input" type="text" placeholder="Name">
-                            <input class="form__input" type="email" placeholder="Email ID">
-                            <input class="form__input" type="text" placeholder="Picture(Google Drive Link)">
-                            <input class="form__input" type="password" placeholder="Password">
-                            <input class="form__input" type="password" placeholder="Confirm Password">
-                            <button type="submit" class="primary-button">Submit</button>
+                        <form action="./resources/php/registration.php" method="POST" class="form">
+                            <input class="form__input" type="text" name="tea_name" required placeholder="Name">
+                            <input class="form__input" type="email" name="tea_email" placeholder="Email ID">
+                            <input class="form__input" type="text" name="tea_picture" placeholder="Picture(Google Drive Link)">
+                            <input class="form__input" type="password" name="tea_pass" required placeholder="Password">
+                            <input class="form__input" type="password" name="tea_con_pass" placeholder="Confirm Password">
+                            <button type="submit" class="primary-button" name="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -77,5 +90,6 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
             
 
     <script src="./resources/js/script.js"></script>
+
     </body>
 </html>
