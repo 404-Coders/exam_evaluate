@@ -98,8 +98,7 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
             </div>
             
             </section>   
-            
-
+        
     <script src="./resources/js/script.js"></script>
 
     </body>
