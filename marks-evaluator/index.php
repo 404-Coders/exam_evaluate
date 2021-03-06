@@ -1,5 +1,30 @@
 <?php
     include "../resources/php/connection.php";
+
+    session_start();
+    $tea_id = $_SESSION['teaID'];
+    $query_tea_name = mysqli_query($con, "SELECT `tea_name` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
+    $fetch_tea_name = mysqli_fetch_array($query_tea_name);
+    $tea_name = $fetch_tea_name[0];
+
+    $query_class_table = mysqli_query($con, "SELECT * FROM `exam_classes` WHERE `tea_id` = '$tea_id'");
+    $fetch_class_table = mysqli_fetch_array($query_class_table);
+    $class_name = $fetch_class_table[2];
+    $sub_name = $fetch_class_table[4];
+
+    $query_num_columns = mysqli_query($con, "SELECT count(*) FROM information_schema.columns WHERE table_name ='exam_result';");
+    $fetch_num_columns = mysqli_fetch_array($query_num_columns);
+
+    $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `tea_id` = '$tea_id' AND `sub_name` = '$sub_name' ");
+    $fetch_exam_result = mysqli_fetch_array($query_exam_result);
+    $stu_rollNo = $fetch_exam_result[1];
+    
+    $totalMarks = 0;
+    for($i = 4; $i < $fetch_num_columns[0]; $i++){
+        $totalMarks += $fetch_exam_result[$i];
+    }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +47,8 @@
             <div class="nav__logo">
                 <img src="../resources/images/logo.svg" alt="Logo">
                 <div class="classInfo">
-                    <p class="nav__className">Class Name</p>
-                    <p class="nav__subjectName">Subject</p>
+                    <p class="nav__className"><?php echo $class_name; ?></p>
+                    <p class="nav__subjectName"><?php echo $sub_name; ?></p>
                 </div>
             </div>
             <div class="nav__menu">
@@ -31,7 +56,7 @@
                     <img src="../resources/images/back-button.svg" alt="back button">
                     <img src="../resources/images/settings.svg" alt="">
                 </div>
-                <div class="nav__name">Jasveen Kaur</div>
+                <div class="nav__name"><?php echo $tea_name; ?></div>
             </div>
         </nav>
     </header>
@@ -106,94 +131,18 @@
                             <th>Questions</th>
                             <th>Marks</th>
                         </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
-    
-    
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
-    
-    
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
-    
-    
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
-    
-    
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
-    
-    
-                        <tr class="answers__markTable__mark">
-                            <td>1.</td>
-                            <td>
-                                <input type="number" value="50">
-                            </td>
-                        </tr>
-                        <tr class="answers__markTable__mark">
-                            <td>2.</td>
-                            <td>
-                                <input type="number" value="30">
-                            </td>
-                        </tr>
-    
+                        <?php
+                            for($i = 4; $i < $fetch_num_columns[0]; $i++){
+                                echo "
+                                <tr class='answers__markTable__mark'>
+                                    <td>".($i - 3)."</td>
+                                    <td>
+                                        <input type='number' value='$fetch_exam_result[$i]'>
+                                    </td>
+                                </tr>
+                                ";
+                            }
+                        ?>                          
                     </table>
                 </div>
                 <div class="answers__buttons">
@@ -201,7 +150,7 @@
                     <img src="../resources/images/delete.svg" alt="delete">
                 </div>
                 <div class="answers__totalC">
-                    <p>Total = <span id="total">400</span></p>
+                    <p>Total = <span id="total"><?php echo $totalMarks; ?></span></p>
                     <button>Submit</button>
                 </div>
             </div>
