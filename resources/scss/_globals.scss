@@ -26,3 +26,23 @@ body{
 .custom-scroll::-webkit-scrollbar-thumb:hover {
     background: $white; 
 }
+
+.primary-button{
+    width: 140px;
+    height: 41px;
+    background: $secondary;
+    border-radius: 10px;
+    color: $white;
+    outline: 0;
+    border: 0;
+}
+.white-button{
+    width: 140px;
+    height: 41px;
+    border: 2px solid $secondary;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: $secondary;
+    outline: 0;
+    background-color: $white;
+}
