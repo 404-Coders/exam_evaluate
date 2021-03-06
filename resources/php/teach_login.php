@@ -15,7 +15,7 @@
             $query = mysqli_query($con, "SELECT * from `teacher_cred` where `tea_id`='$tea_id' and `tea_email`='$tea_email' and `tea_pass`='$tea_pass'");
             if($query > 0)
             {
-                // header("location: teacher_dashboard location");
+                header("location: ../../dashboard/teacher-dashboard/");
                 echo "All three matched";
             }
             else
