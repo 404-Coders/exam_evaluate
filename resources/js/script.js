@@ -23,3 +23,29 @@ function hideOverlay(){
     body.style.filter="none";
     console.log("not Worlking");
 }
+
+
+function validateForm() {
+    var tea_name = document.getElementById("tea_name");
+    var tea_pass = document.getElementById("tea_pass");
+    var tea_con_pass = document.getElementById("tea_con_pass");
+
+    if(tea_name.value.match(/^[A-Za-z]+$/))
+    {
+        if(tea_con_pass.value === tea_pass.value)
+        {
+            return true;
+        }
+        else
+        {
+            swal("Error", "Password Does not Match!", "error");
+            return false;
+        }
+    }
+    else
+    {
+        swal("Error", "Please Enter a valid name", "error");
+        return false;
+    }
+
+}

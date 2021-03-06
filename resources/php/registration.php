@@ -39,7 +39,7 @@
             VALUES ('$tea_name', '$tea_email', '$tea_pass', '$tea_picture')";            
             if(mysqli_query($con, $query))
             {
-                echo "Record added successfully";
+                header("location: ../../?success=data-added");;
             }
             else
             {

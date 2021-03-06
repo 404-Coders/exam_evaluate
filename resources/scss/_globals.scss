@@ -7,6 +7,7 @@
 body{
     color: $greyTextColor;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -21,6 +22,20 @@ body{
 
 .custom-scroll::-webkit-scrollbar-thumb {
     background: $white; 
+}
+
+.sweet-alert {
+    box-sizing : border-box;
+    max-height : 100% !important;
+    overflow-y : auto !important;
+    padding : 0 17px 17px !important;
+    width : 512px;
+
+    //As default top and left are 50%, so it will transform those values and will set the modal exactly in the middle
+    transform: translate(-50%, -50%);
+
+   //remove margins
+   margin: 0;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {

@@ -19,11 +19,22 @@
                 if($_GET['email'] == "exist")
                     echo '
                     <script>
-                        swal("Error", "Email Already Exist!", "error");
-                        setTimeout(() => {
-                            window.location.href = "./";
-                        },3000);
+                        swal("Error", "Email Already Exist!", "error").then(name => {
+                                window.location.href = "./";
+                        });
                     </script>';
+            }
+
+            if(isset($_GET['success']) === true)
+            {
+                if($_GET['success'] == "data-added")
+                {
+                    echo '<script>
+                        swal("Success", "You\'re registered sucessfully!", "success").then(name => {
+                                window.location.href = "./";
+                        });
+                    </script>';
+                }
             }
         ?>
         <header>
@@ -69,17 +80,17 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
             <div class="register__overlay">
                 
             </div>
-            <div class="register__content " onclick="hideOverlay();">
+            <div class="register__content " >
                 <div class="register__details"  >
                     <h1>Welcome to Exam Evaluate</h1>
                     <div class="register__forms">
                         <img src="./resources/images/signup.jpg" alt="Sign Up">
-                        <form action="./resources/php/registration.php" method="POST" class="form">
-                            <input class="form__input" type="text" name="tea_name" required placeholder="Name">
+                        <form action="./resources/php/registration.php" onsubmit="return validateForm()" method="POST" class="form">
+                            <input class="form__input" type="text" id="tea_name" name="tea_name" required placeholder="Name">
                             <input class="form__input" type="email" name="tea_email" placeholder="Email ID">
                             <input class="form__input" type="text" name="tea_picture" placeholder="Picture(Google Drive Link)">
-                            <input class="form__input" type="password" name="tea_pass" required placeholder="Password">
-                            <input class="form__input" type="password" name="tea_con_pass" placeholder="Confirm Password">
+                            <input class="form__input" type="password" id="tea_pass" name="tea_pass" required placeholder="Password">
+                            <input class="form__input" type="password" id="tea_con_pass" name="tea_con_pass" placeholder="Confirm Password">
                             <button type="submit" class="primary-button" name="submit">Submit</button>
                         </form>
                     </div>

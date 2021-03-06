@@ -8,6 +8,7 @@
 body {
   color: #3D3D3D;
   font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -20,6 +21,18 @@ body {
 
 .custom-scroll::-webkit-scrollbar-thumb {
   background: #fff;
+}
+
+.sweet-alert {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  padding: 0 17px 17px !important;
+  width: 512px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
