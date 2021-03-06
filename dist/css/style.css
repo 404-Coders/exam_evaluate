@@ -217,7 +217,6 @@ body {
 .answers__container {
   padding: 10px;
   height: calc(100vh - 141px);
-  overflow: auto;
   position: relative;
   border: 1px solid #B7B7B7;
   display: -webkit-box;
@@ -230,6 +229,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.answers__container__table {
+  max-height: calc(100vh - 295px);
+  overflow: auto;
 }
 
 .answers__buttons {
@@ -303,5 +307,18 @@ body {
 .answers__sheet iframe {
   width: 100%;
   height: 100%;
+}
+
+.nav {
+  background-color: #88B9D3;
+}
+
+.nav__web-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 57px;
+  color: #017296;
 }
 /*# sourceMappingURL=style.css.map */
