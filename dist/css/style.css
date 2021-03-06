@@ -210,12 +210,16 @@ body {
 .answers__container {
   padding: 10px;
   height: calc(100vh - 141px);
-  overflow: auto;
   position: relative;
   border: 1px solid #B7B7B7;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.answers__container__table {
+  max-height: calc(100vh - 295px);
+  overflow: auto;
 }
 
 .answers__buttons {
