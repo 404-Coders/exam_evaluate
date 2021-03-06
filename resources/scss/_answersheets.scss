@@ -121,6 +121,11 @@
     }
     &__sheet{
         flex: 3;
-        border: 1px solid $borderBox_Color;        
+        border: 1px solid $borderBox_Color;   
+        
+        iframe{
+            width: 100%;    
+            height: 100%;
+        }
     }
 }
