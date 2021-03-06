@@ -30,7 +30,7 @@ function validateForm() {
     var tea_pass = document.getElementById("tea_pass");
     var tea_con_pass = document.getElementById("tea_con_pass");
 
-    if(tea_name.value.match(/^[A-Za-z]+$/))
+    if(tea_name.value.match(/^[A-Z a-z]+$/))
     {
         if(tea_con_pass.value === tea_pass.value)
         {
