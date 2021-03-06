@@ -31,16 +31,20 @@
 
     &__navigation{
         margin: 0 20px;
+        display: flex;
+        margin: 0 20px;
+        justify-content: center;
+        align-items: center;
         img{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             margin: 5px;
             cursor: pointer;
         }
     }
 
     &__name{
-        font-size: $font-lg;
+        font-size: 25px;
     }
 
     

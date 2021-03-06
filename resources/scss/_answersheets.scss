@@ -18,6 +18,7 @@
             overflow: auto;
         }
         
+        
         &__item 
         {
             border: $borderBox_Color 1px solid;
@@ -112,12 +113,64 @@
         
         
         
+        
     }
     &__container{
         padding: 10px;
         height: calc(100vh - 141px);
         overflow: auto;
+        position: relative;
         border: 1px solid $borderBox_Color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        img{
+            width: $font-lg;
+            height:$font-lg;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        img:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    &__totalC{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+
+        
+        p{
+            font-size: $font-md;
+        }
+        span{
+            padding: 0 10px;
+            border: 1px solid $borderBox_Color;
+        }
+        button{
+            margin-top: 15px;
+            width: 100%;
+            padding: 8px;
+            color: white;
+            border: 0;
+            font-size: 18px;
+            border-radius: 8px;
+            background-color:$secondary;
+        }
     }
     &__sheet{
         flex: 3;

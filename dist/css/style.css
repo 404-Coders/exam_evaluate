@@ -73,17 +73,27 @@ body {
 
 .nav__navigation {
   margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__navigation img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: 5px;
   cursor: pointer;
 }
 
 .nav__name {
-  font-size: 1.5625rem;
+  font-size: 25px;
 }
 
 .answers {
@@ -208,7 +218,79 @@ body {
   padding: 10px;
   height: calc(100vh - 141px);
   overflow: auto;
+  position: relative;
   border: 1px solid #B7B7B7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.answers__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.answers__buttons img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.answers__buttons img:last-child {
+  margin-right: 0;
+}
+
+.answers__totalC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.answers__totalC p {
+  font-size: 1.25rem;
+}
+
+.answers__totalC span {
+  padding: 0 10px;
+  border: 1px solid #B7B7B7;
+}
+
+.answers__totalC button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  border: 0;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FDBF43;
 }
 
 .answers__sheet {
