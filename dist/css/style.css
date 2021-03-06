@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -58,7 +59,8 @@ body {
   width: 140px;
   height: 41px;
   border: 2px solid #FDBF43;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 10px;
   color: #FDBF43;
   outline: 0;
@@ -76,14 +78,22 @@ body {
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 2px solid #ddd;
 }
 
 .nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__logo img {
@@ -103,17 +113,27 @@ body {
 }
 
 .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 30px;
 }
 
 .nav__navigation {
   margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 20px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__navigation img {
@@ -128,15 +148,20 @@ body {
 }
 
 .answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: calc(100vh - 74px);
-  column-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   padding: 10px;
 }
 
 .answers__sList {
   position: relative;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: white;
 }
 
@@ -174,9 +199,16 @@ body {
 }
 
 .answers__marks {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .answers__markTable {
@@ -238,9 +270,16 @@ body {
   height: calc(100vh - 141px);
   position: relative;
   border: 1px solid #B7B7B7;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .answers__container__table {
@@ -249,8 +288,12 @@ body {
 }
 
 .answers__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
 }
 
@@ -266,10 +309,19 @@ body {
 }
 
 .answers__totalC {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
   position: absolute;
   width: 100%;
@@ -297,7 +349,9 @@ body {
 }
 
 .answers__sheet {
-  flex: 3;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   border: 1px solid #B7B7B7;
 }
 
@@ -322,9 +376,16 @@ body {
 }
 
 .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .intro__icon img {
@@ -348,15 +409,26 @@ body {
 }
 
 .why-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 60px;
 }
 
 .why-app__text {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .why-app__text__blue-head {
@@ -373,11 +445,24 @@ body {
 }
 
 .why-app__photo1 {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .why-app__photo1 img {
   width: 100%;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
 @keyframes fade-out {
@@ -388,6 +473,16 @@ body {
   to {
     opacity: 0;
     display: none;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -404,6 +499,7 @@ body {
 .register {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 50ms ease-in-out, visibility 0s linear 50ms;
   transition: opacity 50ms ease-in-out, visibility 0s linear 50ms;
 }
 
@@ -412,30 +508,47 @@ body {
   height: 100vh;
   position: absolute;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(0, 0, 0, 0.1);
 }
 
 .register__content {
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .register__details {
   background: #fff;
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   border-radius: 10px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .register__details h1 {
@@ -449,6 +562,8 @@ body {
 }
 
 .register__forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -458,11 +573,20 @@ body {
 }
 
 .register__forms form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .register__forms form input {
@@ -485,9 +609,15 @@ body {
 }
 
 .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -497,11 +627,19 @@ body {
   width: 1000px;
   height: 250px;
   padding: 50px;
-  transition: all 320ms ease-in-out;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
   background: #FDBF43;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login__details h1 {
@@ -521,15 +659,20 @@ body {
 }
 
 .login__buttons {
-  transition: all 320ms ease-in-out;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
 .login__form {
   border: 2px solid #FDBF43;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  transform: translateX(65%);
-  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(65%);
+          transform: translateX(65%);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
 .login__form__teacher img {
@@ -551,18 +694,31 @@ body {
   width: 106px;
   height: 106px;
   margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: transparent;
   border-radius: 100%;
   border: 2px solid #FDBF43;
 }
 
 .login__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 350px;
   height: 400px;
   background: #fff;
@@ -588,11 +744,20 @@ body {
 }
 
 .login__form form #studentInput, .login__form form #teacherInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login__form form #teacherInput {

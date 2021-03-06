@@ -10,6 +10,8 @@ var studentInput =  document.getElementById("studentInput");
 var role = document.getElementById("role");
 var role1 = document.getElementById("role1");
 var form = document.getElementById("form");
+var stu_details = document.querySelectorAll(".input2");
+var tea_details = document.querySelectorAll(".input");
 
 
 login_btn1.addEventListener("click",()=>{ //For Teacher
@@ -32,6 +34,16 @@ login_btn1.addEventListener("click",()=>{ //For Teacher
     teacherInput.style.display="flex";
     studentInput.style.display="none";
 
+    stu_details.forEach(function(elem){
+        elem.setAttribute("disabled","");
+    })
+
+    tea_details.forEach(function(elem){
+        if(elem.hasAttribute("disabled")){
+            elem.removeAttribute("disabled");
+        }
+    })
+
 })
 
 
@@ -39,6 +51,16 @@ login_btn1.addEventListener("click",()=>{ //For Teacher
 
 login_btn2.addEventListener("click",()=>{ //For Student
     // login_details.style.transform="translate(100%)";
+    tea_details.forEach(function(elem){
+        elem.setAttribute("disabled","");
+    })
+
+    stu_details.forEach(function(elem){
+        if(elem.hasAttribute("disabled")){
+            elem.removeAttribute("disabled");
+        }
+    })
+    
     login_form.style.transform="translate(65%)";
     form.action="../resources/php/student_login.php"
 
@@ -57,4 +79,9 @@ login_btn2.addEventListener("click",()=>{ //For Student
     imgBorder.style.border="solid 2px #FDBF43";
     teacherInput.style.display="none";
     studentInput.style.display="flex";
+
+    // stu_details.forEach(function(elem){
+    //     elem.add();
+    // })
+    
 })

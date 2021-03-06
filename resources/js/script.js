@@ -23,7 +23,7 @@ rcontent.addEventListener("click",()=>{
     var body = document.getElementById("body");
     body.style.filter="none";
     console.log("not Worlking");
-}
+});
 
 
 function validateForm() {
@@ -49,4 +49,4 @@ function validateForm() {
         return false;
     }
 
-})
+}

@@ -10,7 +10,7 @@
         width: 1000px;
         height: 250px;
         padding: 50px;
-        transition: all 320ms ease-in-out;
+        transition: all $trans-speed ease-in-out;
         background: $secondary;
         display: flex;
         flex-direction: column;
@@ -32,7 +32,7 @@
     }
 
     &__buttons{
-        transition: all 320ms ease-in-out;
+        transition: all $trans-speed ease-in-out;
     }
 
     &__form
@@ -42,7 +42,7 @@
         position: absolute;
         display: flex;
         transform: translateX(65%);
-        transition: all 1s ease-in-out;
+        transition: all $trans-speed ease-in-out;
         &__teacher{ 
 
             img{
