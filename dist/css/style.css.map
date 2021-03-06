@@ -6,8 +6,8 @@
         "../../resources/scss/_variables.scss",
         "../../resources/scss/_globals.scss",
         "../../resources/scss/_mixins.scss",
-        "../../resources/scss/_navbar.scss",
-        "../../resources/scss/_answersheets.scss"
+        "../../resources/scss/marks-evaluator/_navbar.scss",
+        "../../resources/scss/marks-evaluator/_answersheets.scss"
     ],
     "names": [],
     "file": "style.css"
