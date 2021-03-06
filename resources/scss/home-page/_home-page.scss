@@ -1,15 +1,33 @@
 .nav{
-    background-color: $fadedPrimary;
+    
     &__web-name{
-        font-family: Poppins;
+        font-family: poppins;
         font-style: normal;
         font-weight: normal;
-        font-size: 38px;
+        font-size: $font-xlg;
         line-height: 57px;
-        color: #017296;
+        color: $primary;
     }
 
     &__button{
+        margin: 10px;
+        font-family: nunito;
+        font-size: $font-md;
+    }
+}
 
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon img{
+        width: 130px;
+        height: 130px;
+        margin:15px;
+    }
+    
+    &__head{
+        
     }
 }
