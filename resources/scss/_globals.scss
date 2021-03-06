@@ -35,6 +35,9 @@ body{
     color: $white;
     outline: 0;
     border: 0;
+    cursor: pointer;
+    font-size: $font-md;
+
 }
 .white-button{
     width: 140px;
@@ -44,5 +47,7 @@ body{
     border-radius: 10px;
     color: $secondary;
     outline: 0;
+    cursor: pointer;
+
     background-color: $white;
 }
