@@ -118,12 +118,18 @@
     &__container{
         padding: 10px;
         height: calc(100vh - 141px);
-        overflow: auto;
         position: relative;
         border: 1px solid $borderBox_Color;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &__table
+        {
+            max-height: calc(100vh - 295px);
+            overflow: auto;
+    
+        }
     }
 
     &__buttons{

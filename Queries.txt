@@ -3,7 +3,7 @@ Database
 Student Credential -> S.no, Name, Email, Roll Num, Password(DOB), Class, Picture (drive link)
 CREATE TABLE `exam_evaluate`.`student_cred` ( `stu_rollNo` INT NOT NULL , `stu_name` VARCHAR(50) NOT NULL , `stu_email` VARCHAR(50) NOT NULL , `stu_pass` VARCHAR(50) NOT NULL , `stu_class` VARCHAR(10) NOT NULL , `stu_picture` VARCHAR(100) NULL , PRIMARY KEY (`stu_rollNo`)) ENGINE = InnoDB;
 
-Teacher Credential -> S.no, Name, Email, Teacher Id, Password(DOB), Picture (drive link)
+Teacher Credential -> Name, Email, Teacher Id, Password(DOB), Picture (drive link)
 CREATE TABLE `exam_evaluate`.`teacher_cred` ( `tea_id` INT NOT NULL , `tea_name` VARCHAR(50) NOT NULL , `tea_email` VARCHAR(50) NOT NULL , `tea_pass` VARCHAR(50) NOT NULL , `tea_class` VARCHAR(10) NOT NULL , `tea_picture` VARCHAR(100) NULL , PRIMARY KEY (`tea_id`)) ENGINE = InnoDB;
 
 Result -> S.No., Student roll num, teacher id, subject name{ADA,AI}, q1, q2, ... qn
@@ -12,3 +12,9 @@ ALTER TABLE `exam_result` ADD `Q1` INT NULL AFTER `sub_name`, ADD `Q2` INT NULL 
 
 Classes -> S.No., Class Id, Class Name{CSE-1 1st Year,9th-B}, Teacher Id, subject name
 CREATE TABLE `exam_evaluate`.`exam_classes` (`s.no.` INT NOT NULL AUTO_INCREMENT, `class_id` INT NOT NULL, `class_name` VARCHAR(50) NOT NULL, `sub_name` VARCHAR(50) NOT NULL , PRIMARY KEY (`s.no.`)) ENGINE = InnoDB;
+
+
+Answer Sheet
+
+CREATE TABLE `exam_evaluate`.`exam_sheet` (`s.no.` INT NOT NULL AUTO_INCREMENT, `class_id` INT NOT NULL,`stu_rollNo` INT NOT NULL,  `sub_name` VARCHAR(50) NOT NULL, `answersheet` VARCHAR(100) NOT NULL, PRIMARY KEY (`s.no.`)) ENGINE = InnoDB;
+

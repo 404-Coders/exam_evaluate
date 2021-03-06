@@ -1,3 +1,7 @@
+<?php
+    include "../resources/php/connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/mark-evaluator.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
@@ -95,25 +100,102 @@
                 <h3>Enter Marks</h3>
             </div>
             <div class="answers__container">
-                <table class="answers__markTable custome-scroll>
-                    <tr class="answers__markTable__heading">
-                        <th>Questions</th>
-                        <th>Marks</th>
-                    </tr>
-                    <tr class="answers__markTable__mark">
-                        <td>1.</td>
-                        <td>
-                            <input type="number" value="50">
-                        </td>
-                    </tr>
-                    <tr class="answers__markTable__mark">
-                        <td>2.</td>
-                        <td>
-                            <input type="number" value="30">
-                        </td>
-                    </tr>
-
-                </table>
+                <div class="answers__container__table custom-scroll">
+                    <table class="answers__markTable">
+                        <tr class="answers__markTable__heading" >
+                            <th>Questions</th>
+                            <th>Marks</th>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+    
+    
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+    
+    
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+    
+    
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+    
+    
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+    
+    
+                        <tr class="answers__markTable__mark">
+                            <td>1.</td>
+                            <td>
+                                <input type="number" value="50">
+                            </td>
+                        </tr>
+                        <tr class="answers__markTable__mark">
+                            <td>2.</td>
+                            <td>
+                                <input type="number" value="30">
+                            </td>
+                        </tr>
+    
+                    </table>
+                </div>
                 <div class="answers__buttons">
                     <img src="../resources/images/add (1).svg" alt="add">
                     <img src="../resources/images/delete.svg" alt="delete">
