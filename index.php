@@ -77,11 +77,12 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
         </section>
         <!-- Register Sectiton -->
         <section class="register" id="register">
-            <div class="register__overlay">
+            <div class="register__overlay" >
                 
             </div>
-            <div class="register__content " >
+            <div class="register__content">
                 <div class="register__details"  >
+                    <img class="register__cancel"  id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
                     <h1>Welcome to Exam Evaluate</h1>
                     <div class="register__forms">
                         <img src="./resources/images/signup.jpg" alt="Sign Up">
