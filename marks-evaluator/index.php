@@ -2,8 +2,8 @@
     include "../resources/php/connection.php";  
 
     session_start();
-    $tea_id = $_SESSION['teaID'];
-    $id = 0;
+    $tea_id = $_SESSION['teaID'] = "1   ";
+    
     // Retreving Teacher Name
     $query_tea_name = mysqli_query($con, "SELECT `tea_name` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
     $fetch_tea_name = mysqli_fetch_array($query_tea_name);
