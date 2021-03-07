@@ -5,7 +5,7 @@ var register = document.getElementById("register");
 
 
 signinBtn.addEventListener("click", () => {
-    document.location.href = "./login/";
+    document.location.href = "./login/index.html";
 })
 
 signupBtn.addEventListener("click", () => {
@@ -52,7 +52,7 @@ function validateForm() {
 
 }
 
-// // Hide
+// Hide
 
 // var all = document.querySelector("*");
 // if (window.getComputedStyle(all).display === "none")
