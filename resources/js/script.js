@@ -3,6 +3,7 @@ var signupBtn = document.getElementById("signupBtn");
 var register = document.getElementById("register");
 
 
+
 signinBtn.addEventListener("click", () => {
     document.location.href = "./login/index.html";
 })
@@ -50,3 +51,12 @@ function validateForm() {
     }
 
 }
+
+// // Hide
+
+// var all = document.querySelector("*");
+// if (window.getComputedStyle(all).display === "none")
+// {
+//     console.log("wordking");
+//     all.innerHTML="<h1 style='text-align:center;display:flex; align-items:center;' >Please Visit From Desktop</h1>";
+// }
