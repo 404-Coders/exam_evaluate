@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 07, 2021 at 11:44 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Host: localhost
+-- Generation Time: Mar 07, 2021 at 05:20 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,23 +31,24 @@ CREATE TABLE `exam_classes` (
   `s.no.` int(11) NOT NULL,
   `class_id` varchar(50) NOT NULL,
   `class_name` varchar(50) NOT NULL,
-  `sub_name` varchar(50) NOT NULL
+  `sub_name` varchar(50) NOT NULL,
+  `tea_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_classes`
 --
 
-INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`) VALUES
-(1, 'CSE1-AI', 'CSE1', 'AI'),
-(2, 'CSE1-JAVA', 'CSE1', 'JAVA'),
-(3, 'CSE2-JAVA', 'CSE2', 'JAVA'),
-(4, 'CSE2-ADA', 'CSE2', 'ADA'),
-(5, 'CSE2-AI', 'CSE2', 'AI'),
-(6, 'CSE1-ADA', 'CSE1', 'ADA'),
-(7, 'CSE3-JAVA', 'CSE3', 'JAVA'),
-(8, 'CSE3-ADA', 'CSE3', 'ADA'),
-(9, 'CSE3-AI', 'CSE3', 'AI');
+INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `tea_id`) VALUES
+(1, 'CSE1-AI', 'CSE1', 'AI', 3),
+(2, 'CSE1-JAVA', 'CSE1', 'JAVA', 2),
+(3, 'CSE2-JAVA', 'CSE2', 'JAVA', 2),
+(4, 'CSE2-ADA', 'CSE2', 'ADA', 1),
+(5, 'CSE2-AI', 'CSE2', 'AI', 3),
+(6, 'CSE1-ADA', 'CSE1', 'ADA', 1),
+(7, 'CSE3-JAVA', 'CSE3', 'JAVA', 2),
+(8, 'CSE3-ADA', 'CSE3', 'ADA', 1),
+(9, 'CSE3-AI', 'CSE3', 'AI', 3);
 
 -- --------------------------------------------------------
 
@@ -58,6 +59,7 @@ INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`) VALUE
 CREATE TABLE `exam_result` (
   `s.no.` int(11) NOT NULL,
   `stu_rollNo` int(11) NOT NULL,
+  `class_id` varchar(50) NOT NULL,
   `tea_id` int(11) NOT NULL,
   `sub_name` varchar(50) NOT NULL,
   `Q1` int(11) DEFAULT 0,
@@ -71,22 +73,25 @@ CREATE TABLE `exam_result` (
 -- Dumping data for table `exam_result`
 --
 
-INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
-(1, 1, 1, 'ADA', 0, 0, 0, 0, 0),
-(2, 1, 2, 'JAVA', 0, 0, 0, 0, 0),
-(3, 1, 3, 'AI', 0, 0, 0, 0, 0),
-(4, 2, 1, 'ADA', 0, 0, 0, 0, 0),
-(5, 2, 2, 'JAVA', 0, 0, 0, 0, 0),
-(6, 2, 3, 'AI', 0, 0, 0, 0, 0),
-(7, 3, 1, 'ADA', 0, 0, 0, 0, 0),
-(8, 3, 2, 'JAVA', 0, 0, 0, 0, 0),
-(9, 3, 3, 'AI', 0, 0, 0, 0, 0),
-(10, 4, 1, 'ADA', 0, 0, 0, 0, 0),
-(11, 4, 2, 'JAVA', 0, 0, 0, 0, 0),
-(12, 4, 3, 'AI', 0, 0, 0, 0, 0),
-(13, 5, 1, 'ADA', 0, 0, 0, 0, 0),
-(14, 5, 2, 'JAVA', 0, 0, 0, 0, 0),
-(15, 5, 3, 'AI', 0, 0, 0, 0, 0);
+INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
+(1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 0, 0, 0),
+(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(7, 3, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(10, 4, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -225,7 +230,7 @@ ALTER TABLE `exam_classes`
 -- AUTO_INCREMENT for table `exam_result`
 --
 ALTER TABLE `exam_result`
-  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `exam_sheet`
