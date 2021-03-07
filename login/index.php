@@ -18,7 +18,7 @@
                 echo '
                 <script>
                     swal("Error", "Email Not Matched with Provided Roll No!", "error").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -28,7 +28,7 @@
                 echo '
                 <script>
                     swal("Error", "Password Not Matched!", "error").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -38,7 +38,7 @@
                 echo '
                 <script>
                     swal("Error", "Roll No. Not Found!", "error").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -50,7 +50,7 @@
                 echo '
                 <script>
                     swal("Error", "Email Not Found!", "error").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -60,7 +60,7 @@
                 echo '
                 <script>
                     swal("Error", "Password Not Matched!", "error").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -72,7 +72,7 @@
                 echo '
                 <script>
                     swal("Sucess", "Login Sucessful", "success").then(name => {
-                            window.location.href = "./login";
+                            window.location.href = "../login/";
                     });
                 </script>';
             }
@@ -111,7 +111,7 @@
             </form>
         </div>
     </section>
-    <script src="../login/script.js"></script>
+    <script src="../resources/Js/login.js"></script>
 </body>
 
 </html>

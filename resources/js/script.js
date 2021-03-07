@@ -2,8 +2,6 @@ var signinBtn = document.getElementById("signinBtn");
 var signupBtn = document.getElementById("signupBtn");
 var register = document.getElementById("register");
 
-
-
 signinBtn.addEventListener("click", () => {
     document.location.href = "./login/";
 })

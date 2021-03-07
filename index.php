@@ -94,6 +94,8 @@
                         <button type="submit" class="primary-button" name="submit">Submit</button>
                     </form>
                 </div>
+            <div class="why-app__photo1">
+                <img src="./resources/images/why-app-photo.png" alt="why-app?">
             </div>
         </div>
     </section>
