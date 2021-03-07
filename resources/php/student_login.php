@@ -17,17 +17,19 @@
             {
                 session_start();
                 $_SESSION['rollNo'] = $stu_rollNo;
-                header("location: ../../dashboard/student-dashboard/");
+                header("location: ../../login?sucess=login_succ");
                 echo "All three matched";
             }
             else
-            {
-                echo "pass does not matched";
+            {                
+                header("location: ../../login?error=wrong_pass");
+                
                 //return to main login page and show error popup(pass does not exist)
             }
         }
         else
         {
+            header("location: ../../login?error=wrong_mail");
             echo "email to this roll num does not match";
             //return to main login page and show error popup(email to this roll num does not match)
         }
@@ -35,7 +37,8 @@
     }
     else
     {
-        echo "roll number not exist";
+        header("location: ../../login?error=wrong_roll");
+
         //return to main login page and show error popup(roll number not exist)
     }
 ?>

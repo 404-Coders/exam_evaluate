@@ -11,18 +11,17 @@
         $query = mysqli_query($con, "SELECT * from `teacher_cred` where  `tea_email`='$tea_email' and `tea_pass`='$tea_pass'");
         if(mysqli_num_rows($query) > 0)
         {
-            header("location: ../../dashboard/teacher-dashboard/");
-            echo "All two matched";
+            header("location: ../../login?sucess=login_succ");
         }
         else
         {
-            echo "pass does not matched";
+            header("location: ../../login?error=teacher_wrong_pass");
             //return to main login page and show error popup(pass does not exist)
         }
     }
     else
     {
-        echo "email to this id does not match";
+        header("location: ../../login?error=teacher_wrong_mail");
         //return to main login page and show error popup(email to this id does not match)
     }
 
