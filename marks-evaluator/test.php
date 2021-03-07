@@ -9,3 +9,6 @@
     console.log(complex);
 </script>
 
+
+
+var tempArray = <?php echo json_encode($php_array); ?>;
