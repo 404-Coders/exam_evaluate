@@ -111,7 +111,7 @@
             </form>
         </div>
     </section>
-    <script src="../login/script.js"></script>
+    <script src="../resources/Js/login.js"></script>
 </body>
 
 </html>
