@@ -1,5 +1,5 @@
 <?php
-    include "../resources/php/connection.php";
+    include "../resources/php/connection.php";  
 
     session_start();
     $tea_id = $_SESSION['teaID'];

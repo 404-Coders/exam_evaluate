@@ -5,7 +5,7 @@ var register = document.getElementById("register");
 
 
 signinBtn.addEventListener("click", () => {
-    document.location.href = "./login/index.html";
+    document.location.href = "./login/";
 })
 
 signupBtn.addEventListener("click", () => {

@@ -72,7 +72,7 @@ During Covid 19 panademic, education has shifted completly to digital mode. As t
                 </div>
             </div>
             <div class="why-app__photo1">
-                <img src="../resources/images/why-app-photo.png" alt="why-app?">
+                <img src="./resources/images/why-app-photo.png" alt="why-app?">
             </div>
 
         </section>
