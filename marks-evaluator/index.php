@@ -2,7 +2,7 @@
     include "../resources/php/connection.php";  
 
     session_start();
-    $tea_id = $_SESSION['teaID'] = "1   ";
+    $tea_id = $_SESSION['teaID'];
     
     // Retreving Teacher Name
     $query_tea_name = mysqli_query($con, "SELECT `tea_name` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
@@ -22,27 +22,10 @@
     // Getting Student Result Table
     $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `class_id` ='$class_id'");
     $fetch_exam_result = mysqli_fetch_all($query_exam_result);
-    print_r($fetch_exam_result);
-    echo "<br>";
 
+    // Fetching Number of Columns Affected
     $query_num_columns = mysqli_query($con, "SELECT count(*) FROM information_schema.columns WHERE table_name ='exam_result';");
     $fetch_num_columns = mysqli_fetch_array($query_num_columns);
-    
-    // echo count($fetch_num_columns);
-    
-    function toggleResult($j,$num_of_columns,$fetch_exam_result){
-        for($i = 5; $i < $num_of_columns; $i++){
-            // print_r($fetch_exam_result[$j][$i]);
-            echo "
-            <tr class='answers__markTable__mark'>
-                <td>".($i - 4)."</td>
-                <td>
-                    <input type='number' value='".$fetch_exam_result[$j][$i]."'>
-                </td>
-            </tr>
-            ";
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -118,13 +101,7 @@
                         <tr class="answers__markTable__heading" >
                             <th>Questions</th>
                             <th>Marks</th>
-                        </tr>
-                        <?php
-                            $j = 0; 
-                            do{
-                                toggleResult($j,$fetch_num_columns[0],$fetch_exam_result);
-                            }while($j != 0);
-                        ?>                          
+                        </tr>                         
                     </table>
                 </div>
                 <div class="answers__buttons">
@@ -132,7 +109,7 @@
                     <img src="../resources/images/delete.svg" alt="delete">
                 </div>
                 <div class="answers__totalC">
-                    <p>Total = <span id="total"><?php echo $totalMarks; ?></span></p>
+                    <p>Total =&nbsp;<span id="total">00</span></p>
                     <button>Submit</button>
                 </div>
             </div>
@@ -142,21 +119,38 @@
             <iframe class="custom-scroll" src="https://drive.google.com/file/d/1YcSh2-dPpsYqOZAysS7zYGsQBajxtEt0/preview" frameborder="0"></iframe>
         </div>
     </section>
-    
-    <script type="text/javascript">
+    <script>
+        var exam_result = <?php echo json_encode($fetch_exam_result); ?>;
+        console.log(exam_result);
+        var test = document.getElementById('test');
+        var totalID = document.getElementById('total');
+        let text = '';
+        let total = 0;
+        for(let i = 5; i < exam_result[0].length; i++){
+            text += `<tr class='answers__markTable__mark'>
+                <td>${i-4}</td>
+                <td>
+                    <input type='number' class='marks' value='${exam_result[0][i]}'>
+                </td>
+            </tr>`;
+            total += parseInt(exam_result[0][i]);
+        }   
+        test.innerHTML += text; 
+        totalID.innerHTML = total;
+        var marks = document.querySelectorAll(".marks");
         var answers__sList__item = document.querySelectorAll('.answers__sList__item');
-        var test = document.getElementById("test");
-        answers__sList__item.forEach(function(elem) {
-            elem.addEventListener("click", () => {
-                var id = elem.id;   
-//                <!-- document.write(id); -->
-                var a = document.createElement("p");
-                var t = document.createTextNode(`<?php $id = ${id}?>`);
-                a.appendChild(t);
-                test.appendChild(a);
-                console.log(id);         
-            })
-        });
+        for(let q = 0; q < answers__sList__item.length; q++){
+            answers__sList__item[q].addEventListener("click", () => {
+                total = 0;
+                var id = answers__sList__item[q].id;
+                id = id.split("-")[1];
+                for(let i = 5; i < exam_result[0].length; i++){
+                    marks[i-5].value = parseInt(exam_result[id][i]);
+                    total += parseInt(exam_result[id][i]);
+                }
+                totalID.innerHTML = total;
+            }); 
+        };
     </script>
 </body>
 

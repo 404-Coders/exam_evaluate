@@ -11,7 +11,10 @@
         $query = mysqli_query($con, "SELECT * from `teacher_cred` where  `tea_email`='$tea_email' and `tea_pass`='$tea_pass'");
         if(mysqli_num_rows($query) > 0)
         {
-            header("location: ../../login?sucess=login_succ");
+            session_start();
+            $fetch_tea_ID = mysqli_fetch_array($query);
+            $_SESSION['teaID'] = $fetch_tea_ID[0];
+            header("location: ../../dashboard/teacher-dashboard/");
         }
         else
         {
