@@ -11,6 +11,9 @@
         $query = mysqli_query($con, "SELECT * from `teacher_cred` where  `tea_email`='$tea_email' and `tea_pass`='$tea_pass'");
         if(mysqli_num_rows($query) > 0)
         {
+            session_start();
+            $fetch_tea_id = mysqli_fetch_array($query);
+            $_SESSION['teaID'] = $fetch_tea_id[0];
             header("location: ../../dashboard/teacher-dashboard/");
             echo "All two matched";
         }

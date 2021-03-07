@@ -3,28 +3,46 @@
 
     session_start();
     $tea_id = $_SESSION['teaID'];
+    $id = 0;
+    // Retreving Teacher Name
     $query_tea_name = mysqli_query($con, "SELECT `tea_name` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
     $fetch_tea_name = mysqli_fetch_array($query_tea_name);
     $tea_name = $fetch_tea_name[0];
 
-    $query_class_table = mysqli_query($con, "SELECT * FROM `exam_classes` WHERE `tea_id` = '$tea_id'");
-    $fetch_class_table = mysqli_fetch_array($query_class_table);
-    $class_name = $fetch_class_table[2];
-    $sub_name = $fetch_class_table[4];
+    // Fetching Class Name and Sub Name
+    $class_id = $_SESSION['classID'] = "CSE1-ADA";
+    $class_details = explode("-",$class_id);    
+    $class_name = $class_details[0];
+    $sub_name = $class_details[1];
+
+    // Getting Student Details of particular Class
+    $query_students = mysqli_query($con, "SELECT `stu_name`,`stu_rollNo` FROM `student_cred` WHERE stu_class ='$class_name'");
+    $fetch_students = mysqli_fetch_all($query_students);
+
+    // Getting Student Result Table
+    $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `class_id` ='$class_id'");
+    $fetch_exam_result = mysqli_fetch_all($query_exam_result);
+    print_r($fetch_exam_result);
+    echo "<br>";
 
     $query_num_columns = mysqli_query($con, "SELECT count(*) FROM information_schema.columns WHERE table_name ='exam_result';");
     $fetch_num_columns = mysqli_fetch_array($query_num_columns);
-
-    $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `tea_id` = '$tea_id' AND `sub_name` = '$sub_name' ");
-    $fetch_exam_result = mysqli_fetch_array($query_exam_result);
-    $stu_rollNo = $fetch_exam_result[1];
     
-    $totalMarks = 0;
-    for($i = 4; $i < $fetch_num_columns[0]; $i++){
-        $totalMarks += $fetch_exam_result[$i];
+    // echo count($fetch_num_columns);
+    
+    function toggleResult($j,$num_of_columns,$fetch_exam_result){
+        for($i = 5; $i < $num_of_columns; $i++){
+            // print_r($fetch_exam_result[$j][$i]);
+            echo "
+            <tr class='answers__markTable__mark'>
+                <td>".($i - 4)."</td>
+                <td>
+                    <input type='number' value='".$fetch_exam_result[$j][$i]."'>
+                </td>
+            </tr>
+            ";
+        }
     }
-
-    
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +52,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/mark-evaluator.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
@@ -66,58 +83,29 @@
                 <h3>Names</h3>
             </div>
             <div class="answers__sList__items custom-scroll">
-                <div class="answers__sList__item">
-                    <p>1. Kushdeep Singh</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>2. Aastha Bhasin</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>3. Devender Kumar</p>
-                </div>
-                <div class="answers__sList__item selected">
-                    <p>4. Deepak Kumar</p>
-                </div>
+                <?php 
+                    for($i = 0; $i<count($fetch_students); $i++)
+                    {
+                        if($i+1 == 1)
+                        {
+                            echo '
+                                <div class="answers__sList__item selected" id= "stu_name-'.$i.'">
 
-                <div class="answers__sList__item">
-                    <p>1. Kushdeep Singh</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>2. Aastha Bhasin</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>3. Devender Kumar</p>
-                </div>
-                <div class="answers__sList__item selected">
-                    <p>4. Deepak Kumar</p>
-                </div>
+                                    <p>'.($i+1).'. '.$fetch_students[$i][0].'</p>
+                                </div>
+                            ';
+                        }
+                        else{
+                            echo '
+                                <div class="answers__sList__item " id= "stu_name-'.$i.'">
 
-                <div class="answers__sList__item">
-                    <p>1. Kushdeep Singh</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>2. Aastha Bhasin</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>3. Devender Kumar</p>
-                </div>
-                <div class="answers__sList__item selected">
-                    <p>4. Deepak Kumar</p>
-                </div>
-
-                <div class="answers__sList__item">
-                    <p>1. Kushdeep Singh</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>2. Aastha Bhasin</p>
-                </div>
-                <div class="answers__sList__item">
-                    <p>3. Devender Kumar</p>
-                </div>
-                <div class="answers__sList__item selected">
-                    <p>4. Deepak Kumar</p>
-                </div>
-
+                                    <p>'.($i+1).'. '.$fetch_students[$i][0].'</p>
+                                </div>
+                            ';
+                        }
+                        
+                    }
+                ?>
             </div>
         </div>
         <div class="answers__marks">
@@ -126,22 +114,16 @@
             </div>
             <div class="answers__container">
                 <div class="answers__container__table custom-scroll">
-                    <table class="answers__markTable">
+                    <table class="answers__markTable" id="test">
                         <tr class="answers__markTable__heading" >
                             <th>Questions</th>
                             <th>Marks</th>
                         </tr>
                         <?php
-                            for($i = 4; $i < $fetch_num_columns[0]; $i++){
-                                echo "
-                                <tr class='answers__markTable__mark'>
-                                    <td>".($i - 3)."</td>
-                                    <td>
-                                        <input type='number' value='$fetch_exam_result[$i]'>
-                                    </td>
-                                </tr>
-                                ";
-                            }
+                            $j = 0; 
+                            do{
+                                toggleResult($j,$fetch_num_columns[0],$fetch_exam_result);
+                            }while($j != 0);
                         ?>                          
                     </table>
                 </div>
@@ -160,6 +142,22 @@
             <iframe class="custom-scroll" src="https://drive.google.com/file/d/1YcSh2-dPpsYqOZAysS7zYGsQBajxtEt0/preview" frameborder="0"></iframe>
         </div>
     </section>
+    
+    <script type="text/javascript">
+        var answers__sList__item = document.querySelectorAll('.answers__sList__item');
+        var test = document.getElementById("test");
+        answers__sList__item.forEach(function(elem) {
+            elem.addEventListener("click", () => {
+                var id = elem.id;   
+//                <!-- document.write(id); -->
+                var a = document.createElement("p");
+                var t = document.createTextNode(`<?php $id = ${id}?>`);
+                a.appendChild(t);
+                test.appendChild(a);
+                console.log(id);         
+            })
+        });
+    </script>
 </body>
 
 </html>
