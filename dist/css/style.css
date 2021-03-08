@@ -313,6 +313,7 @@ header {
   position: sticky;
   top: 0;
   background: #fff;
+  z-index: 2;
 }
 
 .nav__web-name {
@@ -398,8 +399,9 @@ header {
 .register__overlay {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,7 +411,8 @@ header {
 .register__content {
   color: black;
   display: flex;
-  position: absolute;
+  position: fixed;
+  z-index: 3;
   top: 0;
   width: 100%;
   height: 100%;
@@ -508,7 +511,6 @@ header {
 
 .features__feature .feature_box {
   width: 350px;
-  max-height: 385px;
   overflow: hidden;
   background: #FFFFFF;
   border: 1px solid #B7B7B7;
@@ -516,10 +518,6 @@ header {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px 10px 5px 10px;
   transition: max-height 2s ease-out;
-}
-
-.features__feature .feature_box:hover {
-  max-height: 100%;
 }
 
 .features__feature .feature_box h1 {
@@ -554,6 +552,77 @@ header {
   list-style-position: outside;
   margin: 0 15px;
   padding: 5px;
+}
+
+.team h1 {
+  font-family: Poppins;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  padding: 30px 60px 0px 60px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 75px;
+  /* identical to box height */
+  /* primary */
+  color: #017296;
+}
+
+.team__teamMembers {
+  padding: 15px 60px;
+  display: flex;
+}
+
+.team__teamMembers img {
+  width: 220px;
+}
+
+.team__teamMembers img:nth-child(2n) {
+  margin: 10px -10px;
+  position: relative;
+  top: 220px;
+}
+
+.team__teamMember {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.team__teamMember img {
+  width: 220px;
+}
+
+.team__teamMember h2 {
+  position: absolute;
+  bottom: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 39px;
+  color: #3D3D3D;
+}
+
+.team__teamMember:nth-child(2n) {
+  position: relative;
+  top: 220px;
+  z-index: 1;
+}
+
+.team__background {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), url(../../resources/images/waves.png);
+  background-size: 100% 100%;
 }
 
 .login {
