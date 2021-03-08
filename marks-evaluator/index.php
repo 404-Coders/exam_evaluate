@@ -1,13 +1,27 @@
 <?php
+
+    function extractor($url)
+    {
+        if(strpos($url, "drive.google.com") !== false)
+        {
+            $id = explode('/',$url)[5];
+            return "https://drive.google.com/uc?id=".$id;
+        }
+        else
+        {
+            return url;
+        }
+    }
     include "../resources/php/connection.php";  
 
     session_start();
     $tea_id = $_SESSION['teaID'];
     
     // Retreving Teacher Name
-    $query_tea_name = mysqli_query($con, "SELECT `tea_name` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
-    $fetch_tea_name = mysqli_fetch_array($query_tea_name);
-    $tea_name = $fetch_tea_name[0];
+    $query_tea_details = mysqli_query($con, "SELECT `tea_name`,`tea_picture` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
+    $fetch_tea_details = mysqli_fetch_array($query_tea_details);
+    $tea_name = $fetch_tea_details[0];
+    $tea_pic = $fetch_tea_details[1];
 
     // Fetching Class Name and Sub Name
     
@@ -55,8 +69,8 @@
                 </div>
                 <div class="nav__menu">
                     <div class="nav__navigation">
-                        <img src="../resources/images/back-button.svg" alt="back button">
-                        <img src="../resources/images/settings.svg" alt="">
+                        <img src="../resources/images/back-button.svg" id="backBtn" alt="back button">
+                        <img src="<?php echo extractor($tea_pic);?>" alt="">
                     </div>
                     <div class="nav__name"><?php echo $tea_name; ?></div>
                 </div>

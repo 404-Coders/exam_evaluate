@@ -28,16 +28,16 @@ var addBox = document.getElementById("addBox");
 var delBox = document.getElementById("delBox");
 
 addBox.addEventListener("click", (e) => {
-    text = `
-    <tr class='answers__markTable__mark'>
-        <td>${parseInt(marks.length + 1)}</td>
-        <td><input type='number' class='marks' value='0'></td>
-    </tr>`;
-    
     var test = document.getElementById('test');
-    test.innerHTML += text;
-
     marks = document.querySelectorAll(".marks");
+    let length = parseInt(marks.length + 1);
+    var row = test.insertRow(length);
+    row.classList.add("answers__markTable__mark");
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = length;
+    cell2.innerHTML = `<input type="number" class="marks" value="0">`;
+
     marks.forEach(function(elem){
         elem.addEventListener("change", () => {
             if(elem.value == "")
@@ -80,3 +80,15 @@ marks.forEach(function(elem){
         totalID.innerHTML = total;
     })
 })
+
+var backBtn = document.getElementById("backBtn");
+
+backBtn.addEventListener("click", () => {
+    window.location.href = "../dashboard/teacher-dashboard/";
+})
+
+delBox.addEventListener("click", (e) => {
+    var marks = document.querySelectorAll(".marks");
+    if(marks.length !== 0)
+        test.deleteRow(marks.length);
+});

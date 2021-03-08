@@ -107,18 +107,23 @@ body {
 }
 
 .nav__navigation {
-  margin: 0 20px;
   display: flex;
-  margin: 0 20px;
   justify-content: center;
   align-items: center;
 }
 
-.nav__navigation img {
+.nav__navigation img:first-child {
   width: 25px;
   height: 25px;
   margin: 5px;
+  margin-right: 10px;
   cursor: pointer;
+}
+
+.nav__navigation img:last-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .nav__name {
@@ -139,7 +144,7 @@ body {
 }
 
 .answers__sList__items {
-  height: calc(100vh - 141px);
+  height: calc(100vh - 144px);
   border: 1px #B7B7B7 solid;
   overflow: auto;
 }
@@ -242,7 +247,7 @@ body {
 }
 
 .answers__container__table {
-  max-height: calc(100vh - 295px);
+  max-height: calc(100vh - 290px);
   overflow: auto;
 }
 
@@ -256,6 +261,7 @@ body {
   width: 1.5625rem;
   height: 1.5625rem;
   margin: 10px;
+  margin-bottom: 0;
   cursor: pointer;
 }
 
@@ -271,7 +277,7 @@ body {
   padding: 10px;
   position: absolute;
   width: 100%;
-  bottom: 10px;
+  bottom: 0px;
 }
 
 .answers__totalC p {
@@ -284,7 +290,7 @@ body {
 }
 
 .answers__totalC button {
-  margin-top: 15px;
+  margin-top: 10px;
   width: 100%;
   padding: 8px;
   color: white;
