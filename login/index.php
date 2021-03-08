@@ -88,7 +88,7 @@
             </div>
             <div class="nav__menu">
                 <div class="nav__navigation">
-                    <img src="../../resources/images/back-button.svg" id="backBtn" alt="back button">
+                   <a href="../"><img src="../../resources/images/back-button.svg" id="backBtn" alt="back button"></a> 
                 </div>
             </div>
         </nav>

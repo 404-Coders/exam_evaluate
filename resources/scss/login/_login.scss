@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 74px);
     overflow-x: hidden;
     
     &__details{
