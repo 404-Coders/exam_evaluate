@@ -11,7 +11,7 @@
 
     // Fetching Class Name and Sub Name
     
-    $class_id = $_SESSION['classID'] = "CSE1-AI";
+    $class_id = $_SESSION['class_id'];
     $class_details = explode("-",$class_id);    
     $class_name = $class_details[0];
     $sub_name = $class_details[1];
