@@ -134,6 +134,10 @@
     </section>
     <script src="./resources/js/script.js"></script>
 
+    <!-- Our team -->
+    <section class="team">
+        
+    </section>
 </body>
 
 </html>
