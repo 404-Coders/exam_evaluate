@@ -14,7 +14,7 @@
     <title>Home Page</title>
 </head>
 
-<body>
+<body id="body">
     <?php
     if (isset($_GET['email']) === true) {
         if ($_GET['email'] == "exist")
@@ -94,10 +94,7 @@
                         <button type="submit" class="primary-button" name="submit">Submit</button>
                     </form>
                 </div>
-            <div class="why-app__photo1">
-                <img src="./resources/images/why-app-photo.png" alt="why-app?">
             </div>
-        </div>
     </section>
 
     <!-- Teacher Section -->
@@ -115,21 +112,54 @@
                     <li>helps teacher withexamination activities leading to result processing. </li>
                     <li>helps teacher withexamination activities leading to result processing. </li>
                     <li>helps teacher withexamination activities leading to result processing. </li>
-                    
+
                 </ol>
             </div>
             <div class="features__feature__teacher feature_box">
                 <h1 class="yellow">Student</h1>
                 <img src="./resources/images/students.svg" alt="Students">
                 <ol class="featureList">
-                <li>helps teacher withexamination activities leading to result processing. </li>
-                <li>helps teacher withexamination activities leading to result processing. </li>
-                <li>helps teacher withexamination activities leading to result processing. </li>
-                <li>helps teacher withexamination activities leading to result processing. </li>
-                
+                    <li>helps teacher withexamination activities leading to result processing. </li>
+                    <li>helps teacher withexamination activities leading to result processing. </li>
+                    <li>helps teacher withexamination activities leading to result processing. </li>
+                    <li>helps teacher withexamination activities leading to result processing. </li>
+
                 </ol>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Our team -->
+    <section class="team">
+        <h1>Meet Our Team Members</h1>
+        <div class="team__teamMembers">
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/deepak.svg" alt="">
+                <h2>Deepak Kumar</h2>
+            </div>    
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/jasveen.svg" alt="">
+                <h2>Jasvee Kaur</h2>
+
+            </div>
+
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/kushdeep.svg" alt="">
+                <h2>Kushdeep Walia</h2>
+
+            </div>
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/aastha.svg" alt="">
+                <h2>Aastha Bhasin</h2>
+                
+            </div>
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/dev.svg" alt="">
+                <h2>Devender Kumar</h2>
+            </div>
+        </div>
+        <div class="team__background">
         </div>
     </section>
     <script src="./resources/js/script.js"></script>

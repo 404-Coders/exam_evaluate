@@ -8,9 +8,10 @@ signinBtn.addEventListener("click", () => {
 
 signupBtn.addEventListener("click", () => {
     register.style.opacity="1";
-    register.style.visibility="visible";
     var body = document.getElementById("body");
-    body.style.filter="blur(4px)";
+
+    register.style.visibility="visible";
+    body.style.overflow="hidden";
     register.style.transform="opacity 50ms ease-in-out, visibility 0s linear 50ms";
 })
 
@@ -18,6 +19,9 @@ var rcontent = document.getElementById("rContent");
 
 rcontent.addEventListener("click",()=>{
     register.style.opacity="0";
+    var body = document.getElementById("body");
+    body.style.overflowY="auto";
+
     register.style.visibility="hidden";
     var body = document.getElementById("body");
     body.style.filter="none";
