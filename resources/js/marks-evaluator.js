@@ -16,7 +16,7 @@ for(let i = 5; i < exam_result[0].length; i++){
     text += `
     <tr class='answers__markTable__mark'>
         <td>${i-4}</td>
-        <td><input type='number' class='marks' value='${exam_result[0][i]}'></td>
+        <td><input type='number' name='Q${i-4}' class='marks' value='${exam_result[0][i]}'></td>
     </tr>`;
     total += parseInt(exam_result[0][i]);
 } 
@@ -36,7 +36,7 @@ addBox.addEventListener("click", (e) => {
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     cell1.innerHTML = length;
-    cell2.innerHTML = `<input type="number" class="marks" value="0">`;
+    cell2.innerHTML = `<input type="number" name='Q${length}' class="marks" value="0">`;
 
     marks.forEach(function(elem){
         elem.addEventListener("change", () => {
