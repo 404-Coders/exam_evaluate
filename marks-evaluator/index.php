@@ -10,7 +10,8 @@
     $tea_name = $fetch_tea_name[0];
 
     // Fetching Class Name and Sub Name
-    $class_id = $_SESSION['classID'] = "CSE1-ADA";
+    
+    $class_id = $_SESSION['classID'] = "CSE1-AI";
     $class_details = explode("-",$class_id);    
     $class_name = $class_details[0];
     $sub_name = $class_details[1];
@@ -124,6 +125,6 @@
             const exam_sheet = <?php echo json_encode($fetch_exam_sheet); ?>;
             console.log(exam_sheet);
         </script>
-        <script src="../resources/Js/marks-evaluator.js"></script>
+        <script src="../resources/js/marks-evaluator.js"></script>
     </body>
 </html>
