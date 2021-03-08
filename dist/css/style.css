@@ -955,8 +955,6 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .class__item {
@@ -1115,5 +1113,19 @@ header {
 
 .addClass__plus svg path {
   fill: #B7B7B7;
+}
+
+.addClass:hover {
+  border: 5px solid #FDBF43;
+  background: #017296;
+  cursor: pointer;
+}
+
+.addClass:hover .addClass__circle {
+  background: #FDBF43;
+}
+
+.addClass:hover .addClass__plus svg path {
+  fill: #fff;
 }
 /*# sourceMappingURL=style.css.map */

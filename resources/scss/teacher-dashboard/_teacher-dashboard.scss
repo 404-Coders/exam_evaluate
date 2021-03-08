@@ -6,7 +6,8 @@
     column-gap: 20px;
     row-gap: 30px;
     justify-content: start;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    
 
 
     &__item{
@@ -140,5 +141,24 @@
             fill: $borderBox_Color;
         }
     }
+
+    &:hover
+    {
+        border: 5px solid $secondary;
+        background: $primary;
+        cursor: pointer;
+
+
+    }
+    &:hover &__circle 
+    {
+        background: $secondary;
+    }
+
+    &:hover &__plus svg path 
+    {
+        fill: $white;
+    }
+
     
 }
