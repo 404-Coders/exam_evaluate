@@ -69,10 +69,10 @@
                 </div>
                 <div class="nav__menu">
                     <div class="nav__navigation">
-                        <img src="../resources/images/back-button.svg" id="backBtn" alt="back button">
                         <img src="<?php echo extractor($tea_pic);?>" alt="">
+                        <div class="nav__name"><?php echo $tea_name; ?></div>
+                        <img src="../resources/images/back-button.svg" id="backBtn" alt="back button">
                     </div>
-                    <div class="nav__name"><?php echo $tea_name; ?></div>
                 </div>
             </nav>
         </header>
@@ -109,24 +109,26 @@
                 <div class="answers__heading">
                     <h3>Enter Marks</h3>
                 </div>
-                <div class="answers__container">
-                    <div class="answers__container__table custom-scroll">
-                        <table class="answers__markTable" id="test">
-                            <tr class="answers__markTable__heading" >
-                                <th>Questions</th>
-                                <th>Marks</th>
-                            </tr>                         
-                        </table>
+                <form action="../resources/php/updatingMarks.php" method="POST">
+                    <div class="answers__container">
+                        <div class="answers__container__table custom-scroll">
+                            <table class="answers__markTable" id="test">
+                                <tr class="answers__markTable__heading" >
+                                    <th>Questions</th>
+                                    <th>Marks</th>
+                                </tr>                         
+                            </table>
+                        </div>
+                        <div class="answers__buttons">
+                            <img src="../resources/images/add (1).svg" id="addBox" alt="add">
+                            <img src="../resources/images/delete.svg" id="delBox" alt="delete">
+                        </div>
+                        <div class="answers__totalC">
+                            <p>Total =&nbsp;<span id="total">00</span></p>
+                            <button name ="submit" type="submit">Submit</button>
+                        </div>
                     </div>
-                    <div class="answers__buttons">
-                        <img src="../resources/images/add (1).svg" id="addBox" alt="add">
-                        <img src="../resources/images/delete.svg" id="delBox" alt="delete">
-                    </div>
-                    <div class="answers__totalC">
-                        <p>Total =&nbsp;<span id="total">00</span></p>
-                        <button>Submit</button>
-                    </div>
-                </div>
+                </form>
 
             </div>
             <div class="answers__sheet">

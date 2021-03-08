@@ -39,15 +39,13 @@ addBox.addEventListener("click", (e) => {
     cell2.innerHTML = `<input type="number" name='Q${length}' class="marks" value="0">`;
 
     marks.forEach(function(elem){
-        elem.addEventListener("change", () => {
-            if(elem.value == "")
-                elem.value = 0;
-            total = 0;
-            for(let i = 0; i < marks.length; i++){
-                total += parseInt(marks[i].value);
-            }        
-            totalID.innerHTML = total;
-        })
+        if(elem.value == "")
+            elem.value = 0;
+        total = 0;
+        for(let i = 0; i < marks.length; i++){
+            total += parseInt(marks[i].value);
+        }        
+        totalID.innerHTML = total;
     })
 });
 
@@ -95,4 +93,13 @@ delBox.addEventListener("click", (e) => {
     var marks = document.querySelectorAll(".marks");
     if(marks.length !== 0)
         test.deleteRow(marks.length);
+    marks.forEach(function(elem){
+        if(elem.value == "")
+            elem.value = 0;
+        total = 0;
+        for(let i = 0; i < marks.length; i++){
+            total += parseInt(marks[i].value);
+        }        
+        totalID.innerHTML = total;
+    })
 });
