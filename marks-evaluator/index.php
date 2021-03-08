@@ -120,9 +120,7 @@
         </section>
         <script>
             const exam_result = <?php echo json_encode($fetch_exam_result); ?>;
-            console.log(exam_result);
             const exam_sheet = <?php echo json_encode($fetch_exam_sheet); ?>;
-            console.log(exam_sheet);
         </script>
         <script src="../resources/Js/marks-evaluator.js"></script>
     </body>
