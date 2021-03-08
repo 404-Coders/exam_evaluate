@@ -94,3 +94,17 @@ INSERT INTO `exam_sheet` (`s.no.`, `class_id`, `stu_rollNo`, `sub_name`, `answer
 (NULL, 'CSE3-JAVA', '6', 'JAVA', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
 (NULL, 'CSE3-ADA', '6', 'ADA', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
 (NULL, 'CSE3-AI', '6', 'AI', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing')
+
+
+
+ALTER TABLE `exam_result` 
+ADD `Q6` INT NULL DEFAULT "0" AFTER `Q5`,
+ADD `Q7` INT NULL DEFAULT "0" AFTER `Q6`,
+ADD `Q8` INT NULL DEFAULT "0" AFTER `Q7`,
+ADD `Q9` INT NULL DEFAULT "0" AFTER `Q8`,
+ADD `Q10` INT NULL DEFAULT "0" AFTER `Q9`,
+ADD `Q11` INT NULL DEFAULT "0" AFTER `Q10`, 
+ADD `Q12` INT NULL DEFAULT "0" AFTER `Q11`,
+ADD `Q13` INT NULL DEFAULT "0" AFTER `Q12`,
+ADD `Q14` INT NULL DEFAULT "0" AFTER `Q13`,
+ADD `Q15` INT NULL DEFAULT "0" AFTER `Q14`;

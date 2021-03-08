@@ -11,7 +11,7 @@
 
     // Fetching Class Name and Sub Name
     
-    $class_id = $_SESSION['classID'] = "CSE1-AI";
+    $class_id = $_SESSION['class_id'];
     $class_details = explode("-",$class_id);    
     $class_name = $class_details[0];
     $sub_name = $class_details[1];
@@ -105,8 +105,8 @@
                         </table>
                     </div>
                     <div class="answers__buttons">
-                        <img src="../resources/images/add (1).svg" alt="add">
-                        <img src="../resources/images/delete.svg" alt="delete">
+                        <img src="../resources/images/add (1).svg" id="addBox" alt="add">
+                        <img src="../resources/images/delete.svg" id="delBox" alt="delete">
                     </div>
                     <div class="answers__totalC">
                         <p>Total =&nbsp;<span id="total">00</span></p>

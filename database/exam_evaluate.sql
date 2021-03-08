@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 07, 2021 at 05:20 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.3.27
+-- Host: 127.0.0.1
+-- Generation Time: Mar 08, 2021 at 05:27 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,32 +66,42 @@ CREATE TABLE `exam_result` (
   `Q2` int(11) DEFAULT 0,
   `Q3` int(11) DEFAULT 0,
   `Q4` int(11) DEFAULT 0,
-  `Q5` int(11) DEFAULT 0
+  `Q5` int(11) DEFAULT 0,
+  `Q6` int(11) DEFAULT 0,
+  `Q7` int(11) DEFAULT 0,
+  `Q8` int(11) DEFAULT 0,
+  `Q9` int(11) DEFAULT 0,
+  `Q10` int(11) DEFAULT 0,
+  `Q11` int(11) DEFAULT 0,
+  `Q12` int(11) DEFAULT 0,
+  `Q13` int(11) DEFAULT 0,
+  `Q14` int(11) DEFAULT 0,
+  `Q15` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_result`
 --
 
-INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
-(1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 0, 0, 0),
-(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(7, 3, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(10, 4, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
-(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0);
+INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`, `Q6`, `Q7`, `Q8`, `Q9`, `Q10`, `Q11`, `Q12`, `Q13`, `Q14`, `Q15`) VALUES
+(1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(7, 3, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(10, 4, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
