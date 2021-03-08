@@ -757,9 +757,10 @@ header {
 
 .class__item {
   width: 250px;
+  height: 180px;
   background: #017296;
   position: relative;
-  border: 5px solid #FDBF43;
+  box-shadow: inset 0px 0px 0px 5px #FDBF43;
 }
 
 .class__num {
