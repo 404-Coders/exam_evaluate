@@ -104,8 +104,8 @@
                         </table>
                     </div>
                     <div class="answers__buttons">
-                        <img src="../resources/images/add (1).svg" alt="add">
-                        <img src="../resources/images/delete.svg" alt="delete">
+                        <img src="../resources/images/add (1).svg" id="addBox" alt="add">
+                        <img src="../resources/images/delete.svg" id="delBox" alt="delete">
                     </div>
                     <div class="answers__totalC">
                         <p>Total =&nbsp;<span id="total">00</span></p>
