@@ -108,3 +108,16 @@ ADD `Q12` INT NULL DEFAULT "0" AFTER `Q11`,
 ADD `Q13` INT NULL DEFAULT "0" AFTER `Q12`,
 ADD `Q14` INT NULL DEFAULT "0" AFTER `Q13`,
 ADD `Q15` INT NULL DEFAULT "0" AFTER `Q14`;
+
+
+
+ALTER TABLE `exam_classes` ADD `full_sub_name` VARCHAR(100) NOT NULL AFTER `sub_name`;
+UPDATE `exam_classes`
+SET `full_sub_name` = 'Artificial Intelligence' 
+WHERE `sub_name` = 'AI';
+UPDATE `exam_classes`
+SET `full_sub_name` = 'Algorithm Design & Analysis'
+WHERE `sub_name` = 'ADA';
+UPDATE `exam_classes` 
+SET `full_sub_name` = 'Java Programming' 
+WHERE `sub_name` = 'JAVA';
