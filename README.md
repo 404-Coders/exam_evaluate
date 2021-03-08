@@ -2,14 +2,11 @@
 
 ## Home page
     - Block Responsiveness
-    - Features
     - Team
-    - Footer
 
 ## Login
     - Back Button
     - Background
-    - Form Validation
 
 # Student Dashboard
 
@@ -31,14 +28,6 @@
 # Evaluator
 
 ## Functionality
-    - Back
-    - Add
-    - Delete
-    - Setting
     - Submit
-    - Name List
-    - Auto Total
-    - Remove Pdf pop out
-    - Teacher Image
+    - Move back button after teacher name 
     - Question & Marks -> Sticky
-    - Load Marks on Selection
