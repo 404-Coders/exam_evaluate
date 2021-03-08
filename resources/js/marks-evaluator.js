@@ -56,6 +56,10 @@ var answers__sList__item = document.querySelectorAll('.answers__sList__item');
 
 for(let q = 0; q < answers__sList__item.length; q++){
     answers__sList__item[q].addEventListener("click", () => {
+        answers__sList__item.forEach(function(elem){
+            elem.classList.remove("selected");
+        });
+        answers__sList__item[q].classList.add("selected");
         total = 0;
         var id = answers__sList__item[q].id;
         id = id.split("-")[1];
