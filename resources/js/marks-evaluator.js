@@ -45,6 +45,8 @@ for(let q = 0; q < answers__sList__item.length; q++){
 
 marks.forEach(function(elem){
     elem.addEventListener("change", () => {
+        if(elem.value == "")
+            elem.value = 0;
         total = 0;
         for(let i = 0; i < marks.length; i++){
             total += parseInt(marks[i].value);
