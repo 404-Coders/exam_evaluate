@@ -15,7 +15,7 @@
     - Show AnswerSheet -> 95% width modal
     - Edit Profile -> page (innovative profile)
     - Result Board -> Generate Query -> Form (SubjectTeacher(Automatic){To}, MailSubject, Query(Body), StudentEmail(From))
-    - Download Marksheet
+    - Export Marksheet
 
 # Teacher Dashboard
 

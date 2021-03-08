@@ -10,6 +10,7 @@
     // }
 }
 
+
 body{
     color: $greyTextColor;
     font-family: 'Nunito', sans-serif;
@@ -84,4 +85,9 @@ body{
     font-size: $font-sm;
     text-align: center;
     color: #626262;
+}
+
+
+a{
+    text-decoration: none;
 }
