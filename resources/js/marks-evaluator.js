@@ -80,3 +80,9 @@ marks.forEach(function(elem){
         totalID.innerHTML = total;
     })
 })
+
+var backBtn = document.getElementById("backBtn");
+
+backBtn.addEventListener("click", () => {
+    window.location.href = "../dashboard/teacher-dashboard/";
+})
