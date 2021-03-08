@@ -1,0 +1,31 @@
+.line-1{
+    display: flex;
+    position: relative;
+    top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.line-2{
+    display: flex;
+    position: relative;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.line-1 .box:last-child, .line-2 .box:last-child{
+    margin-left: 50px;
+}
+.box{
+    display: flex;
+    color: $white;
+    background-color: $secondary;
+    border: 5px solid $primary;
+    font-family: 'Poppins';
+    font-size: $font-xl;
+    font-weight: 600;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+}
