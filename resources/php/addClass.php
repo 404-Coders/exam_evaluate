@@ -11,7 +11,8 @@
 
     $sub_name = '';
     for($i = 0; $i < count($sub_name_words); $i++){
-        $sub_name = $sub_name.$sub_name_words[$i][0];
+        if(ctype_alpha($sub_name_words[$i][0]))
+            $sub_name = $sub_name.$sub_name_words[$i][0];
     }
 
     $class_id = $class_name."-".$sub_name;

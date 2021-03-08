@@ -30,6 +30,10 @@
     $class_name = $class_details[0];
     $sub_name = $class_details[1];
 
+    $query_class_id = mysqli_query($con, "SELECT `full_sub_name` FROM `exam_classes` WHERE `tea_id` = '$tea_id' AND `class_id` = '$class_id' GROUP BY `full_sub_name`");
+    $fetch_class_id = mysqli_fetch_all($query_class_id);
+    $full_sub_name = $fetch_class_id[0][0];
+
     // Getting Student Details of particular Class
     $query_students = mysqli_query($con, "SELECT `stu_name`,`stu_rollNo` FROM `student_cred` WHERE stu_class ='$class_name'");
     $fetch_students = mysqli_fetch_all($query_students);
@@ -64,7 +68,7 @@
                     <img src="../resources/images/logo.svg" alt="Logo">
                     <div class="classInfo">
                         <p class="nav__className"><?php echo $class_name; ?></p>
-                        <p class="nav__subjectName"><?php echo $sub_name; ?></p>
+                        <p class="nav__subjectName"><?php echo $full_sub_name; ?></p>
                     </div>
                 </div>
                 <div class="nav__menu">

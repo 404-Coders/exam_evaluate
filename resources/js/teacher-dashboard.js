@@ -12,3 +12,9 @@ function showModal(id)
 
     modal.style.visibility = "visible";
 }
+
+var logout = document.getElementById('logout');
+
+logout.addEventListener("click",()=>{
+    window.location.href = "../../resources/php/logout.php";
+})
