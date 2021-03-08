@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2021 at 05:27 AM
+-- Generation Time: Mar 08, 2021 at 05:48 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -32,6 +32,7 @@ CREATE TABLE `exam_classes` (
   `class_id` varchar(50) NOT NULL,
   `class_name` varchar(50) NOT NULL,
   `sub_name` varchar(50) NOT NULL,
+  `full_sub_name` varchar(100) NOT NULL,
   `tea_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,16 +40,16 @@ CREATE TABLE `exam_classes` (
 -- Dumping data for table `exam_classes`
 --
 
-INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `tea_id`) VALUES
-(1, 'CSE1-AI', 'CSE1', 'AI', 3),
-(2, 'CSE1-JAVA', 'CSE1', 'JAVA', 2),
-(3, 'CSE2-JAVA', 'CSE2', 'JAVA', 2),
-(4, 'CSE2-ADA', 'CSE2', 'ADA', 1),
-(5, 'CSE2-AI', 'CSE2', 'AI', 3),
-(6, 'CSE1-ADA', 'CSE1', 'ADA', 1),
-(7, 'CSE3-JAVA', 'CSE3', 'JAVA', 2),
-(8, 'CSE3-ADA', 'CSE3', 'ADA', 1),
-(9, 'CSE3-AI', 'CSE3', 'AI', 3);
+INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `full_sub_name`, `tea_id`) VALUES
+(1, 'CSE1-AI', 'CSE1', 'AI', 'Artificial Intelligence', 3),
+(2, 'CSE1-JAVA', 'CSE1', 'JAVA', 'Java Programming', 2),
+(3, 'CSE2-JAVA', 'CSE2', 'JAVA', 'Java Programming', 2),
+(4, 'CSE2-ADA', 'CSE2', 'ADA', 'Algorithm Design & Analysis', 1),
+(5, 'CSE2-AI', 'CSE2', 'AI', 'Artificial Intelligence', 3),
+(6, 'CSE1-ADA', 'CSE1', 'ADA', 'Algorithm Design & Analysis', 1),
+(7, 'CSE3-JAVA', 'CSE3', 'JAVA', 'Java Programming', 2),
+(8, 'CSE3-ADA', 'CSE3', 'ADA', 'Algorithm Design & Analysis', 1),
+(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3);
 
 -- --------------------------------------------------------
 

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CACN;EACI,OAAO,EAAE,OAAO;EAChB,WAAW,EAAE,IAAI;EACjB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;CASlB;;AANI,AAAD,YAAO,CAAA;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,SAAU;CACrB",
-    "sources": [
-        "../../resources/scss/teacher-dashboard/teacher-dashboard.scss"
-    ],
-    "names": [],
-    "file": "teacher-dashboard.css"
-}
