@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     include "../../resources/php/connection.php";  
 
     session_start();
@@ -45,4 +45,4 @@
             })
         }
     </script>
-</html>
+</html> -->
