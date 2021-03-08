@@ -1,0 +1,17 @@
+.class
+{
+    padding: 0 100px;
+    padding-top: 50px;
+    display: flex;
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    &__item{
+        width: 250px;
+        height: 180px;
+        background: #017296;
+    }
+}

@@ -1,0 +1,22 @@
+.class {
+  padding: 0 100px;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.class__item {
+  width: 250px;
+  height: 180px;
+  background: #017296;
+}
+/*# sourceMappingURL=teacher-dashboard.css.map */
