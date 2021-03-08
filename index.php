@@ -40,9 +40,9 @@
     <header>
         <nav class="nav">
             <div class="nav__logo">
-                <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="visibility: hidden;">
+                <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="display: none;">
                 <div class="web-name">
-                    <p class="nav__web-name">Exam Evaluate</p>
+                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
                 </div>
             </div>
             <div class="nav__menu">
