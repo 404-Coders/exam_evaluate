@@ -1,14 +1,42 @@
 <?php
-    include "../../resources/php/connection.php";  
-
+    include "../../resources/php/connection.php"; 
+    
+    function extractor($url)
+    {
+        if(strpos($url, "drive.google.com") !== false)
+        {
+            $id = explode('/',$url)[5];
+            return "https://drive.google.com/uc?id=".$id;
+        }
+        else
+        {
+            return url;
+        }
+    }
+    
     session_start();
+
+    if(isset($_GET['classID'])){
+        $_SESSION['class_id'] = $_GET['classID'];
+        header("location: ../../marks-evaluator/");
+    }
+
     $tea_id = $_SESSION['teaID'];
+
+    // Retreving Teacher Name
+    $query_tea_details = mysqli_query($con, "SELECT `tea_name`,`tea_picture` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
+    $fetch_tea_details = mysqli_fetch_array($query_tea_details);
+    $_SESSION['tea_name'] = $tea_name = $fetch_tea_details[0];
+    $_SESSION['tea_pic'] = $tea_pic = $fetch_tea_details[1];
     
     // Retreving Teacher Name
     $query_class_id = mysqli_query($con, "SELECT `class_id`,`full_sub_name` FROM `exam_classes` WHERE `tea_id` = '$tea_id' ORDER BY `class_name`");
     $fetch_class_id = mysqli_fetch_all($query_class_id);
-    print_r($fetch_class_id);
-    
+
+    for($i = 0; $i < sizeof($fetch_class_id); $i++){
+        $class_id[$i] = $fetch_class_id[$i][0];
+        $full_sub_name[$i] = $fetch_class_id[$i][1];
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,89 +60,59 @@
             </div>
             <div class="nav__menu">
                 <div class="nav__navigation">
-                    <img src="../../resources/images/user.png" alt="">
-                    <div class="nav__name"></div>
-                    <img src="../../resources/images/back-button.svg" id="backBtn" alt="back button">
+                    <img src="<?php echo extractor($tea_pic);?>" alt="">
+                    <div class="nav__name"><?php echo $tea_name; ?></div>
+                    <button id="logout" class="white-button nav__button">Logout</button>
                 </div>
             </div>
         </nav>
     </header>
     <section>
         <div class="class">
-            <div class="class__item">
-                <div class="class__num">1.</div>
-                <div class="class__contents">
-                    <div class="class__details">
-                        <div class="class__name">CSE 1</div>
-                        <div class="class__sub__name">Algorithm Analysis & Design </div>
-                    </div>
-                    <div class="class__actions">
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
-                                <div class="class__tool__desc">Modify</div>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/load.svg" alt=""></div>
-                                <div class="class__tool__desc">Load <br> Students</div>
-                            </div>
-                        </a>
+            <?php
+                for($i = 0; $i < count($class_id); $i++){
+                    $classID = explode("-", $class_id[$i])[0];
+            ?>
+                <div class="class__item">
+                    <div class="class__num"><?php echo ($i+1);?>.</div>
+                    <div class="class__contents">
+                        <div class="class__details">
+                            <div class="class__name"><?php echo $classID;?></div>
+                            <div class="class__sub__name"><?php echo $full_sub_name[$i];?></div>
+                        </div>
+                        <div class="class__actions">
+                            <a href="#">
+                                <div class="class__tool">
+                                    <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
+                                    <div class="class__tool__desc">Modify</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="class__tool">
+                                    <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/load.svg" alt=""></div>
+                                    <div class="class__tool__desc">Load <br> Students</div>
+                                </div>
+                            </a>
 
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/export.svg" alt=""></div>
-                                <div class="class__tool__desc">Export</div>
-                            </div>      
-                        </a>
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
-                                <div class="class__tool__desc">Examine</div>
-                            </div>
-                        </a>
+                            <a href="#">
+                                <div class="class__tool">
+                                    <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/export.svg" alt=""></div>
+                                    <div class="class__tool__desc">Export</div>
+                                </div>      
+                            </a>
+                            <a href="./?classID=<?php echo $class_id[$i];?>">
+                                <div class="class__tool">
+                                    <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
+                                    <div class="class__tool__desc">Examine</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-
-            </div>
-            <div class="class__item">
-                <div class="class__num">1.</div>
-                <div class="class__contents">
-                    <div class="class__details">
-                        <div class="class__name">CSE 1</div>
-                        <div class="class__sub__name">Algorithm Analysis & Design </div>
-                    </div>
-                    <div class="class__actions">
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
-                                <div class="class__tool__desc">Modify</div>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/load.svg" alt=""></div>
-                                <div class="class__tool__desc">Load <br> Students</div>
-                            </div>
-                        </a>
-
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/export.svg" alt=""></div>
-                                <div class="class__tool__desc">Export</div>
-                            </div>      
-                        </a>
-                        <a href="#">
-                            <div class="class__tool">
-                                <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
-                                <div class="class__tool__desc">Examine</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+            <?php
+                }
+            ?>
             <div class="addClass">
                 <div class="addClass__circle"></div>
                 <div class=""> 
@@ -136,23 +134,6 @@
             <div class="create__modal__body"></div>
         </div>
     </section>
-    <script>
-
-        function hideModal(id)
-        {
-            var modal = document.getElementById(id);
-            modal.style.transition = "all 500ms ease-in-out"
-            modal.style.visibility = "hidden";
-        }
-
-        function showModal(id)
-        {
-            var modal = document.getElementById(id);
-            modal.style.transition = "all 500ms ease-in-out"
-
-            modal.style.visibility = "visible";
-        }
-
-    </script>
+    <script src="../../resources/js/teacher-dashboard.js"></script>
 </body>
 </html>

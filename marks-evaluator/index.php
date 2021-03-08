@@ -20,8 +20,8 @@
     // Retreving Teacher Name
     $query_tea_details = mysqli_query($con, "SELECT `tea_name`,`tea_picture` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
     $fetch_tea_details = mysqli_fetch_array($query_tea_details);
-    $tea_name = $fetch_tea_details[0];
-    $tea_pic = $fetch_tea_details[1];
+    $tea_name = $_SESSION['tea_name'];
+    $tea_pic = $_SESSION['tea_pic'];
 
     // Fetching Class Name and Sub Name
     
