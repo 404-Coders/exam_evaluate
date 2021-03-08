@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <script src="./node_modules/waypoint/dist/waypoint-0.2.8.min.js"></script>
+    <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
     <title>Home Page</title>
 </head>
 
@@ -40,7 +40,7 @@
     <header>
         <nav class="nav">
             <div class="nav__logo">
-                <img src="./resources/images/logo.svg" alt="Logo">
+                <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="visibility: hidden;">
                 <div class="web-name">
                     <p class="nav__web-name">Exam Evaluate</p>
                 </div>
@@ -54,10 +54,12 @@
 
 
     <section class="intro">
+        <div style="height: 1px; width: 100%; margin-bottom: 25px;"></div>
         <div class="intro__icon">
-            <img src="./resources/images/logo.svg" alt="Logo">
+            <img style="margin-top: -10px !important;" src="./resources/images/logo.svg" alt="Logo">
         </div>
-        <div class="intro__head">Onscreen Evaluation of Answer sheets</div>
+        <div style="height: 4px; width: 100%;" id="waypoint"></div>
+        <div class="intro__head" id="introHeadID">Onscreen Evaluation of Answer sheets</div>
         <div class="body-text intro__body">Onscreen Evaluation or digital answer sheet evaluation provides many advantages for the education institutes to simplify post examination activities leading to result processing.</div>
     </section>
     <section class="why-app">
@@ -164,6 +166,7 @@
         </div>
     </section>
     <script src="./resources/js/script.js"></script>
+    <script src="./resources/js/waypoint.js"></script>
 
 </body>
 
