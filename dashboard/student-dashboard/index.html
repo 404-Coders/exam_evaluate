@@ -1,51 +1,52 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard</title>
-    <link rel="stylesheet" href="../../dist/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teacher Dashboard</title>
+        <link rel="stylesheet" href="../../dist/css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-</head>
-<body>
-    <header>
-        <nav class="nav">
-            <div class="nav__logo">
-                <img src="../../resources/images/logo.svg" alt="Logo">
-                <div class="classInfo">
-                    <p class="nav__className"><?php echo $class_name; ?></p>
-                    <p class="nav__subjectName"><?php echo $sub_name; ?></p>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="../../resources/images/logo.svg" alt="Logo">
+                    <div class="classInfo">
+                        <p class="nav__className"><?php echo $class_name; ?></p>
+                        <p class="nav__subjectName"><?php echo $sub_name; ?></p>
+                    </div>
+                </div>
+                <div class="nav__menu">
+                    <div class="nav__navigation">
+                        <img src="../../resources/images/user.png" alt="">
+                        <div class="nav__name"><?php echo $tea_name; ?>Deepak Kumar </div>
+                        <img src="../../resources/images/back-button.svg" id="backBtn" alt="back button">
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="line-1">
+                <div class="box">
+                    Show <br> Answer Sheet
+                </div>
+                <div class="box">
+                    Result Board
                 </div>
             </div>
-            <div class="nav__menu">
-                <div class="nav__navigation">
-                    <img src="../../resources/images/user.png" alt="">
-                    <div class="nav__name"><?php echo $tea_name; ?>Deepak Kumar </div>
-                    <img src="../../resources/images/back-button.svg" id="backBtn" alt="back button">
-                </div>
+            <div class="line-2">
+                    <div class="box">
+                        Upload Answer Sheet
+                    </div>
+                    <div class="box">
+                        Download Marksheet
+                    </div>
             </div>
-        </nav>
-    </header>
-    <section>
-        <div class="line-1">
-        <div class="box">
-            Show <br> AnswerSheet
-        </div>
-        <div class="box">
-            Result Box
-        </div>
-       </div>
-       <div class="line-2">
-        <div class="box">
-            Upload AnswerSheet
-        </div>
-        <div class="box">
-            Download Marksheet
-        </div>
-    </div>
-    </section>
+        </section>
     </body>
+</html>

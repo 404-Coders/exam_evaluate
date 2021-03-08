@@ -21,11 +21,12 @@
     background-color: $secondary;
     border: 5px solid $primary;
     font-family: 'Poppins';
-    font-size: $font-xl;
+    font-size: $font-xlg;
     font-weight: 600;
     justify-content: space-evenly;
     text-align: center;
     align-items: center;
     width: 250px;
     height: 200px;
+    cursor: pointer;
 }

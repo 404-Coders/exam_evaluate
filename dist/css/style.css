@@ -1131,41 +1131,6 @@ header {
   fill: #fff;
 }
 
-<<<<<<< HEAD
-.line-1 {
-  display: flex;
-  position: relative;
-  top: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.line-2 {
-  display: flex;
-  position: relative;
-  top: 80px;
-  justify-content: center;
-  align-items: center;
-}
-
-.line-1 .box:last-child, .line-2 .box:last-child {
-  margin-left: 50px;
-}
-
-.box {
-  display: flex;
-  color: #fff;
-  background-color: #FDBF43;
-  border: 5px solid #017296;
-  font-family: 'Poppins';
-  font-size: 1.5625rem;
-  font-weight: 600;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  width: 250px;
-  height: 200px;
-=======
 .modal_cobtainer {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
@@ -1189,6 +1154,59 @@ header {
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
->>>>>>> 4ed380c780154f7e4c2b84b702f97ba0c054c304
+}
+
+.line-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.line-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.line-1 .box:last-child, .line-2 .box:last-child {
+  margin-left: 50px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  background-color: #FDBF43;
+  border: 5px solid #017296;
+  font-family: 'Poppins';
+  font-size: 1.875rem;
+  font-weight: 600;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 200px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
