@@ -1,3 +1,8 @@
+header{
+    position: sticky;
+    top: 0;
+    background: $white;
+}
 .nav{
     
     &__web-name{
@@ -77,33 +82,6 @@
 }
 
 // Register Section
-
-@keyframes fade-out{
-    from{
-        opacity: 1;
-        display: block;
-    }
-    
-    to{
-        opacity: 0;
-        display: none;
-    }
-
-}
-@keyframes fade-in{
-    1% {
-        opacity: 0;
-    }
-    100% {
-        visibility: visible;
-        opacity: 1;
-
-    }
-
-}
-
-
-
 .register{  
     // opacity: 0;
     // transform:translate(100vw);
@@ -195,4 +173,85 @@
     }
 
 
+}
+
+// Features Section
+
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+    
+
+    &__heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img{
+            width: 80px;
+            height: 80px;
+        }
+
+        h1{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 52px;
+            color: $primary;
+        }
+    }
+
+    &__feature{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0 0 0 ;
+        .feature_box{
+            width: 350px;
+            background: #FFFFFF;
+            border: 1px solid #B7B7B7;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px 10px 5px 10px;
+            
+            h1{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 23px;
+                color: $white;
+                text-align: center;
+                line-height: 45px;
+                background: $primary;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+            }
+
+            .yellow{
+                background: $secondary;
+            }
+            img
+            {
+                // margin: 20px 0;
+                width: 100%;
+                padding: 10px 0 0 0 ;
+            }
+
+            ol{
+                padding:15px;
+                display: flex;
+                flex-direction: column;
+                li{
+                    list-style-position: outside;
+                    margin: 0 15px;
+                    padding: 5px;
+                }
+            }
+        }
+
+
+    }
 }
