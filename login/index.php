@@ -79,6 +79,21 @@
         }
     ?>
 
+    <header>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="../../resources/images/logo.svg" alt="Logo">
+                <div class="classInfo">
+                </div>
+            </div>
+            <div class="nav__menu">
+                <div class="nav__navigation">
+                   <a href="../"><img src="../../resources/images/back-button.svg" id="backBtn" alt="back button"></a> 
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <section class="login">
         <div class="login__details" id="login_details">
             <div class="login__buttons" id = "login_buttons">
