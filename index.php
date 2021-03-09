@@ -159,10 +159,7 @@
             </div>
         </div>
         <div class="team__background">
-        </div>
-        <!-- Test -->
-            <h1>Please Visit From Desktop</h1>
-        </div>
+        
     </section>
     <script src="./resources/js/script.js"></script>
     <script src="./resources/js/responsive.js"></script>
