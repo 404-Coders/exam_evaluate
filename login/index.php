@@ -82,13 +82,14 @@
     <header>
         <nav class="nav">
             <div class="nav__logo">
-                <img src="../../resources/images/logo.svg" alt="Logo">
-                <div class="classInfo">
+                <img src="../resources/images/logo.svg" alt="Logo">
+                <div class="web-name">
+                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
                 </div>
             </div>
             <div class="nav__menu">
                 <div class="nav__navigation">
-                   <a href="../"><img src="../../resources/images/back-button.svg" id="backBtn" alt="back button"></a> 
+                   <a href="../"><img src="../resources/images/back-button.svg" id="backBtn" alt="back button"></a> 
                 </div>
             </div>
         </nav>

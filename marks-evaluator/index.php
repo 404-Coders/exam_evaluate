@@ -20,8 +20,8 @@
     // Retreving Teacher Name
     $query_tea_details = mysqli_query($con, "SELECT `tea_name`,`tea_picture` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
     $fetch_tea_details = mysqli_fetch_array($query_tea_details);
-    $tea_name = $fetch_tea_details[0];
-    $tea_pic = $fetch_tea_details[1];
+    $tea_name = $_SESSION['tea_name'];
+    $tea_pic = $_SESSION['tea_pic'];
 
     // Fetching Class Name and Sub Name
     
@@ -29,6 +29,10 @@
     $class_details = explode("-",$class_id);    
     $class_name = $class_details[0];
     $sub_name = $class_details[1];
+
+    $query_class_id = mysqli_query($con, "SELECT `full_sub_name` FROM `exam_classes` WHERE `tea_id` = '$tea_id' AND `class_id` = '$class_id' GROUP BY `full_sub_name`");
+    $fetch_class_id = mysqli_fetch_all($query_class_id);
+    $full_sub_name = $fetch_class_id[0][0];
 
     // Getting Student Details of particular Class
     $query_students = mysqli_query($con, "SELECT `stu_name`,`stu_rollNo` FROM `student_cred` WHERE stu_class ='$class_name'");
@@ -64,7 +68,7 @@
                     <img src="../resources/images/logo.svg" alt="Logo">
                     <div class="classInfo">
                         <p class="nav__className"><?php echo $class_name; ?></p>
-                        <p class="nav__subjectName"><?php echo $sub_name; ?></p>
+                        <p class="nav__subjectName"><?php echo $full_sub_name; ?></p>
                     </div>
                 </div>
                 <div class="nav__menu">

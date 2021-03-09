@@ -7,7 +7,7 @@ header{
 .nav{
     
     &__web-name{
-        font-family: poppins;
+        font-family: 'Poppins',sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: $font-xlg;
@@ -144,7 +144,7 @@ header{
             flex-direction: column;
             // margin: 10px;
             padding: 20px;
-            justify-content: space-evenly   ;
+            justify-content: space-evenly;
             align-items: center;
             input {
                 width: 300px;
