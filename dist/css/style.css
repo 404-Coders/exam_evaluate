@@ -1284,14 +1284,13 @@ header {
   cursor: pointer;
 }
 
-.create__modal__body {
+.upload__sheet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
 }
 
-.create__modal__body #upload_form {
+.upload__sheet__form #upload_form {
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1299,11 +1298,11 @@ header {
   row-gap: 15px;
 }
 
-.create__modal__body #upload_form input {
+.upload__sheet__form #upload_form input {
   width: 350px;
 }
 
-.create__modal__body h3 {
+.upload__sheet__form h3 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -1313,12 +1312,12 @@ header {
   color: #017296;
 }
 
-.create__modal__body #icon {
+.upload__sheet__form #icon {
   width: 50px;
   height: 50px;
 }
 
-.create__modal__body #icon path {
+.upload__sheet__form #icon path {
   fill: #FDBF43;
 }
 
