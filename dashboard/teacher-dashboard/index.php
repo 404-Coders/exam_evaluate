@@ -227,5 +227,6 @@
         </div>
     </section>
     <script src="../../resources/js/teacher-dashboard.js"></script>
+    <script src="../../resources/js/responsive.js"></script>
 </body>
 </html>
