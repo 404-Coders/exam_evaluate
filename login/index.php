@@ -43,6 +43,17 @@
                 </script>';
             }
 
+            if($_GET['error'] == "not-loggedin")
+            {
+                echo '
+                <script>
+                    swal("Error", "Account not logged in!", "error").then(name => {
+                            window.location.href = "../login/";
+                    });
+                </script>';
+            }
+
+
             //Error in Teacher's Login 
 
             if($_GET['error'] == "teacher_wrong_mail")

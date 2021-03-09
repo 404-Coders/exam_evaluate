@@ -1151,9 +1151,15 @@ header {
 }
 
 .modal_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal_icon svg {
@@ -1232,19 +1238,19 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-=======
-  justify-content: center;
-<<<<<<< HEAD
 }
 
 .edit-class-buttons {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #delete_button {
@@ -1252,15 +1258,14 @@ header {
 }
 
 #load {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 50px 20px;
 }
 
 #input-box {
   width: 300px;
-=======
->>>>>>> 2caaf51d597d6b4d4b196d9fd9914a3fc2e4beac
->>>>>>> 4ba5b9747dc3e1a98d8b2ed29d96695f7e05b959
 }
 
 .line-1 {
@@ -1354,6 +1359,21 @@ header {
   fill: #FDBF43;
 }
 
+.upload__sheet__subject {
+  width: 350px;
+  padding: 5px 10px;
+  border-left: 5px solid #017296;
+  color: gray;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  border-radius: 0 5px 5px 0px;
+}
+
+.upload__sheet__subject option {
+  color: #017296;
+}
+
 #show_answersheet .create__modal {
   width: 90vw;
   height: 90vh;
@@ -1409,5 +1429,40 @@ header {
   font-size: 1.5625rem;
   color: #017296;
   margin-left: 30px;
+}
+
+.subject__sel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subject__sel__heading {
+  color: #017296;
+}
+
+.subject__sel__select {
+  color: #017296;
+  font-size: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 10px;
+  font-weight: 600;
+  border: 2px #017299 solid;
+  background: white;
+}
+
+.subject__sel__option {
+  color: #3D3D3D;
 }
 /*# sourceMappingURL=style.css.map */

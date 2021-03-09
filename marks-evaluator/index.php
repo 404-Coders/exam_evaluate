@@ -1,17 +1,5 @@
 <?php
 
-    function extractor($url)
-    {
-        if(strpos($url, "drive.google.com") !== false)
-        {
-            $id = explode('/',$url)[5];
-            return "https://drive.google.com/uc?id=".$id;
-        }
-        else
-        {
-            return url;
-        }
-    }
     include "../resources/php/connection.php";  
 
     session_start();
