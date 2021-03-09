@@ -179,7 +179,16 @@
         bottom: 0;
         left:0;
         z-index: 3;
+
     }
+
+    &_section{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     &_icon{
 
@@ -226,10 +235,10 @@
         &_submit{
             margin-top: 15px;
         }
+
     }
     
 }
-
 .create__modal
 {
     position: absolute;
@@ -252,4 +261,24 @@
         justify-content: center;
 
     }
+}
+
+.edit-class-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#delete_button{
+    background:  $primary !important;
+}
+
+#load{
+
+    width: fit-content;
+    padding: 50px 20px;
+}
+
+#input-box{
+    width: 300px;
 }
