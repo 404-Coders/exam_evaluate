@@ -123,7 +123,6 @@
                                                         if(class_name.value === '' || full_sub_name.value === ''){
                                                             var modifyForm = document.getElementById('modifyForm<?php echo $i;?>');
                                                             modifyForm.removeAttribute('action');
-                                                            console.log("removed action");
                                                         }
                                                     })
                                                 </script>
