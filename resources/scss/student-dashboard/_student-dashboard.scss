@@ -67,6 +67,22 @@
             }
         }
     }
+
+    &__subject{
+        width: 350px;
+        padding: 5px 10px;
+        border-left: 5px solid $primary;
+        color: gray;
+        font-size: 16px;
+        outline: none;
+        background: white;
+        border-radius: 0 5px 5px 0px;
+
+        option
+        {
+            color: $primary;
+        }
+    }
 }
 
 #show_answersheet{
@@ -121,4 +137,39 @@
     // line-height: 37px;
     color: $primary;
     margin-left: 30px;
+}
+
+
+
+
+
+//Select Class Styling
+
+.subject__sel
+{
+    display: flex;
+    column-gap: 30px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &__heading
+    {
+        color: $primary;
+    }
+
+    &__select{
+        color: $primary;
+        font-size: 15px;
+        width: max-content;
+        padding: 10px 10px;
+        font-weight: 600;
+        border: 2px #017299 solid;
+        background: white;
+    }
+
+    &__option{
+        color: $greyTextColor;
+    }
+    
 }

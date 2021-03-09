@@ -1,17 +1,5 @@
 <?php
 
-    function extractor($url)
-    {
-        if(strpos($url, "drive.google.com") !== false)
-        {
-            $id = explode('/',$url)[5];
-            return "https://drive.google.com/uc?id=".$id;
-        }
-        else
-        {
-            return url;
-        }
-    }
     include "../resources/php/connection.php";  
 
     session_start();
@@ -93,14 +81,14 @@
                             {
                                 echo '
                                     <div class="answers__sList__item selected" id= "stu_name-'.$i.'">
-                                        <p>'.($i+1).'. '.$fetch_students[$i][0].'</p>
+                                        <p>'.$fetch_students[$i][1].'. '.$fetch_students[$i][0].'</p>
                                     </div>
                                 ';
                             }
                             else{
                                 echo '
                                     <div class="answers__sList__item " id= "stu_name-'.$i.'">
-                                        <p>'.($i+1).'. '.$fetch_students[$i][0].'</p>
+                                        <p>'.$fetch_students[$i][1].'. '.$fetch_students[$i][0].'</p>
                                     </div>
                                 ';
                             }
@@ -113,7 +101,7 @@
                 <div class="answers__heading">
                     <h3>Enter Marks</h3>
                 </div>
-                <form action="../resources/php/updatingMarks.php" method="POST">
+                <form action="../resources/php/updatingMarks.php" id="resultId" method="POST">
                     <div class="answers__container">
                         <div class="answers__container__table custom-scroll">
                             <table class="answers__markTable" id="test">
@@ -121,6 +109,9 @@
                                     <th>Questions</th>
                                     <th>Marks</th>
                                 </tr>                         
+                                <tr class="answers__markTable__mark" style="display: none;">
+                                    <td colspan="2"><input type="hidden" name="stu_rollNo" id="stu_rollNo"></td>
+                                </tr>
                             </table>
                         </div>
                         <div class="answers__buttons">
@@ -129,7 +120,7 @@
                         </div>
                         <div class="answers__totalC">
                             <p>Total =&nbsp;<span id="total">00</span></p>
-                            <button name ="submit" type="submit">Submit</button>
+                            <button name ="submit" id="subBtn" type="submit">Submit</button>
                         </div>
                     </div>
                 </form>

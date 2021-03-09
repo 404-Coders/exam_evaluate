@@ -1,17 +1,4 @@
 <?php 
-    function extractor($url)
-    {
-        if(strpos($url, "drive.google.com") !== false)
-        {
-            echo "Exist";
-            $id = explode('/',$str)[5];
-            return "https://drive.google.com/uc?id=".$id;
-        }
-        else
-        {
-            echo "not exist";
-        }
-    }
     if($_SERVER['REQUEST_METHOD'] === "POST")
     {
         include './connection.php';

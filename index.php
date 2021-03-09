@@ -110,7 +110,7 @@
         </div>
         <div class="features__feature">
             <div class="features__feature__teacher feature_box">
-                <h1>Teachers</h1>
+                <h1>Teacher</h1>
                 <img src="./resources/images/teachers.svg" alt="">
                 <ol class="featureList">
                     <li><strong>Create Class : </strong>Teacher can create a class by specifying Class name & Subject.</li>

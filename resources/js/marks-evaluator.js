@@ -30,13 +30,13 @@ var delBox = document.getElementById("delBox");
 addBox.addEventListener("click", (e) => {
     var test = document.getElementById('test');
     marks = document.querySelectorAll(".marks");
-    let length = parseInt(marks.length + 1);
+    let length = parseInt(marks.length + 2);
     var row = test.insertRow(length);
     row.classList.add("answers__markTable__mark");
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    cell1.innerHTML = length;
-    cell2.innerHTML = `<input type="number" name='Q${length}' class="marks" value="0">`;
+    cell1.innerHTML = length - 1;
+    cell2.innerHTML = `<input type="number" name='Q${(length - 1)}' class="marks" value="0">`;
 
     marks.forEach(function(elem){
         if(elem.value == "")
@@ -102,4 +102,15 @@ delBox.addEventListener("click", (e) => {
         }        
         totalID.innerHTML = total;
     })
+});
+
+var subBtn = document.getElementById('subBtn');
+
+subBtn.addEventListener("click", () => {
+    var resultId = document.getElementById('resultId');
+
+    var selected = document.querySelector('.selected');
+    let id = selected.children[0].innerHTML;
+    let str = id.split(".")[0];
+    document.getElementById('stu_rollNo').setAttribute("value",str);
 });

@@ -10,11 +10,13 @@
 	$sql = "SELECT * FROM `exam_result` WHERE `class_id` = '$classId' ORDER BY `stu_rollNo`"; 
 	$setRec_query = mysqli_query($con, $sql);  
 	$setRec = mysqli_fetch_all($setRec_query);
-	// print_r($setRec);
 	$l_rollno = $setRec[0][1];
-	$u_rollno = mysqli_num_rows($setRec_query);
+	$u_rollno = mysqli_num_rows($setRec_query) - 1;
+	$u_rollno = $setRec[$u_rollno][1];
+
 	$studentRec = mysqli_query($con,"SELECT `stu_rollNo`, `stu_name` FROM `student_cred` WHERE `stu_rollNo` IN('$l_rollno','$u_rollno')  ORDER BY `stu_rollNo`");
 	$stuRec =  mysqli_fetch_all($studentRec);
+
 	for($i = 0; $i < mysqli_num_rows($setRec_query); $i++){
 		$sum = 0;
 		for($j = 5; $j < $fetch_num_columns[0]; $j++){
