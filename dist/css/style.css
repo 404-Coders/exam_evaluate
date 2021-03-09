@@ -652,7 +652,7 @@ header {
 }
 
 .features__feature .feature_box {
-  width: 450px;
+  width: 400px;
   overflow: hidden;
   background: #FFFFFF;
   border: 1px solid #B7B7B7;
@@ -703,6 +703,7 @@ header {
   list-style-position: outside;
   margin: 0 15px;
   padding: 5px;
+  font-size: 14px;
 }
 
 .team h1 {
