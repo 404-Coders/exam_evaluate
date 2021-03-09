@@ -159,9 +159,10 @@
             </div>
         </div>
         <div class="team__background">
-        </div>
+        
     </section>
     <script src="./resources/js/script.js"></script>
+    <script src="./resources/js/responsive.js"></script>
     <script src="./resources/js/waypoint.js"></script>
 
 </body>

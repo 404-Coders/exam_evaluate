@@ -128,6 +128,8 @@
         </div>
     </section>
     <script src="../resources/js/login.js"></script>
+    <script src="../resources/js/responsive.js"></script>
+
 </body>
 
 </html>
