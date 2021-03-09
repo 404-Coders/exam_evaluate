@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <section class="modal_cobtainer" id="create_class" style="visibility: hidden;">
+    <section class="modal_container" id="create_class" style="visibility: hidden;">
         <div class="create__modal">
             <div class="create__modal__head">
                 <img class="register__cancel" onclick="hideModal('create_class')" src="../../resources/images/cancel.svg" alt="">
