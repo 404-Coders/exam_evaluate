@@ -54,7 +54,7 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Nunito", sans-serif;
 }
 
@@ -836,6 +836,7 @@ header {
   padding: 0 20px;
   padding-bottom: 10px;
   font-size: 1.875rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .login__details button {
@@ -870,7 +871,7 @@ header {
 }
 
 .login__form__teacher p {
-  font-family: Poppins;
+  font-family: "Nunito",sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
