@@ -121,6 +121,7 @@ a {
   width: 50px;
   height: 50px;
   margin: 5px;
+  border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -978,6 +979,7 @@ header {
 .create__modal__body {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
 }
 
 .edit-class-buttons {
@@ -997,6 +999,8 @@ header {
 
 #input-box {
   width: 300px;
+=======
+>>>>>>> 2caaf51d597d6b4d4b196d9fd9914a3fc2e4beac
 }
 
 .line-1 {
@@ -1033,6 +1037,43 @@ header {
   width: 250px;
   height: 200px;
   cursor: pointer;
+}
+
+.upload__sheet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.upload__sheet__form #upload_form {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 15px;
+}
+
+.upload__sheet__form #upload_form input {
+  width: 350px;
+}
+
+.upload__sheet__form h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  color: #017296;
+}
+
+.upload__sheet__form #icon {
+  width: 50px;
+  height: 50px;
+}
+
+.upload__sheet__form #icon path {
+  fill: #FDBF43;
 }
 
 #show_answersheet .create__modal {
