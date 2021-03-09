@@ -140,5 +140,7 @@
             const exam_sheet = <?php echo json_encode($fetch_exam_sheet); ?>;
         </script>
         <script src="../resources/js/marks-evaluator.js"></script>
+        <script src="./resources/js/responsive.js"></script>
+
     </body>
 </html>
