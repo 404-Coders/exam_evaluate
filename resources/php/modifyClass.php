@@ -21,12 +21,6 @@
         $class_id = $class_name."-".$sub_name;
         $query = mysqli_query($con, "UPDATE `exam_classes` SET `class_id` = '$class_id', `class_name` = '$class_name', `full_sub_name` = '$full_sub_name', `sub_name` = '$sub_name' WHERE `tea_id` = '$tea_id' AND `class_id` = '$classID'");
         if($query > 0){
-            echo $class_id."<br>";
-            echo $class_name."<br>";
-            echo $full_sub_name."<br>";
-            echo $sub_name."<br>";
-            echo $tea_id."<br>";
-            echo $classID."<br>";
             header("location: ../../dashboard/teacher-dashboard/");
         }
         else{
