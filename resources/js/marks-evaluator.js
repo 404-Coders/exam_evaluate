@@ -91,8 +91,10 @@ backBtn.addEventListener("click", () => {
 
 delBox.addEventListener("click", (e) => {
     var marks = document.querySelectorAll(".marks");
+    console.log(marks);
+    console.log(marks.length);
     if(marks.length !== 0)
-        test.deleteRow(marks.length);
+        test.deleteRow(marks.length + 1);
     marks.forEach(function(elem){
         if(elem.value == "")
             elem.value = 0;
