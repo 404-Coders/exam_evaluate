@@ -21,6 +21,11 @@
             header("location: ../../marks-evaluator/");
         }
 
+        if(isset($_GET['generateReport'])){
+            $_SESSION['class_id'] = $_GET['generateReport'];
+            header("location: ../../resources/php/generateResult.php");
+        }
+
         $tea_id = $_SESSION['teaID'];
 
         // Retreving Teacher Name
@@ -182,16 +187,16 @@
                                 <section class="modal_container" id="download_answersheet<?php echo $i;?>" style="visibility: hidden;">
                                     <div class="create__modal">
                                         <div class="create__modal__head">
-                                            <img class="register__cancel" onclick="hideModal('download_answersheet<?php echo $i;?>')" src="../../resources/images/cancel.svg" alt="">
+                                        <img class="register__cancel" onclick="hideModal('download_answersheet<?php echo $i;?>')" src="../../resources/images/cancel.svg" alt=""></a>
                                         </div>
                                         <div class="create__modal__body" id="view-frame">
                                             <div class="line-1">
                                                 <div class=" box download-box">
                                                     Export <br> to Email
                                                 </div>
-                                                <div class="box download-box">
-                                                    Downlaod <br> to device-width
-                                                </div>
+                                                <a href="./?generateReport=<?php echo $class_id[$i];?>"><div class="box download-box">
+                                                   Downlaod <br> to device-width 
+                                                </div></a> 
                                             </div>
                                         </div>
                                     </div>
