@@ -93,8 +93,9 @@
         }
 
         &__desc{
-            font-size: 10px;
+            font-size: 12px;
             color: white;
+            font-family: "Nunito",sans-serif;
         }
     }
 
@@ -166,7 +167,10 @@
 
     
 }
-
+.model_heading{
+    font-family: "Nunito", sans-serif;
+    font-size: $font-lg;
+}
 
 .modal
 {
@@ -195,6 +199,7 @@
         & svg{
             width: 70px;
             height: 70px;
+            // margin-bottom: 15px;
             
             & path{
                 fill: $secondary;
@@ -277,6 +282,8 @@
 
     width: fit-content;
     padding: 50px 20px;
+    display: flex;
+    align-items: center;
 }
 
 #input-box{

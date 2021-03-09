@@ -37,7 +37,7 @@ header{
         font-family: Poppins;
         font-style: normal;
         font-weight: normal;
-        font-size: $font-lg;
+        font-size: $font-xlg;
         line-height: 63px;
         color:$greyTextColor;
     }
@@ -48,7 +48,6 @@ header{
         text-align: center;
     }
 }
-
 .why-app{
     display:flex;
     padding: 0 60px;
@@ -208,7 +207,7 @@ header{
         justify-content: space-evenly;
         margin: 20px 0 0 0 ;
         .feature_box{
-            width: 350px;
+            width: 400px;
             overflow: hidden;
             background: #FFFFFF;
             border: 1px solid #B7B7B7;
@@ -249,6 +248,7 @@ header{
                     list-style-position: outside;
                     margin: 0 15px;
                     padding: 5px;
+                    font-size: 14px;
                 }
             }
         }
