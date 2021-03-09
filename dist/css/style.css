@@ -1131,7 +1131,7 @@ header {
   fill: #fff;
 }
 
-.modal_cobtainer {
+.modal_container {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -1208,5 +1208,43 @@ header {
   width: 250px;
   height: 200px;
   cursor: pointer;
+}
+
+.create__modal__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.create__modal__body #upload_form {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 15px;
+}
+
+.create__modal__body #upload_form input {
+  width: 350px;
+}
+
+.create__modal__body h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  color: #017296;
+}
+
+.create__modal__body #icon {
+  width: 50px;
+  height: 50px;
+}
+
+.create__modal__body #icon path {
+  fill: #FDBF43;
 }
 /*# sourceMappingURL=style.css.map */

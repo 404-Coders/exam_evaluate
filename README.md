@@ -17,6 +17,8 @@
     - Result Board -> Generate Query -> Form (SubjectTeacher(Automatic){To}, MailSubject, Query(Body), StudentEmail(From))
     - Export Marksheet
 
+    - Icon on each box
+
 # Teacher Dashboard
 
 ## Features

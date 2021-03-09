@@ -30,3 +30,41 @@
     height: 200px;
     cursor: pointer;
 }
+
+
+.create__modal__body
+{
+    display: flex;
+    height: 100%;
+    
+    #upload_form
+    {
+        width: 100%;
+        justify-content: center;
+        row-gap: 15px;
+
+        input
+        {
+            width: 350px;
+        }
+    }
+    h3
+    {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        color: #017296;
+    }
+    #icon
+    {
+        width: 50px;
+        height: 50px;
+
+        path{
+            fill: $secondary;
+        }
+    }
+}
