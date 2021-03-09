@@ -419,7 +419,7 @@ header {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
   line-height: 63px;
   color: #3D3D3D;
 }
@@ -644,7 +644,7 @@ header {
 }
 
 .features__feature .feature_box {
-  width: 350px;
+  width: 450px;
   overflow: hidden;
   background: #FFFFFF;
   border: 1px solid #B7B7B7;
@@ -1151,9 +1151,15 @@ header {
 }
 
 .modal_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal_icon svg {
@@ -1232,19 +1238,19 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-=======
-  justify-content: center;
-<<<<<<< HEAD
 }
 
 .edit-class-buttons {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #delete_button {
@@ -1252,15 +1258,14 @@ header {
 }
 
 #load {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 50px 20px;
 }
 
 #input-box {
   width: 300px;
-=======
->>>>>>> 2caaf51d597d6b4d4b196d9fd9914a3fc2e4beac
->>>>>>> 4ba5b9747dc3e1a98d8b2ed29d96695f7e05b959
 }
 
 .line-1 {

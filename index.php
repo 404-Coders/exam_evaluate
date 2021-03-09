@@ -69,7 +69,9 @@
             </div>
             <div class="why-app__text__body body-text">
                 Onscreen Marking System is useful to evaluate physical copies of the answer sheets in digital format.
-                During Covid 19 panademic, education has shifted completly to digital mode. As teachers were never familiar with online mode, this website offers them an easy alternate of checking students answer sheet and examination activities leading to result processing. This helps in reducing screen time as well.
+                During Covid 19 pandemic, education has shifted completely to digital mode. As teachers were never familiar with online mode, this website offers them an easy alternate of checking students answer sheet and examination activities leading to result processing. 
+                After evaluating answer sheets teacher can download compiled result of each class in PDF format.
+                Students can export to email or download their result in all subjects in compiled form in PDF format.
             </div>
         </div>
         <div class="why-app__photo1">
@@ -111,10 +113,12 @@
                 <h1>Teachers</h1>
                 <img src="./resources/images/teachers.svg" alt="">
                 <ol class="featureList">
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
+                    <li><strong>Create Class : </strong>Teacher can create a class by specifying Class name & Subject.</li>
+                    <li><strong>Modify / Delete : </strong>Teacher can modify class details or can even delete class.</li>
+                    <li><strong>Load Students : </strong>After creating a class, teacher shall upload link of Class List. By doing so, all student data will get stored in Database.</li>
+                    <li><strong>Export Result : </strong>Compiled result of students can be downloaded in PDF format.</li>
+                    <li><strong>Examine Answersheets : </strong>Clicking this button answersheet along with a small form is displayed. Teacher can enter marks gained in each question. Cumulative marks is calculated simultaneously and by clicking on submit button marks get stored in the data base.</li>
+                    
 
                 </ol>
             </div>
@@ -122,11 +126,10 @@
                 <h1 class="yellow">Student</h1>
                 <img src="./resources/images/students.svg" alt="Students">
                 <ol class="featureList">
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-                    <li>helps teacher withexamination activities leading to result processing. </li>
-
+                <li><strong>Upload Answersheet : </strong>Student have to enter the link of the PDF uploaded on Google Drive.</li>
+                <li><strong>Show Answersheet : </strong>Student can view the uploaded answersheet to verify if he/she uploaded the correct PDF.</li>
+                <li><strong>Result Board : </strong>It displays list of all subjects whose PDFs has been uploaded, marks in each question and total marks gained along with the PDF uploaded.</li>
+                <li><strong>Download Marksheet : </strong>Student can download or export the marksheet through mail which specifies subject name & the marks gained in respective subject.</li>
                 </ol>
             </div>
 
