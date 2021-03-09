@@ -16,160 +16,156 @@
 </head>
 
 <body id="body">
-    <div id="responsiveContent">
-        <h1 id='responsive' style='text-align:center; display:flex; align-items:center;justify-content: center;height: calc(100vh - 20px);color: #017296;margin: 0;padding: 0;' >Please Visit From Desktop</h1>
-    </div>
-    <div id="bodyContent">
-        <?php
-        if (isset($_GET['email']) === true) {
-            if ($_GET['email'] == "exist")
-                echo '
-                        <script>
-                            swal("Error", "Email Already Exist!", "error").then(name => {
-                                    window.location.href = "./";
-                            });
-                        </script>';
+    <?php
+    if (isset($_GET['email']) === true) {
+        if ($_GET['email'] == "exist")
+            echo '
+                    <script>
+                        swal("Error", "Email Already Exist!", "error").then(name => {
+                                window.location.href = "./";
+                        });
+                    </script>';
+    }
+
+    if (isset($_GET['success']) === true) {
+        if ($_GET['success'] == "data-added") {
+            echo '<script>
+                        swal("Success", "You\'re registered sucessfully!", "success").then(name => {
+                                window.location.href = "./";
+                        });
+                    </script>';
         }
-
-        if (isset($_GET['success']) === true) {
-            if ($_GET['success'] == "data-added") {
-                echo '<script>
-                            swal("Success", "You\'re registered sucessfully!", "success").then(name => {
-                                    window.location.href = "./";
-                            });
-                        </script>';
-            }
-        }
-        ?>
-        <header>
-            <nav class="nav">
-                <div class="nav__logo">
-                    <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="display: none;">
-                    <div class="web-name">
-                        <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
-                    </div>
-                </div>
-                <div class="nav__menu">
-                    <button id="signinBtn" class="white-button nav__button">Sign In</button>
-                    <button id="signupBtn" class="primary-button nav__button">Register</button>
-                </div>
-            </nav>
-        </header>
-
-
-        <section class="intro">
-            <div style="height: 1px; width: 100%; margin-bottom: 25px;"></div>
-            <div class="intro__icon">
-                <img style="margin-top: -10px !important;" src="./resources/images/logo.svg" alt="Logo">
-            </div>
-            <div style="height: 4px; width: 100%;" id="waypoint"></div>
-            <div class="intro__head" id="introHeadID">Onscreen Evaluation of Answer sheets</div>
-            <div class="body-text intro__body">Onscreen Evaluation or digital answer sheet evaluation provides many advantages for the education institutes to simplify post examination activities leading to result processing.</div>
-        </section>
-        <section class="why-app">
-            <div class="why-app__text">
-                <div class="why-app__text__blue-head">
-                    Why Onscreen marking system ?
-                </div>
-                <div class="why-app__text__body body-text">
-                    Onscreen Marking System is useful to evaluate physical copies of the answer sheets in digital format.
-                    During Covid 19 panademic, education has shifted completly to digital mode. As teachers were never familiar with online mode, this website offers them an easy alternate of checking students answer sheet and examination activities leading to result processing. This helps in reducing screen time as well.
+    }
+    ?>
+    <header>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="display: none;">
+                <div class="web-name">
+                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
                 </div>
             </div>
-            <div class="why-app__photo1">
-                <img src="./resources/images/why-app-photo.png" alt="why-app?">
+            <div class="nav__menu">
+                <button id="signinBtn" class="white-button nav__button">Sign In</button>
+                <button id="signupBtn" class="primary-button nav__button">Register</button>
             </div>
+        </nav>
+    </header>
 
-        </section>
-        <!-- Register Sectiton -->
-        <section class="register" id="register">
-            <div class="register__overlay">
 
+    <section class="intro">
+        <div style="height: 1px; width: 100%; margin-bottom: 25px;"></div>
+        <div class="intro__icon">
+            <img style="margin-top: -10px !important;" src="./resources/images/logo.svg" alt="Logo">
+        </div>
+        <div style="height: 4px; width: 100%;" id="waypoint"></div>
+        <div class="intro__head" id="introHeadID">Onscreen Evaluation of Answer sheets</div>
+        <div class="body-text intro__body">Onscreen Evaluation or digital answer sheet evaluation provides many advantages for the education institutes to simplify post examination activities leading to result processing.</div>
+    </section>
+    <section class="why-app">
+        <div class="why-app__text">
+            <div class="why-app__text__blue-head">
+                Why Onscreen marking system ?
             </div>
-            <div class="register__content">
-                <div class="register__details">
-                    <img class="register__cancel" id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
-                    <h1>Welcome to Exam Evaluate</h1>
-                    <div class="register__forms">
-                        <img src="./resources/images/signup.jpg" alt="Sign Up">
-                        <form action="./resources/php/registration.php" onsubmit="return validateForm()" method="POST" class="form">
-                            <input class="form__input" type="text" id="tea_name" name="tea_name" required placeholder="Name">
-                            <input class="form__input" type="email" name="tea_email" placeholder="Email ID">
-                            <input class="form__input" type="text" name="tea_picture" placeholder="Picture(Google Drive Link)">
-                            <input class="form__input" type="password" id="tea_pass" name="tea_pass" required placeholder="Password">
-                            <input class="form__input" type="password" id="tea_con_pass" name="tea_con_pass" placeholder="Confirm Password">
-                            <button type="submit" class="primary-button" name="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Teacher Section -->
-        <section class="features">
-            <div class="features__heading">
-                <img src="./resources/images/feature.svg" alt="Features">
-                <h1>Features</h1>
+            <div class="why-app__text__body body-text">
+                Onscreen Marking System is useful to evaluate physical copies of the answer sheets in digital format.
+                During Covid 19 pandemic, education has shifted completely to digital mode. As teachers were never familiar with online mode, this website offers them an easy alternate of checking students answer sheet and examination activities leading to result processing. 
+                After evaluating answer sheets teacher can download compiled result of each class in PDF format.
+                Students can export to email or download their result in all subjects in compiled form in PDF format.
             </div>
-            <div class="features__feature">
-                <div class="features__feature__teacher feature_box">
-                    <h1>Teachers</h1>
-                    <img src="./resources/images/teachers.svg" alt="">
-                    <ol class="featureList">
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
+        </div>
+        <div class="why-app__photo1">
+            <img src="./resources/images/why-app-photo.png" alt="why-app?">
+        </div>
 
-                    </ol>
-                </div>
-                <div class="features__feature__teacher feature_box">
-                    <h1 class="yellow">Student</h1>
-                    <img src="./resources/images/students.svg" alt="Students">
-                    <ol class="featureList">
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
-                        <li>helps teacher withexamination activities leading to result processing. </li>
+    </section>
+    <!-- Register Sectiton -->
+    <section class="register" id="register">
+        <div class="register__overlay">
 
-                    </ol>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Our team -->
-        <section class="team">
-            <h1>Meet Our Team Members</h1>
-            <div class="team__teamMembers">
-                <div class="team__teamMember">
-                    <img src="./resources/images/team-members/deepak.svg" alt="">
-                    <h2>Deepak Kumar</h2>
-                </div>    
-                <div class="team__teamMember">
-                    <img src="./resources/images/team-members/jasveen.svg" alt="">
-                    <h2>Jasveen Kaur</h2>
-                </div>
-                <div class="team__teamMember">
-                    <img src="./resources/images/team-members/kushdeep.svg" alt="">
-                    <h2>Kushdeep Walia</h2>
-                </div>
-                <div class="team__teamMember">
-                    <img src="./resources/images/team-members/aastha.svg" alt="">
-                    <h2>Aastha Bhasin</h2>
-                </div>
-                <div class="team__teamMember">
-                    <img src="./resources/images/team-members/dev.svg" alt="">
-                    <h2>Devender Kumar</h2>
+        </div>
+        <div class="register__content">
+            <div class="register__details">
+                <img class="register__cancel" id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
+                <h1>Welcome to Exam Evaluate</h1>
+                <div class="register__forms">
+                    <img src="./resources/images/signup.jpg" alt="Sign Up">
+                    <form action="./resources/php/registration.php" onsubmit="return validateForm()" method="POST" class="form">
+                        <input class="form__input" type="text" id="tea_name" name="tea_name" required placeholder="Name">
+                        <input class="form__input" type="email" name="tea_email" placeholder="Email ID">
+                        <input class="form__input" type="text" name="tea_picture" placeholder="Picture(Google Drive Link)">
+                        <input class="form__input" type="password" id="tea_pass" name="tea_pass" required placeholder="Password">
+                        <input class="form__input" type="password" id="tea_con_pass" name="tea_con_pass" placeholder="Confirm Password">
+                        <button type="submit" class="primary-button" name="submit">Submit</button>
+                    </form>
                 </div>
             </div>
-            <div class="team__background">
-            
-        </section>
-        <script src="./resources/js/script.js"></script>
-        <script src="./resources/js/responsive.js"></script>
-        <script src="./resources/js/waypoint.js"></script>
-    </div>
-    <script src="./resources/js/responsive.js"></script>
+    </section>
+
+    <!-- Teacher Section -->
+    <section class="features">
+        <div class="features__heading">
+            <img src="./resources/images/feature.svg" alt="Features">
+            <h1>Features</h1>
+        </div>
+        <div class="features__feature">
+            <div class="features__feature__teacher feature_box">
+                <h1>Teachers</h1>
+                <img src="./resources/images/teachers.svg" alt="">
+                <ol class="featureList">
+                    <li><strong>Create Class : </strong>Teacher can create a class by specifying Class name & Subject.</li>
+                    <li><strong>Modify / Delete : </strong>Teacher can modify class details or can even delete class.</li>
+                    <li><strong>Load Students : </strong>After creating a class, teacher shall upload link of Class List. By doing so, all student data will get stored in Database.</li>
+                    <li><strong>Export Result : </strong>Compiled result of students can be downloaded in PDF format.</li>
+                    <li><strong>Examine Answersheets : </strong>Clicking this button answersheet along with a small form is displayed. Teacher can enter marks gained in each question. Cumulative marks is calculated simultaneously and by clicking on submit button marks get stored in the data base.</li>
+                    
+
+                </ol>
+            </div>
+            <div class="features__feature__teacher feature_box">
+                <h1 class="yellow">Student</h1>
+                <img src="./resources/images/students.svg" alt="Students">
+                <ol class="featureList">
+                <li><strong>Upload Answersheet : </strong>Student have to enter the link of the PDF uploaded on Google Drive.</li>
+                <li><strong>Show Answersheet : </strong>Student can view the uploaded answersheet to verify if he/she uploaded the correct PDF.</li>
+                <li><strong>Result Board : </strong>It displays list of all subjects whose PDFs has been uploaded, marks in each question and total marks gained along with the PDF uploaded.</li>
+                <li><strong>Download Marksheet : </strong>Student can download or export the marksheet through mail which specifies subject name & the marks gained in respective subject</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our team -->
+    <section class="team">
+        <h1>Meet Our Team Members</h1>
+        <div class="team__teamMembers">
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/deepak.svg" alt="">
+                <h2>Deepak Kumar</h2>
+            </div>    
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/jasveen.svg" alt="">
+                <h2>Jasveen Kaur</h2>
+            </div>
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/kushdeep.svg" alt="">
+                <h2>Kushdeep Walia</h2>
+            </div>
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/aastha.svg" alt="">
+                <h2>Aastha Bhasin</h2>
+            </div>
+            <div class="team__teamMember">
+                <img src="./resources/images/team-members/dev.svg" alt="">
+                <h2>Devender Kumar</h2>
+            </div>
+        </div>
+        <div class="team__background">
+        </div>
+    </section>
+    <script src="./resources/js/script.js"></script>
+    <script src="./resources/js/waypoint.js"></script>
 
 </body>
 

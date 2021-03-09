@@ -425,7 +425,7 @@ header {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
   line-height: 63px;
   color: #3D3D3D;
 }
@@ -650,7 +650,7 @@ header {
 }
 
 .features__feature .feature_box {
-  width: 350px;
+  width: 450px;
   overflow: hidden;
   background: #FFFFFF;
   border: 1px solid #B7B7B7;
