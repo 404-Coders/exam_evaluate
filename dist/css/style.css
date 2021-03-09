@@ -5,6 +5,12 @@
           box-sizing: border-box;
 }
 
+@media (max-width: 63.9375em) {
+  * {
+    display: none;
+  }
+}
+
 body {
   color: #3D3D3D;
   font-family: 'Nunito', sans-serif;

@@ -17,7 +17,7 @@
 
     $class_id = $class_name."-".$sub_name;
 
-    $query = mysqli_query($con, "INSERT INTO `exam_classes` VALUES (NULL, '$class_id', '$class_name', '$sub_name', '$full_sub_name', '$tea_id');");
+    $query = mysqli_query($con, "INSERT INTO `exam_classes` VALUES (NULL, '$class_id', '$class_name', '$sub_name', '$full_sub_name', '$tea_id',NULL);");
     if($query > 0){
         header("location: ../../dashboard/teacher-dashboard/");
     }

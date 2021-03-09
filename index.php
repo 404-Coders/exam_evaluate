@@ -129,7 +129,7 @@
                 <li><strong>Upload Answersheet : </strong>Student have to enter the link of the PDF uploaded on Google Drive.</li>
                 <li><strong>Show Answersheet : </strong>Student can view the uploaded answersheet to verify if he/she uploaded the correct PDF.</li>
                 <li><strong>Result Board : </strong>It displays list of all subjects whose PDFs has been uploaded, marks in each question and total marks gained along with the PDF uploaded.</li>
-                <li><strong>Download Marksheet : </strong>Student can download or export the marksheet through mail which specifies subject name & the marks gained in respective subject.</li>
+                <li><strong>Download Marksheet : </strong>Student can download or export the marksheet through mail which specifies subject name & the marks gained in respective subject</li>
                 </ol>
             </div>
 

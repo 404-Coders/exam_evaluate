@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2021 at 05:48 PM
+-- Generation Time: Mar 09, 2021 at 01:28 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -33,23 +33,25 @@ CREATE TABLE `exam_classes` (
   `class_name` varchar(50) NOT NULL,
   `sub_name` varchar(50) NOT NULL,
   `full_sub_name` varchar(100) NOT NULL,
-  `tea_id` int(11) NOT NULL
+  `tea_id` int(11) NOT NULL,
+  `api_link` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_classes`
 --
 
-INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `full_sub_name`, `tea_id`) VALUES
-(1, 'CSE1-AI', 'CSE1', 'AI', 'Artificial Intelligence', 3),
-(2, 'CSE1-JAVA', 'CSE1', 'JAVA', 'Java Programming', 2),
-(3, 'CSE2-JAVA', 'CSE2', 'JAVA', 'Java Programming', 2),
-(4, 'CSE2-ADA', 'CSE2', 'ADA', 'Algorithm Design & Analysis', 1),
-(5, 'CSE2-AI', 'CSE2', 'AI', 'Artificial Intelligence', 3),
-(6, 'CSE1-ADA', 'CSE1', 'ADA', 'Algorithm Design & Analysis', 1),
-(7, 'CSE3-JAVA', 'CSE3', 'JAVA', 'Java Programming', 2),
-(8, 'CSE3-ADA', 'CSE3', 'ADA', 'Algorithm Design & Analysis', 1),
-(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3);
+INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `full_sub_name`, `tea_id`, `api_link`) VALUES
+(1, 'CSE1-AI', 'CSE1', 'AI', 'Artificial Intelligence', 3, NULL),
+(2, 'CSE1-JP', 'CSE1', 'JP', 'Java Programming', 2, NULL),
+(3, 'CSE2-JP', 'CSE2', 'JP', 'Java Programming', 2, NULL),
+(4, 'CSE2-ADA', 'CSE2', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
+(5, 'CSE2-AI', 'CSE2', 'AI', 'Artificial Intelligence', 3, NULL),
+(6, 'CSE1-ADA', 'CSE1', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
+(7, 'CSE3-JP', 'CSE3', 'JP', 'Java Programming', 2, NULL),
+(8, 'CSE3-ADA', 'CSE3', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
+(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3, NULL),
+(17, 'IT1-ADA', 'IT1', 'ADA', 'Algorithm Design & Analysis', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -201,19 +203,22 @@ INSERT INTO `teacher_cred` (`tea_id`, `tea_name`, `tea_email`, `tea_pass`, `tea_
 --
 ALTER TABLE `exam_classes`
   ADD PRIMARY KEY (`s.no.`),
-  ADD UNIQUE KEY `UNIQUE` (`class_id`);
+  ADD KEY `tea_id` (`tea_id`);
 
 --
 -- Indexes for table `exam_result`
 --
 ALTER TABLE `exam_result`
-  ADD PRIMARY KEY (`s.no.`);
+  ADD PRIMARY KEY (`s.no.`),
+  ADD KEY `stu_rollNo` (`stu_rollNo`),
+  ADD KEY `tea_id` (`tea_id`);
 
 --
 -- Indexes for table `exam_sheet`
 --
 ALTER TABLE `exam_sheet`
-  ADD PRIMARY KEY (`s.no.`);
+  ADD PRIMARY KEY (`s.no.`),
+  ADD KEY `stu_rollNo` (`stu_rollNo`);
 
 --
 -- Indexes for table `student_cred`
@@ -235,7 +240,7 @@ ALTER TABLE `teacher_cred`
 -- AUTO_INCREMENT for table `exam_classes`
 --
 ALTER TABLE `exam_classes`
-  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `exam_result`
@@ -254,6 +259,29 @@ ALTER TABLE `exam_sheet`
 --
 ALTER TABLE `teacher_cred`
   MODIFY `tea_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `exam_classes`
+--
+ALTER TABLE `exam_classes`
+  ADD CONSTRAINT `exam_classes_ibfk_1` FOREIGN KEY (`tea_id`) REFERENCES `teacher_cred` (`tea_id`);
+
+--
+-- Constraints for table `exam_result`
+--
+ALTER TABLE `exam_result`
+  ADD CONSTRAINT `exam_result_ibfk_1` FOREIGN KEY (`stu_rollNo`) REFERENCES `student_cred` (`stu_rollNo`),
+  ADD CONSTRAINT `exam_result_ibfk_2` FOREIGN KEY (`tea_id`) REFERENCES `teacher_cred` (`tea_id`);
+
+--
+-- Constraints for table `exam_sheet`
+--
+ALTER TABLE `exam_sheet`
+  ADD CONSTRAINT `exam_sheet_ibfk_1` FOREIGN KEY (`stu_rollNo`) REFERENCES `student_cred` (`stu_rollNo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

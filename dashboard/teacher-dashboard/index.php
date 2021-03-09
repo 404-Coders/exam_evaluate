@@ -103,16 +103,29 @@
                                                 <div class="modal_heading">
                                                     <p>Edit Class</p>
                                                 </div>
-                                                <form action="../../resources/php/addClass.php" method="POST">
+                                                <form action="../../resources/php/modifyClass.php?i=<?php echo $i;?>&classID=<?php echo $class_id[$i];?>" method="POST" id="modifyForm<?php echo $i;?>">
                                                     <div class="modal_input">
-                                                        <input class="modal_input_box" type="text" id="class_name" name="class_name" required placeholder="Class Name">
-                                                        <input class="modal_input_box" type="text" id="full_sub_name" name="full_sub_name" required placeholder="Full Subject Name">
+                                                        <input class="modal_input_box" type="text" id="class_name<?php echo $i;?>" name="class_name" placeholder="Class Name">
+                                                        <input class="modal_input_box" type="text" id="full_sub_name<?php echo $i;?>" name="full_sub_name" placeholder="Full Subject Name">
                                                         <div class="edit-class-buttons">
-                                                        <button type="submit" class="modal_input_submit primary-button" name="submit">Save Changes</button>
-                                                        <button type="submit" id="delete_button" class=" modal_input_submit primary-button " name="submit">Delete Class</button>
+                                                            <button type="submit" id="updateBtn<?php echo $i;?>" style="width: " class="modal_input_submit primary-button" name="updateBtn<?php echo $i;?>">Save Changes</button>
+                                                            <button type="submit" id="delete_button<?php echo $i;?>" class=" modal_input_submit primary-button" name="delete_button<?php echo $i;?>">Delete Class</button>
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <script>
+                                                    var updateBtn = document.getElementById('updateBtn<?php echo $i;?>');
+
+                                                    updateBtn.addEventListener("click", () => {
+                                                        var class_name = document.getElementById('class_name<?php echo $i;?>');
+                                                        var full_sub_name = document.getElementById('full_sub_name<?php echo $i;?>');
+
+                                                        if(class_name.value === '' || full_sub_name.value === ''){
+                                                            var modifyForm = document.getElementById('modifyForm<?php echo $i;?>');
+                                                            modifyForm.removeAttribute('action');
+                                                        }
+                                                    })
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
@@ -139,7 +152,7 @@
                                                             
                                                      </svg>
                                                         <h1 class="model_heading">Add Student</h1>
-                                                        <input id="input-box"  class="modal_input_box" type="text" id="class_name" name="class_name" required placeholder="Student Email">
+                                                        <input class="modal_input_box" type="text" id="stu_email<?php echo $i;?>" name="stu_email" required placeholder="Student Email">
                                                     </div>
                                                 </div>
                                                     <div class="modal_box">
@@ -150,7 +163,7 @@
                                                         </svg>
                                                 
                                                         <h1 class="model_heading">Load Students</h1>
-                                                        <input id="input-box" class="modal_input_box" type="text" id="class_name" name="class_name" required placeholder="Upload List">
+                                                        <input class="modal_input_box" type="text" id="uploadList<?php echo $i;?>" name="uploadList" required placeholder="Upload List">
                                                     </div>
                                                 </div>
                                              </div>
