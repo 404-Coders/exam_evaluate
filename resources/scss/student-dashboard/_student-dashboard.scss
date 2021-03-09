@@ -1,0 +1,113 @@
+.line-1{
+    display: flex;
+    position: relative;
+    top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.line-2{
+    display: flex;
+    position: relative;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.line-1 .box:last-child, .line-2 .box:last-child{
+    margin-left: 50px;
+}
+.box{
+    display: flex;
+    color: $white;
+    background-color: $secondary;
+    border: 5px solid $primary;
+    font-family: 'Poppins';
+    font-size: $font-xlg;
+    font-weight: 600;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+.upload__sheet
+{   display: flex;
+    
+    &__form{
+        #upload_form
+        {
+            width: 100%;
+            justify-content: center;
+            row-gap: 15px;
+
+            input
+            {
+                width: 350px;
+            }
+        }
+        h3
+        {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+            color: #017296;
+        }
+        #icon
+        {
+            width: 50px;
+            height: 50px;
+
+            path{
+                fill: $secondary;
+            }
+        }
+    }
+}
+
+#show_answersheet{
+    .create__modal{
+        width: 90vw;
+        height: 90vh;
+        #view-frame{
+            width: 100%;
+            height: calc(90vh - 60px);
+
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+#download_answersheet{
+    .create__modal{
+        width:50vw;
+        height:50vh;
+        #view-frame{
+            width: 100%;
+            // height: 100%
+        }
+    }
+}
+.download-box{
+    display: flex;
+    color: $white;
+    background-color: $secondary;
+    border: 5px solid $primary;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-size: $font-md;
+    font-weight: 400;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Result Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="../resources/images/logo.svg" alt="Logo">
+                <div class="classInfo">
+                    <p class="nav__className"><?php echo $class_name; ?></p>
+                    <p class="nav__subjectName"><?php echo $full_sub_name; ?></p>
+                </div>
+            </div>
+            <div class="nav__menu">
+                <div class="nav__navigation">
+                    <img src="<?php echo extractor($tea_pic);?>" alt="">
+                    <div class="nav__name"><?php echo $tea_name; ?></div>
+                    <img src="../resources/images/back-button.svg" id="backBtn" alt="back button">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="../resources/js/responsive.js"></script>
+
+</body>
+</html>

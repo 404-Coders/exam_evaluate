@@ -1,33 +1,29 @@
 # Bucket List
 
-## Home page
-    - Block Responsiveness
-    - Team
-
-## Login
-    - Back Button
-    - Background
+## Home page (Jasveen)
+    - Features -> Content
 
 # Student Dashboard
 
-## Features
+## Features 
+### Development (Jasveen) & Backend (Deepak)
     - Upload AnswerSheet -> Modal Form
     - Show AnswerSheet -> 95% width modal
-    - Edit Profile -> page (innovative profile)
     - Result Board -> Generate Query -> Form (SubjectTeacher(Automatic){To}, MailSubject, Query(Body), StudentEmail(From))
     - Export Marksheet
+
+    - Icon on each box
 
 # Teacher Dashboard
 
 ## Features
+### Development (Aastha) & Backend (Kushdeep)
     - Add Student OR Load Student Google Sheet
-    - Add/Modify/Delete Classes
+    - Modify/Delete Classes
     - Generate/Download Marksheet
     - Check Exams
 
 # Evaluator
 
 ## Functionality
-    - Submit
-    - Move back button after teacher name 
-    - Question & Marks -> Sticky
+    - Submit (Deepak)

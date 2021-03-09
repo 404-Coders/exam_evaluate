@@ -143,19 +143,15 @@
             </div>    
             <div class="team__teamMember">
                 <img src="./resources/images/team-members/jasveen.svg" alt="">
-                <h2>Jasvee Kaur</h2>
-
+                <h2>Jasveen Kaur</h2>
             </div>
-
             <div class="team__teamMember">
                 <img src="./resources/images/team-members/kushdeep.svg" alt="">
                 <h2>Kushdeep Walia</h2>
-
             </div>
             <div class="team__teamMember">
                 <img src="./resources/images/team-members/aastha.svg" alt="">
                 <h2>Aastha Bhasin</h2>
-                
             </div>
             <div class="team__teamMember">
                 <img src="./resources/images/team-members/dev.svg" alt="">

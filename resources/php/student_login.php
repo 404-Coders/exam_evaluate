@@ -17,7 +17,7 @@
             {
                 session_start();
                 $_SESSION['rollNo'] = $stu_rollNo;
-                header("location: ../../login?sucess=login_succ");
+                header("location: ../../dashboard/student-dashboard/");
                 echo "All three matched";
             }
             else
