@@ -62,7 +62,7 @@
                     <div class="nav__navigation">
                         <img src="<?php echo extractor($tea_pic);?>" alt="">
                         <div class="nav__name"><?php echo $tea_name; ?></div>
-                        <button id="logout" class="white-button nav__button">Logout</button>
+                        <button id="logout" class="primary-button ">Logout</button>
                     </div>
                 </div>
             </nav>
@@ -109,7 +109,7 @@
                                                         <input class="modal_input_box" type="text" id="full_sub_name<?php echo $i;?>" name="full_sub_name" placeholder="Full Subject Name">
                                                         <div class="edit-class-buttons">
                                                             <button type="submit" id="updateBtn<?php echo $i;?>" style="width: " class="modal_input_submit primary-button" name="updateBtn<?php echo $i;?>">Save Changes</button>
-                                                            <button type="submit" id="delete_button<?php echo $i;?>" class=" modal_input_submit primary-button" name="delete_button<?php echo $i;?>">Delete Class</button>
+                                                            <button type="submit" id="delete_button<?php echo $i;?>" class=" modal_input_submit blue-button" name="delete_button<?php echo $i;?>">Delete Class</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -133,43 +133,64 @@
                                 <a onclick="showModal('loadStudent<?php echo $i;?>')" >
                                     <div class="class__tool">
                                         <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/load.svg" alt=""></div>
-                                        <div class="class__tool__desc">Load <br> Students</div>
+                                        <div class="class__tool__desc">Load Data</div>
                                     </div>
                                 </a>
                                 <section class="modal_container" id='loadStudent<?php echo $i;?>' style="visibility: hidden;" >
                                     <div id="load" class="create__modal">
-                                        <div class="create__modal__head">
+                                        <div>
                                             <img class="register__cancel" onclick="hideModal('loadStudent<?php echo $i;?>')" src="../../resources/images/cancel.svg" alt="">
                                         </div>
                                         <div class="create__modal__body">
                                             <div class="modal">
-                                                    <div class="modal_section">
-                                                    <div class="modal_box">
-                                                    <div class="modal_icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
-                                                    <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341    c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z    " fill="#88b9d3" data-original="#000000" style="" class=""/>
-                                                    <path d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318    c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83    s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z" fill="#88b9d3" data-original="#000000" style="" class=""/>
-                                                            
-                                                     </svg>
-                                                        <h1 class="model_heading">Add Student</h1>
-                                                        <input class="modal_input_box" type="text" id="stu_email<?php echo $i;?>" name="stu_email" required placeholder="Student Email">
-                                                    </div>
-                                                </div>
-                                                    <div class="modal_box">
-                                                    <div class="modal_icon">
+                                                <div class="modal_icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg" id="Solid">
-                                                        <path d="m239.029 384.97a24 24 0 0 0 33.942 0l90.509-90.509a24 24 0 0 0 0-33.941 24 24 0 0 0 -33.941 0l-49.539 49.539v-262.059a24 24 0 0 0 -48 0v262.059l-49.539-49.539a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941z" fill="#ffffff" data-original="#000000" style=""/>
-                                                        <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" fill="#ffffff" data-original="#000000" style=""/></g></g>
-                                                        </svg>
-                                                
-                                                        <h1 class="model_heading">Load Students</h1>
-                                                        <input class="modal_input_box" type="text" id="uploadList<?php echo $i;?>" name="uploadList" required placeholder="Upload List">
-                                                    </div>
+                                                            <path d="m239.029 384.97a24 24 0 0 0 33.942 0l90.509-90.509a24 24 0 0 0 0-33.941 24 24 0 0 0 -33.941 0l-49.539 49.539v-262.059a24 24 0 0 0 -48 0v262.059l-49.539-49.539a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941z" fill="#ffffff" data-original="#000000" style=""/>
+                                                            <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" fill="#ffffff" data-original="#000000" style=""/></g></g>
+                                                    </svg>
                                                 </div>
-                                             </div>
-                                             <button type="submit" class="modal_input_submit primary-button" name="submit">Submit</button>
+                                                <div class="modal_heading">
+                                                    <p>Load Students</p>
+                                                </div>
+                                                <form>
+                                                    <div class="modal_input">
+                                                    <input class="modal_input_box" type="text" id="uploadList<?php echo $i;?>" name="uploadList" required placeholder="Upload List">
+                                                        <div class="edit-class-buttons">
+                                                        <button type="submit" class="modal_input_submit primary-button" name="submit">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
+                                        </div>
+                                        <!-- <div class="create__modal__body">
+                                            <div class="modal">
+                                                    <div class="modal_section">
+                                                        <div class="modal_box">
+                                                            <div class="modal_icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+                                                                <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341    c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z    " fill="#88b9d3" data-original="#000000" style="" class=""/>
+                                                                <path d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318    c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83    s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z" fill="#88b9d3" data-original="#000000" style="" class=""/>                   
+                                                                </svg>
+                                                                <h1 class="model_heading">Add Student</h1>
+                                                                <input class="modal_input_box" type="text" id="stu_email<?php echo $i;?>" name="stu_email" required placeholder="Student Email">
+                                                            </div>
+                                                        </div>
+                                                    <div class="modal">
+                                                        <div class="modal_icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg" id="Solid">
+                                                            <path d="m239.029 384.97a24 24 0 0 0 33.942 0l90.509-90.509a24 24 0 0 0 0-33.941 24 24 0 0 0 -33.941 0l-49.539 49.539v-262.059a24 24 0 0 0 -48 0v262.059l-49.539-49.539a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941z" fill="#ffffff" data-original="#000000" style=""/>
+                                                            <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" fill="#ffffff" data-original="#000000" style=""/></g></g>
+                                                            </svg>
+                                                
+                                                            <h1 class="modal_heading">Load Students</h1>
+                                                            <input class="modal_input_box" type="text" id="uploadList<?php echo $i;?>" name="uploadList" required placeholder="Upload List">
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                            <button type="submit" class="modal_input_submit primary-button" name="submit">Submit</button>
                                             </div>
+                                        </div> -->
+                                        
                                     </div>
                                 </section>
 
@@ -181,16 +202,16 @@
                                 </a>
                                 <section class="modal_container" id="download_answersheet<?php echo $i;?>" style="visibility: hidden;">
                                     <div class="create__modal">
-                                        <div class="create__modal__head">
+                                        <div>
                                             <img class="register__cancel" onclick="hideModal('download_answersheet<?php echo $i;?>')" src="../../resources/images/cancel.svg" alt="">
                                         </div>
-                                        <div class="create__modal__body" id="view-frame">
-                                            <div class="line-1">
+                                        <div class="create__modal__body" id="view-frame" style="height:100%">
+                                            <div class="line-1" style="top:0;">
                                                 <div class=" box download-box">
                                                     Export <br> to Email
                                                 </div>
                                                 <div class="box download-box">
-                                                    Downlaod <br> to device-width
+                                                    Downlaod <br> to device
                                                 </div>
                                             </div>
                                         </div>
