@@ -160,12 +160,29 @@
                                     </div>
                                 </section>
 
-                                <a href="#">
+                                <a onclick="showModal('download_answersheet<?php echo $i;?>')">
                                     <div class="class__tool">
                                         <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/export.svg" alt=""></div>
                                         <div class="class__tool__desc">Export</div>
                                     </div>      
                                 </a>
+                                <section class="modal_container" id="download_answersheet<?php echo $i;?>" style="visibility: hidden;">
+                                    <div class="create__modal">
+                                        <div class="create__modal__head">
+                                            <img class="register__cancel" onclick="hideModal('download_answersheet<?php echo $i;?>')" src="../../resources/images/cancel.svg" alt="">
+                                        </div>
+                                        <div class="create__modal__body" id="view-frame">
+                                            <div class="line-1">
+                                                <div class=" box download-box">
+                                                    Export <br> to Email
+                                                </div>
+                                                <div class="box download-box">
+                                                    Downlaod <br> to device-width
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                                 <a href="./?classID=<?php echo $class_id[$i];?>">
                                     <div class="class__tool">
                                         <div class="class__tool__icon"><img src="../../resources/images/teacher-dashboard/edit.svg" alt=""></div>
