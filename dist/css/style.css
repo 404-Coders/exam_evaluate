@@ -1411,4 +1411,14 @@ header {
   height: 150px;
   cursor: pointer;
 }
+
+.board-head {
+  height: 38px;
+  font-family: nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5625rem;
+  color: #017296;
+  margin-left: 30px;
+}
 /*# sourceMappingURL=style.css.map */
