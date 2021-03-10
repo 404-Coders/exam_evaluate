@@ -1487,4 +1487,8 @@ header {
 .subject__sel__option {
   color: #3D3D3D;
 }
+
+p.selected {
+  background: rgba(136, 185, 211, 0.2);
+}
 /*# sourceMappingURL=style.css.map */

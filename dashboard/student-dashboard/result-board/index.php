@@ -17,6 +17,7 @@
     $stu_name = $_SESSION["stu_name"];
     $stu_pic = $_SESSION["stu_pic"];
     $class_name =  $_SESSION["class_name"];
+    // $class_id = $_SESSION['class_id'];
 
     //Load Subjects
     $query_classes = mysqli_query($con, "SELECT `sub_name` from `exam_classes` where `class_name`='$class_name' ORDER BY `sub_name`");
@@ -28,26 +29,39 @@
     {
         array_push($classes, $fetch_classes[$i][0]);
     }
+
+    // Getting Student Result Table
+    $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `stu_rollNo` ='$stu_rollNo' ORDER BY `sub_name`");
+    $fetch_exam_result = mysqli_fetch_all($query_exam_result);
+
+    $result = new stdClass();
+    // $fetch_exam_result = json_encode($fetch_exam_result);
+    for($i = 0; $i < count($fetch_exam_result); $i++ )
+    {
+        $key = $fetch_exam_result[$i][4];
+        $value = array_slice($fetch_exam_result[$i], 5);
+        $result->$key = $value;
+    }
+
+
+    //getting answersheet
+    $query_answersheet = mysqli_query($con, "SELECT `sub_name`, `answersheet` FROM `exam_sheet` WHERE `stu_rollNo` ='$stu_rollNo' ORDER BY `stu_rollNo`");
+    $fetch_answersheet = mysqli_fetch_all($query_answersheet);
+    
+    $answersheets = new stdClass();
+    for($i = 0; $i < count($fetch_answersheet); $i++ )
+    {
+        $value = getPreview($fetch_answersheet[$i][1]);
+        $key = $fetch_answersheet[$i][0];
+        $answersheets->$key = $value;
+    }
+
+
     
 
-    // $query_class_id = mysqli_query($con, "SELECT `full_sub_name` FROM `exam_classes` WHERE `tea_id` = '$tea_id' AND `class_id` = '$class_id' GROUP BY `full_sub_name`");
-    // $fetch_class_id = mysqli_fetch_all($query_class_id);
-    // $full_sub_name = $fetch_class_id[0][0];
 
-    // // Getting Student Details of particular Class
-    // $query_students = mysqli_query($con, "SELECT `stu_name`,`stu_rollNo` FROM `student_cred` WHERE stu_class ='$class_name'");
-    // $fetch_students = mysqli_fetch_all($query_students);
 
-    // // Getting Student Result Table
-    // $query_exam_result = mysqli_query($con, "SELECT * FROM `exam_result` WHERE `class_id` ='$class_id'");
-    // $fetch_exam_result = mysqli_fetch_all($query_exam_result);
 
-    // $query_exam_sheet = mysqli_query($con, "SELECT * FROM `exam_sheet` WHERE `class_id` ='$class_id' ORDER BY `stu_rollNo`");
-    // $fetch_exam_sheet = mysqli_fetch_all($query_exam_sheet);
-
-    // // Fetching Number of Columns Affected
-    // $query_num_columns = mysqli_query($con, "SELECT count(*) FROM information_schema.columns WHERE table_name ='exam_result';");
-    // $fetch_num_columns = mysqli_fetch_array($query_num_columns);
 ?>
 
 <!DOCTYPE html>
@@ -91,8 +105,8 @@
                             if($i+1 == 1)
                             {
                                 echo '
-                                    <div class="answers__sList__item selected" id= "stu_name-'.$i.'">
-                                        <p>'.$classes[$i].'</p>
+                                    <div class="answers__sList__item" id= "stu_name-'.$i.'">
+                                        <p class="selected">'.$classes[$i].'</p>
                                     </div>
                                 ';
                             }
@@ -123,15 +137,11 @@
                                 <tr class="answers__markTable__mark" style="display: none;">
                                     <td colspan="2"><input type="hidden" name="stu_rollNo" id="stu_rollNo"></td>
                                 </tr>
+
                             </table>
                         </div>
-                        <!-- <div class="answers__buttons">
-                            <img src="../../../resources/images/add (1).svg" id="addBox" alt="add">
-                            <img src="../../../resources/images/delete.svg" id="delBox" alt="delete">
-                        </div> -->
                         <div class="answers__totalC">
-                            <p>Total =&nbsp;<span id="total">00</span></p>
-                            <button name ="submit" id="subBtn" type="submit">Submit</button>
+                            <p>Total Marks =&nbsp;<span id="total">00</span></p>
                         </div>
                     </div>
                 </form>
@@ -141,12 +151,70 @@
                 <iframe class="custom-scroll" id="markSheet" src="" frameborder="0"></iframe>
             </div>
         </section>
+
+        <!-- <script src="../../../resources/js/responsive.js"></script> -->
         <script>
-            const exam_result = <?php echo json_encode($fetch_exam_result); ?>;
-            const exam_sheet = <?php echo json_encode($fetch_exam_sheet); ?>;
+            var selectedItem; 
+            const table = document.getElementById("test");
+            loadResultBoard();
+            function loadResultBoard() {
+                var result = <?php echo json_encode($result);?>;
+                var answersheets = <?php echo json_encode($answersheets);?>;
+
+                var resultSize = Object.keys(result);
+                var stu_names = document.querySelectorAll(".answers__sList__item>p");
+
+                for(var i = 0; i < stu_names.length; i++)
+                {
+                    if(stu_names[i].classList.contains("selected"))
+                    {
+                        selectedItem = i;
+                        var element = document.querySelector("p.selected").innerHTML;
+                        var total = document.getElementById("total"); 
+                        console.log(element);
+                        var answersheet = document.getElementById("markSheet");
+                        var marks = result[element];
+                        // console.log(element, marks,  answersheets[element]);
+                        answersheet.setAttribute("src", answersheets[element]);
+                        var i = 0;
+                        let str = "", sum = 0;
+                        marks.forEach(student_marks => {
+                            str+=`
+                                <tr class="answers__markTable__mark">
+                                    <td>${"Q"+(i+1)}</td>
+                                    <td>${student_marks}</td>
+                                </tr>
+                                `;
+                            i++;
+                            sum += parseInt(student_marks); 
+                        });
+                        total.innerHTML = sum;
+                        table.innerHTML += str;
+
+
+                    }
+                }
+
+            }
+            var student = document.querySelectorAll(".answers__sList__item>p");
+            student.forEach(stu => {
+                stu.addEventListener("click", function() {
+                student.forEach(elem => {
+                    if(elem.classList.contains("selected") === true)    
+                        elem.classList.remove("selected");
+                })
+                table.innerHTML = `
+                                    <tr class="answers__markTable__heading">
+                                        <th>Questions</th>
+                                        <th>Marks</th>
+                                    </tr>`;
+                stu.classList.add("selected");
+                loadResultBoard();
+                // console.log( "Clicked", selectedItem);
+                });
+            });  
+            
         </script>
-        <script src="../resources/js/marks-evaluator.js"></script>
-        <script src="./resources/js/responsive.js"></script>
 
     </body>
 </html>
