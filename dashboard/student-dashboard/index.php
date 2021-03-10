@@ -210,12 +210,14 @@
                 </div>
                 <div class="create__modal__body" id="view-frame">
                     <div class="line-1">
-                        <div class=" box download-box">
-                            Export <br> to Email
-                        </div>
+                        <a href="../../resources/php/studentMarksheet.php">
+                            <div class=" box download-box">
+                                Export <br> as PDF
+                            </div>
+                        </a> 
                         <a href="../../resources/php/generateEachResult.php">
                             <div class="box download-box">
-                                Downlaod <br> to device 
+                                Export <br> as Excel 
                             </div>
                         </a> 
                     </div>
