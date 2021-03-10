@@ -28,7 +28,7 @@
     }
     //Xls Generator
 	$columnHeader = '';  
-	$columnHeader = "Subject Name" . "\t" . "Marks" . "\t";  
+	$columnHeader = "<b>Subject Name" . "\t" . "Marks" . "\t";  
 	$setData = '';  
 	for($k =0; $k < count($setRec); $k++){  
 		$rowData = $sub_name[$k]."\t".$subMarks[$k] . "\t";
