@@ -1,9 +1,9 @@
 <?php
-require('fpdf/fpdf.php');
+require('fpdf.php');
 
 class PDF_SECTOR extends FPDF
 {
-    function Sector($xc, $yc, $r, $a, $b, $style='FD', $cw=true, $o=90)
+    public function sector($xc, $yc, $r, $a, $b, $style='FD', $cw=true, $o=90)
     {
         $d0 = $a - $b;
         if($cw){
@@ -96,7 +96,7 @@ class PDF_SECTOR extends FPDF
         $this->_out($op);
     }
 
-    function _Arc($x1, $y1, $x2, $y2, $x3, $y3 )
+    public function _Arc($x1, $y1, $x2, $y2, $x3, $y3 )
     {
         $h = $this->h;
         $this->_out(sprintf('%.2F %.2F %.2F %.2F %.2F %.2F c',
