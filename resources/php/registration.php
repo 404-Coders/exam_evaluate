@@ -16,7 +16,7 @@
         {
             if($tea_picture == "")
             {
-                $tea_picture = "https://drive.google.com/uc?id=1pIn_EOigZXo1uD2pm97lOERKQXjv6W03";
+                $tea_picture = "https://drive.google.com/file/d/1pIn_EOigZXo1uD2pm97lOERKQXjv6W03/view?usp=sharing";
             }
             else
             {

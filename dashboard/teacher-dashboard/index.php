@@ -41,6 +41,13 @@
         $class_id[$i] = $fetch_class_id[$i][0];
         $full_sub_name[$i] = $fetch_class_id[$i][1];
     }    
+
+    if(sizeof($fetch_class_id) <= 0){
+        $count_class = 0;
+    }
+    else{
+        $count_class = count($class_id);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +81,7 @@
     <section>
         <div class="class">
             <?php
-                for($i = 0; $i < count($class_id); $i++){
+                for($i = 0; $i < $count_class; $i++){
                     $classID = explode("-", $class_id[$i])[0];
             ?>
                 <div class="class__item">

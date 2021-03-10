@@ -4,14 +4,14 @@
     $stu_roll = $_SESSION['rollNo'];
 
     include ("./connection.php");
-    
-    // $filename = "Report - ".$class_name." ".$sub_name.".pdf";
 
     $query_class_name = mysqli_query($con,"SELECT * FROM `student_cred` WHERE `stu_rollNo` = '$stu_roll'");
     $fetch_class_name = mysqli_fetch_array($query_class_name);
     $stu_name = $fetch_class_name[1];
     $stu_email = $fetch_class_name[2];
 	$class_name = $fetch_class_name[4]; 
+
+    $filename = $stu_name." ".$class_name.".pdf";
 
 	$query_class_details = mysqli_query($con,"SELECT `class_id`,`full_sub_name` FROM `exam_classes` WHERE `class_name` = '$class_name'");
     $fetch_class_details = mysqli_fetch_all($query_class_details);
@@ -58,18 +58,18 @@
     $pdf->Ln(4);
     $pdf->SetFont("Arial","","14");
     $pdf->setTextColor(0,0,0);
-    $pdf->Cell(30,10,"","0","0","C");
+    $pdf->Cell(15,10,"","0","0","C");
     $pdf->Cell(30,10,"S. No.","1","0","C");
-    $pdf->Cell(70,10,"Subject Name","1","0","C");
+    $pdf->Cell(100,10,"Subject Name","1","0","C");
     $pdf->Cell(40,10,"Marks Gained","1","1","C");
     
     for($k =0; $k < count($total); $k++){  
-        $pdf->Cell(30,10,"","0","0","C");
+        $pdf->Cell(15,10,"","0","0","C");
 		$pdf->Cell(30,10,$k+1,"1","0","C");
-        $pdf->Cell(70,10,$full_sub_name[$k],"1","0","C");
+        $pdf->Cell(100,10,$full_sub_name[$k],"1","0","C");
         $pdf->Cell(40,10,$total[$k],"1","1","C");  
 	}
 
-    $pdf->output();
-    // $pdf->output($filename,"D");
+    // $pdf->output();
+    $pdf->output($filename,"D");
 ?>
