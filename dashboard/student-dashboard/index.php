@@ -7,7 +7,6 @@
 ?>
 <?php 
     include "../../resources/php/connection.php";
-    // session_start();
     $stu_rollNo = $_SESSION["rollNo"];
 
     //Load student's details
@@ -107,7 +106,7 @@
                 <div class="nav__logo">
                     <img src="../../resources/images/logo.svg" alt="Logo">
                     <div class="classInfo">
-                        <p class="nav__className"><?php echo "Class Name"; ?></p>
+                        <p class="nav__className"><?php echo $stu_class; ?></p>
                         <p class="nav__subjectName"></p>
                     </div>
                 </div>
@@ -125,7 +124,7 @@
                 <div class="box" onclick="showModal('show_answersheet')">
                     Show <br> Answer Sheet
                 </div>
-                <a href="./result-board/index.html">
+                <a href="./result-board/">
                     <div class="box">
                         Result Board
                     </div>
