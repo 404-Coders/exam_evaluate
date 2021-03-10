@@ -95,7 +95,7 @@
             <div class="nav__logo">
                 <img src="../resources/images/logo.svg" alt="Logo">
                 <div class="web-name">
-                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
+                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluator</p>
                 </div>
             </div>
             <div class="nav__menu">

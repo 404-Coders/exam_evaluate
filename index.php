@@ -42,7 +42,7 @@
             <div class="nav__logo">
                 <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="display: none;">
                 <div class="web-name">
-                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluate</p>
+                    <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluator</p>
                 </div>
             </div>
             <div class="nav__menu">
@@ -87,7 +87,7 @@
         <div class="register__content">
             <div class="register__details">
                 <img class="register__cancel" id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
-                <h1>Welcome to Exam Evaluate</h1>
+                <h1>Welcome to Exam Evaluator</h1>
                 <div class="register__forms">
                     <img src="./resources/images/signup.jpg" alt="Sign Up">
                     <form action="./resources/php/registration.php" onsubmit="return validateForm()" method="POST" class="form">
