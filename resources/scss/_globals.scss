@@ -92,3 +92,30 @@ body{
 a{
     text-decoration: none;
 }
+
+#backBtn{
+    cursor:pointer;
+
+
+    path{
+        fill: $primary;
+
+            // fill: $secondary;
+    }
+
+    path:first-child{
+        fill: $secondary;
+    }
+    &:hover{
+
+        path{
+            fill: $secondary;
+        }
+        path:first-child{
+            fill: $primary;
+        }
+        
+    }
+
+
+}

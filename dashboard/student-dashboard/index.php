@@ -214,7 +214,7 @@
                             Export <br> to Email
                         </div>
                         <div class="box download-box">
-                            Downlaod <br> to device-width
+                            Downlaod <br> to device
                         </div>
                     </div>
                 </div>
