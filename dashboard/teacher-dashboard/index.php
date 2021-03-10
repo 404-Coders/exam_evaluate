@@ -73,7 +73,7 @@
                 <div class="nav__navigation">
                     <img src="<?php echo extractor($tea_pic);?>" alt="">
                     <div class="nav__name"><?php echo $tea_name; ?></div>
-                    <button id="logout" class="primary-button nav__button">Logout</button>
+                    <button id="logout" class="primary-button" style="font-size:18px">Logout</button>
                 </div>
             </div>
         </nav>
