@@ -213,9 +213,11 @@
                         <div class=" box download-box">
                             Export <br> to Email
                         </div>
-                        <div class="box download-box">
-                            Downlaod <br> to device-width
-                        </div>
+                        <a href="../../resources/php/generateEachResult.php">
+                            <div class="box download-box">
+                                Downlaod <br> to device 
+                            </div>
+                        </a> 
                     </div>
                 </div>
             </div>
