@@ -15,12 +15,17 @@
         header("location: ../../marks-evaluator/");
     }
 
-        if(isset($_GET['generateReport'])){
-            $_SESSION['class_id'] = $_GET['generateReport'];
-            header("location: ../../resources/php/generateResult.php");
-        }
+    if(isset($_GET['generateExcel'])){
+        $_SESSION['class_id'] = $_GET['generateExcel'];
+        header("location: ../../resources/php/generateResult.php");
+    }
 
-        $tea_id = $_SESSION['teaID'];
+    if(isset($_GET['generatePDF'])){
+        $_SESSION['class_id'] = $_GET['generatePDF'];
+        header("location: ../../resources/php/classMarksheet.php");
+    }
+
+    $tea_id = $_SESSION['teaID'];
 
     // Retreving Teacher Name
     $query_tea_details = mysqli_query($con, "SELECT `tea_name`,`tea_picture` FROM `teacher_cred` WHERE `tea_id` = '$tea_id'");
@@ -108,7 +113,7 @@
                                                     <input class="modal_input_box" type="text" id="full_sub_name" name="full_sub_name" placeholder="Full Subject Name">
                                                     <div class="edit-class-buttons">
                                                     <button type="submit" class="modal_input_submit primary-button" name="updateBtn<?php echo $i;?>">Save Changes</button>
-                                                    <button type="submit" id="delete_button<?php echo $i;?>" class=" modal_input_submit primary-button" name="delete_button<?php echo $i;?>">Delete Class</button>
+                                                    <button type="submit" id="delete_button<?php echo $i;?>" class=" modal_input_submit blue-button" name="delete_button<?php echo $i;?>">Delete Class</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -177,11 +182,11 @@
                                         </div>
                                         <div class="create__modal__body" id="view-frame" style="height:100%">
                                             <div class="line-1" style="top:0;">
-                                                <div class=" box download-box">
-                                                    Export <br> to Email
+                                                <a href="./?generatePDF=<?php echo $class_id[$i];?>"><div class=" box download-box">
+                                                    Export <br> as PDF
                                                 </div>
-                                                <a href="./?generateReport=<?php echo $class_id[$i];?>"><div class="box download-box">
-                                                   Downlaod <br> to device 
+                                                <a href="./?generateExcel=<?php echo $class_id[$i];?>"><div class="box download-box">
+                                                    Export <br> as Excel 
                                                 </div></a> 
                                             </div>
                                         </div>
