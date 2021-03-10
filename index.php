@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
-    <title>Home Page</title>
+    <title>Exam Evaluator</title>
 </head>
 
 <body id="body">
