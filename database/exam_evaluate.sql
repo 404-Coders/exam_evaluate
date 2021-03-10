@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2021 at 10:42 PM
+-- Generation Time: Mar 10, 2021 at 01:27 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -77,22 +77,22 @@ CREATE TABLE `exam_result` (
 
 INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
 (1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 10, 9, 20),
-(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(2, 1, 'CSE1-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
 (4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(5, 2, 'CSE1-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
 (7, 3, 'CSE2-ADA', 1, 'ADA', 20, 20, 10, 1, 0),
-(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(8, 3, 'CSE2-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
 (10, 4, 'CSE2-ADA', 1, 'ADA', 67, 0, 0, 20, 0),
-(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(11, 4, 'CSE2-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
 (13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(14, 5, 'CSE3-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0),
 (16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
-(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(17, 6, 'CSE3-JP', 2, 'JP', 0, 0, 0, 0, 0),
 (18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -114,22 +114,22 @@ CREATE TABLE `exam_sheet` (
 --
 
 INSERT INTO `exam_sheet` (`s.no.`, `class_id`, `stu_rollNo`, `sub_name`, `answersheet`) VALUES
-(1, 'CSE1-JAVA', 1, 'JAVA', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
+(1, 'CSE1-JP', 1, 'JP', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
 (2, 'CSE1-ADA', 1, 'ADA', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
 (3, 'CSE1-AI', 1, 'AI', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
-(4, 'CSE1-JAVA', 2, 'JAVA', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
+(4, 'CSE1-JP', 2, 'JP', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
 (5, 'CSE1-ADA', 2, 'ADA', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
 (6, 'CSE1-AI', 2, 'AI', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
-(7, 'CSE2-JAVA', 3, 'JAVA', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
+(7, 'CSE2-JP', 3, 'JP', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
 (8, 'CSE2-ADA', 3, 'ADA', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
 (9, 'CSE2-AI', 3, 'AI', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
-(10, 'CSE2-JAVA', 4, 'JAVA', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
+(10, 'CSE2-JP', 4, 'JP', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
 (11, 'CSE2-ADA', 4, 'ADA', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
 (12, 'CSE2-AI', 4, 'AI', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
-(13, 'CSE3-JAVA', 5, 'JAVA', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
+(13, 'CSE3-JP', 5, 'JP', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
 (14, 'CSE3-ADA', 5, 'ADA', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
 (15, 'CSE3-AI', 5, 'AI', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
-(16, 'CSE3-JAVA', 6, 'JAVA', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
+(16, 'CSE3-JP', 6, 'JP', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
 (17, 'CSE3-ADA', 6, 'ADA', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
 (18, 'CSE3-AI', 6, 'AI', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing');
 
