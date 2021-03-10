@@ -68,7 +68,7 @@
                 Why Onscreen marking system ?
             </div>
             <div class="why-app__text__body body-text">
-                Onscreen Marking System is useful to evaluate physical copies of the answer sheets in digital format.
+                Onscreen Marking System is useful to evaluate answer sheets in digital format.
                 During Covid 19 pandemic, education has shifted completely to digital mode. As teachers were never familiar with online mode, this website offers them an easy alternate of checking students answer sheet and examination activities leading to result processing. 
                 After evaluating answer sheets teacher can download compiled result of each class in PDF format.
                 Students can export to email or download their result in all subjects in compiled form in PDF format.
