@@ -115,7 +115,7 @@
                     <div class="nav__navigation">
                         <img src=<?php echo $stu_pic; ?> alt="">
                         <div class="nav__name"><?php echo $stu_name; ?></div>
-                        <button id="logout" class="white-button nav__button">Logout</button>
+                        <button id="logout" class="primary-button" style="font-size:18px">Logout</button>
                     </div>
                 </div>
             </nav>
