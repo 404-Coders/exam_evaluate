@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2021 at 01:28 PM
+-- Generation Time: Mar 09, 2021 at 10:42 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -50,8 +50,7 @@ INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `full
 (6, 'CSE1-ADA', 'CSE1', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
 (7, 'CSE3-JP', 'CSE3', 'JP', 'Java Programming', 2, NULL),
 (8, 'CSE3-ADA', 'CSE3', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
-(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3, NULL),
-(17, 'IT1-ADA', 'IT1', 'ADA', 'Algorithm Design & Analysis', 1, NULL);
+(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -69,42 +68,32 @@ CREATE TABLE `exam_result` (
   `Q2` int(11) DEFAULT 0,
   `Q3` int(11) DEFAULT 0,
   `Q4` int(11) DEFAULT 0,
-  `Q5` int(11) DEFAULT 0,
-  `Q6` int(11) DEFAULT 0,
-  `Q7` int(11) DEFAULT 0,
-  `Q8` int(11) DEFAULT 0,
-  `Q9` int(11) DEFAULT 0,
-  `Q10` int(11) DEFAULT 0,
-  `Q11` int(11) DEFAULT 0,
-  `Q12` int(11) DEFAULT 0,
-  `Q13` int(11) DEFAULT 0,
-  `Q14` int(11) DEFAULT 0,
-  `Q15` int(11) DEFAULT 0
+  `Q5` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_result`
 --
 
-INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`, `Q6`, `Q7`, `Q8`, `Q9`, `Q10`, `Q11`, `Q12`, `Q13`, `Q14`, `Q15`) VALUES
-(1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 3, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(10, 4, 'CSE2-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
+(1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 10, 9, 20),
+(2, 1, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(5, 2, 'CSE1-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(7, 3, 'CSE2-ADA', 1, 'ADA', 20, 20, 10, 1, 0),
+(8, 3, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(10, 4, 'CSE2-ADA', 1, 'ADA', 67, 0, 0, 20, 0),
+(11, 4, 'CSE2-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(14, 5, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(17, 6, 'CSE3-JAVA', 2, 'JAVA', 0, 0, 0, 0, 0),
+(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -240,7 +229,7 @@ ALTER TABLE `teacher_cred`
 -- AUTO_INCREMENT for table `exam_classes`
 --
 ALTER TABLE `exam_classes`
-  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `exam_result`

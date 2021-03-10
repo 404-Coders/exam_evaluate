@@ -17,6 +17,9 @@
 # Teacher Dashboard
 
 ## Features
+    - Fix Same name class creation
+    - Fix modify adding class 
+    - Delete Class Fix
 ### Development (Aastha) & Backend (Kushdeep)
     - Add Student OR Load Student Google Sheet
     - Modify/Delete Classes
@@ -24,6 +27,7 @@
     - Check Exams
 
 # Evaluator
-
+    - delete button
+    - Marks Change on Delete and add
 ## Functionality
     - Submit (Deepak)
