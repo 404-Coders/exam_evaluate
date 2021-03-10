@@ -162,7 +162,7 @@
                             </g>
                         </svg>
                         <h3>Upload Answer sheet</h3>
-                        <select class="upload__sheet__subject" name="subject" id="subjects">
+                        <select class="upload__sheet__subject" name="subject" id="subjects" required>
                             <option value="none" selected>Select a Subject</option>
                             <?php 
                                 for($i = 0; $i < count($classes); $i++)
@@ -171,7 +171,7 @@
                                 }
                             ?>
                         </select>
-                        <input class="form__input" type="text" name="sheet_link" placeholder="Drive link">
+                        <input class="form__input" required type="text" name="sheet_link" placeholder="Drive link">
                         <button type="submit" class="primary-button" name="submit">Upload</button>
                     </form>
                 </div>

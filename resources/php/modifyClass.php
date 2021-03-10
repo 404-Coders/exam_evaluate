@@ -31,7 +31,7 @@
     if(isset($_POST[$delete])){
         $query = mysqli_query($con, "DELETE FROM `exam_classes` WHERE `class_id` = '$classID' AND `tea_id` = '$tea_id'");
         if($query > 0){
-            header("location: ../../dashboard/teacher-dashboard/?delete=yes");
+            header("location: ../../dashboard/teacher-dashboard/");
         }
         else{
             echo "Not Added";

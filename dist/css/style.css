@@ -88,6 +88,26 @@ a {
   text-decoration: none;
 }
 
+#backBtn {
+  cursor: pointer;
+}
+
+#backBtn path {
+  fill: #017296;
+}
+
+#backBtn path:first-child {
+  fill: #FDBF43;
+}
+
+#backBtn:hover path {
+  fill: #FDBF43;
+}
+
+#backBtn:hover path:first-child {
+  fill: #017296;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1486,5 +1506,9 @@ header {
 
 .subject__sel__option {
   color: #3D3D3D;
+}
+
+p.selected {
+  background: rgba(136, 185, 211, 0.2);
 }
 /*# sourceMappingURL=style.css.map */
