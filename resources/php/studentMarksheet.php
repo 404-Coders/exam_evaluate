@@ -22,7 +22,8 @@
 
     for($i = 0; $i < count($class_id); $i++){
         $result_query = mysqli_query($con,"SELECT * FROM `exam_result` WHERE `class_id` = '$class_id[$i]' AND `stu_rollNo` = '$stu_roll'");
-        $fetch_result[$i] = mysqli_fetch_array($result_query);
+        if(mysqli_num_rows($result_query) > 0)
+            $fetch_result[$i] = mysqli_fetch_array($result_query);
     }
 
     $query_num_columns = mysqli_query($con, "SELECT count(*) FROM information_schema.columns WHERE table_name ='exam_result';");
