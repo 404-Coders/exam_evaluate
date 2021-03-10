@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2021 at 01:27 PM
+-- Generation Time: Mar 10, 2021 at 02:43 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -42,15 +42,15 @@ CREATE TABLE `exam_classes` (
 --
 
 INSERT INTO `exam_classes` (`s.no.`, `class_id`, `class_name`, `sub_name`, `full_sub_name`, `tea_id`, `api_link`) VALUES
-(1, 'CSE1-AI', 'CSE1', 'AI', 'Artificial Intelligence', 3, NULL),
+(1, 'CSE1-CSP', 'CSE1', 'CSP', 'Communication Skills for Professionals', 3, NULL),
 (2, 'CSE1-JP', 'CSE1', 'JP', 'Java Programming', 2, NULL),
 (3, 'CSE2-JP', 'CSE2', 'JP', 'Java Programming', 2, NULL),
 (4, 'CSE2-ADA', 'CSE2', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
-(5, 'CSE2-AI', 'CSE2', 'AI', 'Artificial Intelligence', 3, NULL),
+(5, 'CSE2-CSP', 'CSE2', 'CSP', 'Communication Skills for Professionals', 3, NULL),
 (6, 'CSE1-ADA', 'CSE1', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
 (7, 'CSE3-JP', 'CSE3', 'JP', 'Java Programming', 2, NULL),
 (8, 'CSE3-ADA', 'CSE3', 'ADA', 'Algorithm Design & Analysis', 1, NULL),
-(9, 'CSE3-AI', 'CSE3', 'AI', 'Artificial Intelligence', 3, NULL);
+(9, 'CSE3-CSP', 'CSE3', 'CSP', 'Communication Skills for Professionals', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -78,22 +78,22 @@ CREATE TABLE `exam_result` (
 INSERT INTO `exam_result` (`s.no.`, `stu_rollNo`, `class_id`, `tea_id`, `sub_name`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`) VALUES
 (1, 1, 'CSE1-ADA', 1, 'ADA', 10, 9, 10, 9, 20),
 (2, 1, 'CSE1-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(3, 1, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
-(4, 2, 'CSE1-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
+(3, 1, 'CSE1-CSP', 3, 'CSP', 10, 5, 20, 0, 0),
+(4, 2, 'CSE1-ADA', 1, 'ADA', 10, 10, 0, 0, 0),
 (5, 2, 'CSE1-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(6, 2, 'CSE1-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(6, 2, 'CSE1-CSP', 3, 'CSP', 0, 0, 0, 0, 0),
 (7, 3, 'CSE2-ADA', 1, 'ADA', 20, 20, 10, 1, 0),
 (8, 3, 'CSE2-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(9, 3, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(9, 3, 'CSE2-CSP', 3, 'CSP', 0, 0, 0, 0, 0),
 (10, 4, 'CSE2-ADA', 1, 'ADA', 67, 0, 0, 20, 0),
 (11, 4, 'CSE2-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(12, 4, 'CSE2-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(12, 4, 'CSE2-CSP', 3, 'CSP', 0, 0, 0, 0, 0),
 (13, 5, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
 (14, 5, 'CSE3-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(15, 5, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0),
+(15, 5, 'CSE3-CSP', 3, 'CSP', 0, 0, 0, 0, 0),
 (16, 6, 'CSE3-ADA', 1, 'ADA', 0, 0, 0, 0, 0),
 (17, 6, 'CSE3-JP', 2, 'JP', 0, 0, 0, 0, 0),
-(18, 6, 'CSE3-AI', 3, 'AI', 0, 0, 0, 0, 0);
+(18, 6, 'CSE3-CSP', 3, 'CSP', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -114,24 +114,24 @@ CREATE TABLE `exam_sheet` (
 --
 
 INSERT INTO `exam_sheet` (`s.no.`, `class_id`, `stu_rollNo`, `sub_name`, `answersheet`) VALUES
-(1, 'CSE1-JP', 1, 'JP', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
-(2, 'CSE1-ADA', 1, 'ADA', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
-(3, 'CSE1-AI', 1, 'AI', 'https://drive.google.com/file/d/1SvQp16pPvusGSP6O7elvk9kysihkSKiO/view?usp=sharing'),
-(4, 'CSE1-JP', 2, 'JP', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
-(5, 'CSE1-ADA', 2, 'ADA', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
-(6, 'CSE1-AI', 2, 'AI', 'https://drive.google.com/file/d/1QVp71tM2KXPIcaM-fH7pJU2z8nxj56uT/view?usp=sharing'),
+(1, 'CSE1-JP', 1, 'JP', 'https://drive.google.com/file/d/1B6T2z1Gdd0w36uof6knSC48Rw7YqqrN1/view?usp=sharing'),
+(3, 'CSE1-CSP', 1, 'CSP', 'https://drive.google.com/file/d/1oSMOWxDywMVX0bzAh6Bxoo5JGlWhp87e/view?usp=sharing'),
+(4, 'CSE1-JP', 2, 'JP', 'https://drive.google.com/file/d/17LKKyneKIjOszNPkay9jBTdATYImJ9gd/view?usp=sharing'),
+(5, 'CSE1-ADA', 2, 'ADA', 'https://drive.google.com/file/d/1MkrsVs2b-dgfZgOI571W9HMWeucfGGjD/view?usp=sharing'),
+(6, 'CSE1-CSP', 2, 'CSP', 'https://drive.google.com/file/d/1lRZnfb49RbMTveKGezjlh-T_h7JMg7pF/view?usp=sharing'),
 (7, 'CSE2-JP', 3, 'JP', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
 (8, 'CSE2-ADA', 3, 'ADA', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
-(9, 'CSE2-AI', 3, 'AI', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
+(9, 'CSE2-CSP', 3, 'CSP', 'https://drive.google.com/file/d/1CtzlY5sAb4CyF_p4wSyuPToyx5-Q406U/view?usp=sharing'),
 (10, 'CSE2-JP', 4, 'JP', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
 (11, 'CSE2-ADA', 4, 'ADA', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
-(12, 'CSE2-AI', 4, 'AI', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
+(12, 'CSE2-CSP', 4, 'CSP', 'https://drive.google.com/file/d/1kPfofwOSv3vZruDVGysv9mgaOIiXyMFZ/view?usp=sharing'),
 (13, 'CSE3-JP', 5, 'JP', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
 (14, 'CSE3-ADA', 5, 'ADA', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
-(15, 'CSE3-AI', 5, 'AI', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
+(15, 'CSE3-CSP', 5, 'CSP', 'https://drive.google.com/file/d/1nzdWCNrmFQexUiRHv_ro22dl3yD-Wxuk/view?usp=sharing'),
 (16, 'CSE3-JP', 6, 'JP', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
 (17, 'CSE3-ADA', 6, 'ADA', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
-(18, 'CSE3-AI', 6, 'AI', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing');
+(18, 'CSE3-CSP', 6, 'CSP', 'https://drive.google.com/file/d/1xAgA3YXU_B8GdPKCfgtwllpCcdMY4nxt/view?usp=sharing'),
+(19, 'CSE1-ADA', 1, 'ADA', 'https://drive.google.com/file/d/1KpIP_yBJP6tFX8nceFzkHjQSFo2oJ6JW/view?usp=sharing');
 
 -- --------------------------------------------------------
 
@@ -181,7 +181,7 @@ CREATE TABLE `teacher_cred` (
 INSERT INTO `teacher_cred` (`tea_id`, `tea_name`, `tea_email`, `tea_pass`, `tea_picture`) VALUES
 (1, 'Munshi Yadav', 'munshiyadav@gtbit.org', '12345678', 'https://drive.google.com/file/d/1zK58eNTgeeoHvwwbTyg-Qca-kFSkDr4O/view?usp=sharing'),
 (2, 'Rajiv Chopra', 'rajivchopra@gtbit.org', '12345678', 'https://drive.google.com/file/d/1szBJlEPklW-rkrql0BaFY9Kb1d235lij/view?usp=sharing'),
-(3, 'Dr. Ashish Bhardwaj', 'ashishbhardwaj@gtbit.org', '12345678', 'https://drive.google.com/file/d/1dMRtkfc4pKqeW_lSfl3Kl78j8Z5fxUq3/view?usp=sharing');
+(3, 'Dr. Seema Singh', 'drseemasingh@gtbit.org', '12345678', 'https://drive.google.com/file/d/1pIn_EOigZXo1uD2pm97lOERKQXjv6W03/view?usp=sharing');
 
 --
 -- Indexes for dumped tables
@@ -229,7 +229,7 @@ ALTER TABLE `teacher_cred`
 -- AUTO_INCREMENT for table `exam_classes`
 --
 ALTER TABLE `exam_classes`
-  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `exam_result`
@@ -241,13 +241,13 @@ ALTER TABLE `exam_result`
 -- AUTO_INCREMENT for table `exam_sheet`
 --
 ALTER TABLE `exam_sheet`
-  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `s.no.` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `teacher_cred`
 --
 ALTER TABLE `teacher_cred`
-  MODIFY `tea_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `tea_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
