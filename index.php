@@ -40,7 +40,7 @@
     <header>
         <nav class="nav">
             <div class="nav__logo">
-                <img src="./resources/images/logo.svg" alt="Logo" id="navLogoImg" style="display: none;">
+                <img draggable="false" src="./resources/images/logo.svg" alt="Logo" id="navLogoimg draggable="false"" style="display: none;">
                 <div class="web-name">
                     <p class="nav__web-name" style="margin-left: 10px;">Exam Evaluator</p>
                 </div>
@@ -56,7 +56,7 @@
     <section class="intro">
         <div style="height: 1px; width: 100%; margin-bottom: 25px;"></div>
         <div class="intro__icon">
-            <img style="margin-top: -10px !important;" src="./resources/images/logo.svg" alt="Logo">
+            <img draggable="false" style="margin-top: -10px !important;" src="./resources/images/logo.svg" alt="Logo">
         </div>
         <div style="height: 4px; width: 100%;" id="waypoint"></div>
         <div class="intro__head" id="introHeadID">Onscreen Evaluation of Answer sheets</div>
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="why-app__photo1">
-            <img src="./resources/images/why-app-photo.png" alt="why-app?">
+            <img draggable="false" src="./resources/images/why-app-photo.jpg" alt="why-app?">
         </div>
 
     </section>
@@ -86,10 +86,10 @@
         </div>
         <div class="register__content">
             <div class="register__details">
-                <img class="register__cancel" id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
+                <img draggable="false" class="register__cancel" id="rContent" src="./resources/images/cancel.svg" alt="" srcset="">
                 <h1>Welcome to Exam Evaluator</h1>
                 <div class="register__forms">
-                    <img src="./resources/images/signup.jpg" alt="Sign Up">
+                    <img draggable="false" src="./resources/images/signup.jpg" alt="Sign Up">
                     <form action="./resources/php/registration.php" onsubmit="return validateForm()" method="POST" class="form">
                         <input class="form__input" type="text" id="tea_name" name="tea_name" required placeholder="Name">
                         <input class="form__input" type="email" name="tea_email" placeholder="Email ID">
@@ -105,13 +105,13 @@
     <!-- Teacher Section -->
     <section class="features">
         <div class="features__heading">
-            <img src="./resources/images/feature.svg" alt="Features">
+            <img draggable="false" src="./resources/images/feature.svg" alt="Features">
             <h1>Features</h1>
         </div>
         <div class="features__feature">
             <div class="features__feature__teacher feature_box">
                 <h1>Teacher</h1>
-                <img src="./resources/images/teachers.svg" alt="">
+                <img draggable="false" src="./resources/images/teachers.jpg" alt="">
                 <ol class="featureList">
                     <li><strong>Create Class : </strong>Teacher can create a class by specifying Class name & Subject.</li>
                     <li><strong>Modify / Delete : </strong>Teacher can modify class details or can even delete class.</li>
@@ -124,7 +124,7 @@
             </div>
             <div class="features__feature__teacher feature_box">
                 <h1 class="yellow">Student</h1>
-                <img src="./resources/images/students.svg" alt="Students">
+                <img draggable="false" src="./resources/images/students.jpg" alt="Students">
                 <ol class="featureList">
                 <li><strong>Upload Answersheet : </strong>Student have to enter the link of the PDF uploaded on Google Drive.</li>
                 <li><strong>Show Answersheet : </strong>Student can view the uploaded answersheet to verify if he/she uploaded the correct PDF.</li>
@@ -141,23 +141,23 @@
         <h1>Meet Our Team Members</h1>
         <div class="team__teamMembers">
             <div class="team__teamMember">
-                <img src="./resources/images/team-members/deepak.svg" alt="">
+                <img draggable="false" src="./resources/images/team-members/deepak.jpg" alt="Deepak Kumar">
                 <h2>Deepak Kumar</h2>
             </div>    
             <div class="team__teamMember">
-                <img src="./resources/images/team-members/jasveen.svg" alt="">
+                <img draggable="false" src="./resources/images/team-members/jasveen.jpg" alt="Jasveen Kaur">
                 <h2>Jasveen Kaur</h2>
             </div>
             <div class="team__teamMember">
-                <img src="./resources/images/team-members/kushdeep.svg" alt="">
+                <img draggable="false" src="./resources/images/team-members/kushdeep.jpg" alt="Kushdeep Singh">
                 <h2>Kushdeep Walia</h2>
             </div>
             <div class="team__teamMember">
-                <img src="./resources/images/team-members/aastha.svg" alt="">
+                <img draggable="false" src="./resources/images/team-members/aastha.jpg" alt="Aastha Bhasin">
                 <h2>Aastha Bhasin</h2>
             </div>
             <div class="team__teamMember">
-                <img src="./resources/images/team-members/dev.svg" alt="">
+                <img draggable="false" src="./resources/images/team-members/dev.jpg" alt="Devender Kumar">
                 <h2>Devender Kumar</h2>
             </div>
         </div>
