@@ -1,5 +1,7 @@
 <?php
-    require("../../Library - FPDF/pdf-sector.php");
+    require("../../fpdf/pdf-sector.php");
+    define('FPDF_FONTPATH','../../fpdf/font/');
+
     session_start();
     $stu_roll = $_SESSION['rollNo'];
 
