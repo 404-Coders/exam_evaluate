@@ -1,7 +1,8 @@
 # What is Exam Evaluator ?
-	Exam Evaluator is useful to evaluate answer sheets in digital format. The teacher can mark the answer sheets by just 
-	filling the form which is presented next to the  answer sheet. After the evaluation, the result is compiled automatically
-	and the teacher can view/ download compiled result of the class in excel format and student can download the mark sheet in PDF format.
+	Exam Evaluator is useful to evaluate answer sheets in digital format. The teacher can mark the answer sheets
+	by just filling the form which is presented next to the answer sheet. After the evaluation, the result is 
+	compiled automatically and the teacher can view/ download compiled result of the class in excel format and 
+	student can download the mark sheet in PDF format.
 
 # Features
  ## For Students
