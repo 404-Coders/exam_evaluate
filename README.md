@@ -1,33 +1,33 @@
-# Bucket List
+# What is Exam Evaluator ?
+	Exam Evaluator is useful to evaluate answer
+	sheets in digital format. The teacher can mark
+	the answer sheets by just filling the form which
+	is presented next to the answer sheet. After the
+	evaluation, the result is compiled automatically
+	and the teacher can view/ download compiled
+	result of the class in excel format and student
+	can download the mark sheet in PDF format.
 
-## Home page (Jasveen)
-    - Features -> Content
+# Features
+	## For Students
+	- UploadAnswersheet
+	- Show Answersheet
+	- Download Marksheet
+	- Result Board
 
-# Student Dashboard
+	## For Teachers
+	- Modify / Delete Classes
+	- Export Result
+	- Load Students
+	- Examine sheets
 
-## Features 
-### Development (Jasveen) & Backend (Deepak)
-    - Upload AnswerSheet -> Modal Form
-    - Show AnswerSheet -> 95% width modal
-    - Result Board -> Generate Query -> Form (SubjectTeacher(Automatic){To}, MailSubject, Query(Body), StudentEmail(From))
-    - Export Marksheet
-
-    - Icon on each box
-
-# Teacher Dashboard
-
-## Features
-    - Fix Same name class creation
-    - Fix modify adding class 
-    - Delete Class Fix
-### Development (Aastha) & Backend (Kushdeep)
-    - Add Student OR Load Student Google Sheet
-    - Modify/Delete Classes
-    - Generate/Download Marksheet
-    - Check Exams
-
-# Evaluator
-    - delete button
-    - Marks Change on Delete and add
-## Functionality
-    - Submit (Deepak)
+# Technologies Used
+	- HTML
+	- SASS(CSS)
+	- JavaScript
+	- PHP
+# Future Scope
+	- Feature to annotate on answersheets.
+	- Feature to generate query & view query status, if a student feels to request re-checking of the answer sheet.
+	- Option to edit profile details of Student and Teacher.
+	- Export to email option for Class result and Student Marksheets.
