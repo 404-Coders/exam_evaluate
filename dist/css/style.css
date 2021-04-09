@@ -198,6 +198,7 @@ a {
 
 .answers__sList__item p {
   padding: 10px 40px;
+  cursor: pointer;
 }
 
 .answers__heading h3 {
